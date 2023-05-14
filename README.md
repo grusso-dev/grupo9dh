@@ -5,11 +5,11 @@
 ## Objetivo
 
 ## Paginas de referencia
-* [songkick](https://www.songkick.com/home)
-* [Pagina 2](https://pagina2.com)
-* [Pagina 3](https://pagina3.com)
-* [Pagina 4](https://pagina4.com)
-* [Pagina 5](https://pagina5.com)
+* [Songkick](https://www.songkick.com/home)
+* [BandsInTown](https://www.bandsintown.com)
+* [SeatGeek](https://seatgeek.com)
+* [EventBrite](https://www.eventbrite.com.ar)
+* [Jukely](https://www.jukely.com)
 
 ## Descripcion del grupo
 ## Comunicacion
