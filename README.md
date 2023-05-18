@@ -18,10 +18,12 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 ## Integrantes del proyecto: 
 * Azcarate, Victoria: Soy Victoria, vivo en CABA y soy graduada en diseño de imagen y sonido. Actualmente, trabajo como Content Designer para una empresa de tecnología, creando contenido visual y multimedia para diversas plataformas digitales. Además, el cine es una de mis grandes pasiones, siempre estoy buscando nuevas películas para ver y discutir. 
 * Castellano, Thiago:
-* Kupferberg, Ezequiel: Vivo en Capital Federal, tengo 20 anios (lo cambio cuando tenga el celu, en la compu no hay enie)
-* Mena, Marcos:27 años , de la ciudad de Córdoba ,  músico , ex estudiante de Ing Agronómica ( 4to año). Técnico Universitario en Ciencias Agropecuarias.
+* Kupferberg, Ezequiel: Vivo en Capital Federal, tengo 20 años.
+* Mena, Marcos: Tengo 27 años ,soy de la ciudad de Córdoba ,  músico , ex estudiante de Ing Agronómica ( 4to año). Técnico Universitario en Ciencias Agropecuarias.
 * Rodas, Pamela: En la actualidad, me encuentro enfocada en emprender y desarrollar mi propio proyecto empresarial. Tengo 23 años, vivo CABA. Desde muy chica he sentido una fuerte pasión por el mundo de los negocios, encuentro una gran satisfacción al explorar y aprovechar nuevas oportunidades en este ámbito. 
-* Russo, Gustavo:
+* Russo, Gustavo: Soy de Loma hermosa partido de tres de febrero, trabajo como coordinador de IT en el hospital Bocalandro, programador en PHP en LSDM S.A. una empresa dedicada Brindar soluciones integrales para pacientes y ademas trabajo freelance para GardenLife que es una empresa dedicada a la produccion de productos plasticos. <br> Ademas de PHP realice proyectos en Visual Basic 6, Java (Android studio), C# y SQL Server. 
+Soy amante de la toda la musica, especialmente Rock Nacional.
+Y Proximamente Full Stack Developer.
 * Salim, Eloisa:
 * Scuzzarello, Francisco:
 
