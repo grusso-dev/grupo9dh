@@ -12,7 +12,16 @@
 * [EventBrite](https://www.eventbrite.com.ar)
 * [Jukely](https://www.jukely.com)
 
-## Descripcion del grupo
+## Integrantes del proyecto: 
+* Azcarate, Victoria: 
+* Castellano, Thiago:
+* Kupferberg, Ezequiel:
+* Mena, Marcos:
+* Rodas, Pamela:
+* Russo, Gustavo:
+* Salim, Eloisa:
+* Scuzzarello, Francisco:
+
 ## Comunicacion
 * [Trello](https://trello.com/invite/b/gfeCsPjj/ATTI61af9938af2dcfb45f7d7ae2bc936011F1D49CAA/proyecto-integrador)
 
