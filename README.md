@@ -1,4 +1,5 @@
 # SoundStage
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/logo.png">
 
 ## Descripcion del sitio
 
