@@ -21,9 +21,7 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 * Kupferberg, Ezequiel (github username: UninstallUrPC): Vivo en Capital Federal, tengo 20 años y estudio en el CBC. Soy un gamer desde chico, y me gusta escuchar musica. 
 * Mena, Marcos: Tengo 27 años ,soy de la ciudad de Córdoba ,  músico , ex estudiante de Ing Agronómica ( 4to año). Técnico Universitario en Ciencias Agropecuarias.
 * Rodas, Pamela: En la actualidad, me encuentro enfocada en emprender y desarrollar mi propio proyecto empresarial. Tengo 23 años, vivo CABA. Desde muy chica he sentido una fuerte pasión por el mundo de los negocios, encuentro una gran satisfacción al explorar y aprovechar nuevas oportunidades en este ámbito. 
-* Russo, Gustavo (grusso-dev): Soy de Loma hermosa partido de tres de febrero, trabajo como coordinador de IT en el hospital Bocalandro, programador en PHP en LSDM S.A. una empresa dedicada Brindar soluciones integrales para pacientes y ademas trabajo freelance para GardenLife que es una empresa dedicada a la produccion de productos plasticos. <br> Ademas de PHP realice proyectos en Visual Basic 6, Java (Android studio), C# y SQL Server. 
-Soy amante de la toda la musica, especialmente Rock Nacional.
-Y Proximamente Full Stack Developer.
+* Russo, Gustavo (grusso-dev): Soy de Loma hermosa partido de tres de febrero amante de la toda la musica, especialmente Rock Nacional.<br>Trabajo como coordinador de IT en el hospital Bocalandro, programador en PHP en LSDM S.A. una empresa dedicada Brindar soluciones integrales para pacientes y ademas trabajo freelance para GardenLife que es una empresa dedicada a la produccion de productos plasticos. <br> Ademas de PHP realice proyectos en Visual Basic 6, Java (Android studio), C# y SQL Server proximamente Full Stack Developer en node.
 
 * Scuzzarello, Francisco:
 
@@ -32,11 +30,12 @@ Y Proximamente Full Stack Developer.
 
 ## Wireframes 
 * Página principal: https://ibb.co/0KR5jZz
-
-
-
-
-
-
 * Design System: https://www.figma.com/file/hcdlC4FCSPi6BXRNFSKSts/DS---SoundStage?type=design&node-id=1%3A159&t=PH9XP84yEYghajLH-1
+
+#### index
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/index.png">
+
+#### Registro
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/registro1.png">
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/registro1.png">
 
