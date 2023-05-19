@@ -30,3 +30,13 @@ Y Proximamente Full Stack Developer.
 ## Comunicacion
 * [Trello](https://trello.com/invite/b/gfeCsPjj/ATTI61af9938af2dcfb45f7d7ae2bc936011F1D49CAA/proyecto-integrador)
 
+## Wireframes 
+* Página principal: https://ibb.co/0KR5jZz
+
+
+
+
+
+
+* Design System: https://www.figma.com/file/hcdlC4FCSPi6BXRNFSKSts/DS---SoundStage?type=design&node-id=1%3A159&t=PH9XP84yEYghajLH-1
+
