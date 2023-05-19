@@ -17,7 +17,7 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 
 ## Integrantes del proyecto: 
 * Azcarate, Victoria: Soy Victoria, vivo en CABA y soy graduada en diseño de imagen y sonido. Actualmente, trabajo como Content Designer para una empresa de tecnología, creando contenido visual y multimedia para diversas plataformas digitales. Además, el cine es una de mis grandes pasiones, siempre estoy buscando nuevas películas para ver y discutir. 
-* Castellano, Thiago:
+* Castellano, Thiago: Tengo 19 años, vivo en capital federal, trabajo en internaciones del hospital Favaloro y soy estudiante de arquitectura en la UBA.
 * Kupferberg, Ezequiel (github username: UninstallUrPC): Vivo en Capital Federal, tengo 20 años y estudio en el CBC. Soy un gamer desde chico, y me gusta escuchar musica. 
 * Mena, Marcos: Tengo 27 años ,soy de la ciudad de Córdoba ,  músico , ex estudiante de Ing Agronómica ( 4to año). Técnico Universitario en Ciencias Agropecuarias.
 * Rodas, Pamela: En la actualidad, me encuentro enfocada en emprender y desarrollar mi propio proyecto empresarial. Tengo 23 años, vivo CABA. Desde muy chica he sentido una fuerte pasión por el mundo de los negocios, encuentro una gran satisfacción al explorar y aprovechar nuevas oportunidades en este ámbito. 
