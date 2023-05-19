@@ -24,7 +24,7 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 * Russo, Gustavo: Soy de Loma hermosa partido de tres de febrero, trabajo como coordinador de IT en el hospital Bocalandro, programador en PHP en LSDM S.A. una empresa dedicada Brindar soluciones integrales para pacientes y ademas trabajo freelance para GardenLife que es una empresa dedicada a la produccion de productos plasticos. <br> Ademas de PHP realice proyectos en Visual Basic 6, Java (Android studio), C# y SQL Server. 
 Soy amante de la toda la musica, especialmente Rock Nacional.
 Y Proximamente Full Stack Developer.
-* Salim, Eloisa:
+
 * Scuzzarello, Francisco:
 
 ## Comunicacion
