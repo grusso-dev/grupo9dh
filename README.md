@@ -32,10 +32,20 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 * Página principal: https://ibb.co/0KR5jZz
 * Design System: https://www.figma.com/file/hcdlC4FCSPi6BXRNFSKSts/DS---SoundStage?type=design&node-id=1%3A159&t=PH9XP84yEYghajLH-1
 
-#### index
+#### Home o Página de inicio
 <img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/index.png">
+
+#### Detalle de un producto
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/detalle.png">
+
+#### Carrito de compras
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/carrito.png">
 
 #### Registro
 <img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/registro1.png">
 <img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/registro1.png">
+
+#### Formulario de login
+<img width = "50%" alt="logo" src="https://soundstage.linsock.com.ar/public/images/wireframe/login.png">
+
 
