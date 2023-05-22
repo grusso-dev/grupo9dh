@@ -26,7 +26,7 @@ SoundStage  es el lugar ideal para descubrir los conciertos de tus bandas favori
 * Scuzzarello, Francisco:
 
 ## Comunicacion
-* [Trello](https://trello.com/invite/b/gfeCsPjj/ATTI61af9938af2dcfb45f7d7ae2bc936011F1D49CAA/proyecto-integrador)
+* [Trello](https://trello.com/b/gfeCsPjj/proyecto-integrador)
 
 ## Wireframes 
 * Página principal: https://ibb.co/0KR5jZz
