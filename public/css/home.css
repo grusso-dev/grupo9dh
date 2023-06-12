@@ -1,0 +1,201 @@
+* {
+    box-sizing: content-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100vw;
+    margin: auto;
+
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    position: absolute;
+    z-index: 1;
+    top: 2vw;
+    width: 90%;
+    left: 5vw;
+    
+
+}
+
+.logo {
+    width: 20%;
+    margin: 2px 0px;
+}
+
+.buscador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.buscador > input {
+    border-radius: 53px 0px 0px 53px;
+    height: 2.5vw;
+    margin: 0;
+    border-width: 0px;
+    border-style: none;
+    padding-left: 5%;
+}
+
+.cajaI {
+    background-color: #2176B8;
+    height: 2.78vw;
+    width: 3.5vw;
+    border-radius: 0 53px 53px 0;
+    position: relative;
+
+}
+
+.cajaI > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagenFondo {
+    width: 100vw;
+    position: relative;
+}
+
+.imagenFondo > img {
+    width: 100vw;
+}
+
+
+.contenidoHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    gap: 5vw;
+    top: 10vw;
+    right: 10vw;
+    
+}
+
+.textHero {
+    width: 45vw;
+    text-shadow: black 0px 0px 10px;
+    margin-top: 4vw;
+ 
+
+    
+}
+
+.textHero > h1 {
+    font-size: 60px;
+    color: white;
+
+
+}
+
+.recuadroHero {
+    width: 30vw;
+    position: relative;
+    top: 5vw;
+    
+
+
+}
+
+.recuadroHero > img {
+    width: 100%;
+}
+
+.textoImagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.textoImagen > p {
+    color: #0075FF;
+    text-align: center;
+    font-size:2.5vw;
+    margin: 1%;
+}
+
+.textoImagen > h4 {
+    color: white;
+    text-align: center;
+    font-size: 4.5vw;
+    margin: 1%;
+}
+
+.buttonGradient {
+    background-image: linear-gradient(to right, #93278F 0%, #0075FF 100%);
+    color: white;
+    height: 2.5vw;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 1.5vw;
+    border-width: 0px;
+    margin-top: 1.5vw;
+}
+
+.buttonGradient:hover {
+    background-position: right center;
+}
+
+.porGenero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttonGradient2 {
+    background-image: linear-gradient(to right, #1B1464 0%, #0075FF 100%);
+    color: white;
+    height: 2.5vw;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 1.5vw;
+    border-width: 0px;
+    margin-top: 1.5vw;
+}
+
+.showsUltimoMomento > h2 {
+    margin-top: 4vw;
+    margin-left: 8vw;
+    font-size: 3vw;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    margin-left: 8vw;
+    
+}
+.box {
+    width: 150px;
+    height: 85px;
+    font-size: 2vw;
+    background-color: #2176B8;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 65px;
+    
+}
+
+
