@@ -9,14 +9,14 @@ body {
 
 nav {
     width: 100vw;
-    margin: auto;
+    
 
 }
 
 .navBar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px 0px;
     gap: 35px;
@@ -53,7 +53,7 @@ nav {
 
 .cajaI {
     background-color: #2176B8;
-    height: 2.78vw;
+    height: 2.7vw;
     width: 3.5vw;
     border-radius: 0 53px 53px 0;
     position: relative;
