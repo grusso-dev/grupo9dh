@@ -11,7 +11,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link 
+    <link
       href="/Codigos/BOSSES/Proyecto Integrador/grupo9dh/public/css/checkout.css"
       rel="stylesheet"
     />
@@ -61,7 +61,7 @@
           </div>
 
           <!-- Acordion -->
-          <div class="col-md-6">
+          <form class="col-md-6">
             <div class="row row-cols-1">
               <div class="accordion accordion-flush" id="accordionFlush">
                 <!-- Acordion Item 1 -->
@@ -84,14 +84,42 @@
                     data-bs-parent="#accordionFlush"
                   >
                     <div class="accordion-body">
-                      <p style="margin-bottom: 5px">Nombre</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Apellido</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">E-Mail</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Numero de telefono</p>
-                      <input type="text" />
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Nombre</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Apellido</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Numero de telefono</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">E-mail</label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,20 +144,60 @@
                     data-bs-parent="#accordionFlush"
                   >
                     <div class="accordion-body">
-                      <p style="margin-bottom: 5px">Direccion (Linea 1)</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Direccion (Linea 2)</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Nombre</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Pais</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Ciudad</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Codigo Postal</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Informacion adicional</p>
-                      <input type="text" />
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Direccion (Linea 1)</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Direccion (Linea 2)</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Pais</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Ciudad</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Codigo Postal</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Informacion adicional</label>
+                      </div>
 
                       <p style="margin-top: 10px">
                         Los datos de facturacion son los mismos que la entrega.
@@ -159,25 +227,53 @@
                     data-bs-parent="#accordionFlush"
                   >
                     <div class="accordion-body">
-                      <p style="margin-bottom: 5px">Numero de tarjeta</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">
-                        Nombre y apellido del titular
-                      </p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">CVV/CVC</p>
-                      <input type="text" />
-                      <p style="margin-bottom: 5px">Expira en:</p>
-                      <input type="text" placeholder="MM/YY" />
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Numero de tarjeta</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput"
+                          >Nombre y apellido del titular</label
+                        >
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">CVV/CVC</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                        />
+                        <label for="floatingInput">Expira en: MM/YY</label>
+                      </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </main>
+    
   </body>
 </html>
