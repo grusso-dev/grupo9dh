@@ -1,6 +1,7 @@
 * {
     box-sizing: content-box;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,7 +10,7 @@ body {
 
 nav {
     width: 100vw;
-    
+
 
 }
 
@@ -28,7 +29,7 @@ nav {
     top: 2vw;
     width: 90%;
     left: 5vw;
-    
+
 
 }
 
@@ -42,7 +43,8 @@ nav {
     flex-direction: row;
     align-items: center;
 }
-.buscador > input {
+
+.buscador>input {
     border-radius: 53px 0px 0px 53px;
     height: 2.5vw;
     margin: 0;
@@ -60,7 +62,7 @@ nav {
 
 }
 
-.cajaI > i {
+.cajaI>i {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,7 +74,7 @@ nav {
     position: relative;
 }
 
-.imagenFondo > img {
+.imagenFondo>img {
     width: 100vw;
 }
 
@@ -87,19 +89,19 @@ nav {
     gap: 5vw;
     top: 10vw;
     right: 10vw;
-    
+
 }
 
 .textHero {
     width: 45vw;
     text-shadow: black 0px 0px 10px;
     margin-top: 4vw;
- 
 
-    
+
+
 }
 
-.textHero > h1 {
+.textHero>h1 {
     font-size: 60px;
     color: white;
 
@@ -110,12 +112,12 @@ nav {
     width: 30vw;
     position: relative;
     top: 5vw;
-    
+
 
 
 }
 
-.recuadroHero > img {
+.recuadroHero>img {
     width: 100%;
 }
 
@@ -127,14 +129,14 @@ nav {
 
 }
 
-.textoImagen > p {
+.textoImagen>p {
     color: #0075FF;
     text-align: center;
-    font-size:2.5vw;
+    font-size: 2.5vw;
     margin: 1%;
 }
 
-.textoImagen > h4 {
+.textoImagen>h4 {
     color: white;
     text-align: center;
     font-size: 4.5vw;
@@ -173,7 +175,7 @@ nav {
     margin-top: 1.5vw;
 }
 
-.showsUltimoMomento > h2 {
+.showsUltimoMomento>h2 {
     margin-top: 4vw;
     margin-left: 8vw;
     font-size: 3vw;
@@ -185,8 +187,9 @@ nav {
     justify-content: space-between;
     width: 90vw;
     margin-left: 8vw;
-    
+
 }
+
 .box {
     width: 150px;
     height: 85px;
@@ -195,7 +198,5 @@ nav {
     border-radius: 30px;
     text-align: center;
     padding-top: 65px;
-    
+
 }
-
-

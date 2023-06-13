@@ -1,10 +1,28 @@
-.prueba {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.register {
+  width: 30vw;
+  position: relative;
+  top: 5vw;
+
+
+
 }
 
-.btn {
-  margin: 10px;
+.register>img {
+  width: 100%;
+}
+
+.register-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.register-data>input {
+  border-radius: 53px 0px 0px 53px;
+  height: 2.5vw;
+  margin: 0;
+  border-width: 0px;
+  border-style: none;
+  padding-left: 5%;
+  width: 15vw;
 }
