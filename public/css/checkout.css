@@ -9,3 +9,36 @@
     border-radius: 5px;
     margin-top: 10px;
 }
+
+.card-img {
+  background-repeat: repeat-y;
+  background-size: auto;
+}
+.card {
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
+  .card::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  .card::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 5px; 
+  }
+  
+  .card::-webkit-scrollbar-thumb {
+    background-color: purple; 
+    border-radius: 10px; /
+  }
+  
+  .card::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+
+.card-title, .card-text{
+z-index: 1;
+color: aliceblue;
+} 
+
+
