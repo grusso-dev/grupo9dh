@@ -1,0 +1,29 @@
+.container-sm{
+    background-color: aquamarine;
+    margin-top: 50px;
+  }
+  .logo{
+    height: 70px;
+    width: 120px;
+  }
+  .foto{
+    height: 200px;
+    width: 290px;
+  }
+  .miedo{
+    display: flex;
+  }
+  .fechas{margin: 10px;}
+  .descripcion{
+    margin: 20px;
+  }
+  .boton{
+    text-align: center;
+    margin: 40px;
+  }
+  .card-body{
+    text-align: center;
+  }
+  .card{
+        margin: 0 auto;
+  }
