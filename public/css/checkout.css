@@ -63,13 +63,25 @@ header{
     margin-top: 10px;
 }
 
+.btn.btn-outline-dark{
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+  background-color: whitesmoke;
+}
+
+.btn.btn-outline-dark:hover{
+  color: #345beb;
+  border-color: #345beb;
+}
+
 .accordion-button.collapsed{
 background-color: whitesmoke;
+box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card {
     height: 600px;
     overflow-y: auto; 
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.3);
   }
   .card::-webkit-scrollbar {
     width: 10px; 
