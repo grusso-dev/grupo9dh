@@ -1,14 +1,31 @@
 .fa-solid.fa-compact-disc.fa-2x{
   margin-left: 3vw;
-  margin-top: 0.3vh;
+  margin-top: 0.5vh;
 }
 
 @media only screen and (max-width:1449px){
-  .fa-solid.fa-compact-disc.fa-2x, .input-group{
+  .fa-solid.fa-compact-disc.fa-2x{
+    margin-top: 2.5vh;
+  }
+  
+.input-group{
     margin-top: 2vh;
   }
 
 }
+
+.card.text-bg-dark{
+  background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
+  background-size: cover;
+}
+
+@media only screen and (max-width: 991px) {
+  .fa-solid.fa-compact-disc.fa-2x {
+    display: none;
+  }
+}
+
+
 .nav-link{
   margin-right: 25px;
   color: white;
@@ -46,13 +63,25 @@ header{
     margin-top: 10px;
 }
 
+.btn.btn-outline-dark{
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+  background-color: whitesmoke;
+}
+
+.btn.btn-outline-dark:hover{
+  color: #345beb;
+  border-color: #345beb;
+}
+
 .accordion-button.collapsed{
 background-color: whitesmoke;
+box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card {
     height: 600px;
     overflow-y: auto; 
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.3);
   }
   .card::-webkit-scrollbar {
     width: 10px; 
