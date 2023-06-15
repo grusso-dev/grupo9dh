@@ -5,32 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/home.css">
     <script src="https://kit.fontawesome.com/6d376e5dff.js" crossorigin="anonymous"></script>
     <title>SoundStage</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navBar">
-                <img src="https://linsock.com.ar/soundstage/public/images/SoundStage_Logo_degrade_2.svg" alt="logo" class="logo"> <a href="/"></a> </img>
-                <p>Shows cerca tuyo</p>
-                <p>Artistas del momento</p>
-                <p>Último momento</p>
-                <div class="buscador"><input type="search" name="searchbox" id="search" value="Buscá por artista, lugar o fecha"><div class="cajaI"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></div></div>
-                <i class="fa-solid fa-compact-disc fa-2xl" style="color:  #93278F;"><a href="/login"></a></i>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="/">
+                <img src="https://linsock.com.ar/soundstage/public/images/SoundStage_Logo_degrade_2.svg" alt="logo" class="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Shows cerca tuyo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Artistas del momento</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Último momento</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="input-group">
+                      <input type="search" class="form-control" placeholder="Buscá por artista, lugar o fecha" aria-label="Search">
+                      <button class="btn btn-outline-light" type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                      <i class="fa-solid fa-compact-disc fa-2x" style="color:  #93278F;"></i>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </nav>
+
         <section>
             <div class="contenidoHero">
                 <div class="textHero">
                     <h1>Descubre, agenda y disfruta: Tu música en un solo lugar</h1>
-                    <button type="submit" class="buttonGradient"><a href="/register"></a>Conectá tu spotify</button>
+                    <a href="/register"><button type="submit" class="buttonGradient">Conectá tu spotify</button></a>
                 </div>
                 <div class="recuadroHero">
                     <div class="textoImagen">
@@ -57,40 +82,88 @@
         </section>
         <section class="showsUltimoMomento">
             <h2>Shows de último momento</h2>
+            
             <div class="boxes">
-                <p class="box">1</p>
-                <p class="box">2</p>
-                <p class="box">3</p>
-                <p class="box">4</p>
-                <p class="box">5</p>
-                <p class="box">6</p>
+                <a href="http://" class="contenedor"><img src="\img\c74450cca629f0c19a2d7547e1aadf41.jpg" alt="img"></a>
+                <a href="http://" class="contenedor"><img src="\img\f11fdfa79739e19515272db005c87b7a.jpg" alt="img"></a>
+                <a href="http://" class="contenedor"><img src="\img\960fcb7e3085db27b8976c5b91438b5d.jpg" alt="img"></a>
+                <a href="http://" class="contenedor"><img src="\img\2fee57b8a54e493a68702f11bfa3fe05.jpg" alt="img"></a>
+                <a href="http://" class="contenedor"><img src="\img\e84f02fbfbb8c4abf0f336fd32f0421f.jpg" alt="img"></a>
+                <a href="http://"><p>Ver más</p></a>
             </div>
         </section>
         <section class="showsUltimoMomento">
             <h2>Tus artistas favoritos</h2>
             <div class="boxes">
-                <p class="box">1</p>
-                <p class="box">2</p>
-                <p class="box">3</p>
-                <p class="box">4</p>
-                <p class="box">5</p>
-                <p class="box">6</p>
+              <a href="http://" class="contenedor"><img src="\img\00c2e7197dfc1aafc36309f5a6e4dedd.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\2a299d90b3d7964e8e03c21797653e3e.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\4d03f56cf32f49f763410c1ac133da22.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\f6d0a6973319be65f266a8b2c53bacbe.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\a31dd9d87e4bf7c9af22f30524147a81.jpg" alt="img"></a>
+              <a href="http://"><p>Ver más</p></a>
             </div>
         </section>
         <section class="showsUltimoMomento">
             <h2>Artistas del momento</h2>
             <div class="boxes">
-                <p class="box">1</p>
-                <p class="box">2</p>
-                <p class="box">3</p>
-                <p class="box">4</p>
-                <p class="box">5</p>
-                <p class="box">6</p>
+              <a href="http://" class="contenedor"><img src="\img\024ba6610204e3ddc91823e624e27684.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\3dbd4582e83f6293725ebeeb9b7ad551.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\e3d52338d1b71207996eed1519f82892.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\e1688d9714a51f2271b2e840dfcf4e26.jpg" alt="img"></a>
+              <a href="http://" class="contenedor"><img src="\img\7ddf2e1845d10fbbff97c3f8348f1975.jpg" alt="img"></a>
+              <a href="http://"><p>Ver más</p></a>
             </div>
         </section>
 
 
     </main>
+
+
+    <footer class="footer">
+      <div class="footer1">
+        <h4>Mapa del sitio</h4>
+        <a href="/"> Home </a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/registerdata">Register Data</a>
+        <a href="/detail">Product</a>
+        <a href="/checkout"> Checkout </a>
+      </div>
+      <div class="footer 2">
+        <a
+          class="btn btn-primary btn-lg btn-floating"
+          style="background-color: #ac2bac; margin: 5%;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a 
+        class="btn btn-primary btn-lg btn-floating" 
+        style="background-color: #3b5998; margin: 5%;" 
+        href="#!" 
+        role="button"
+         ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a 
+        class="btn btn-primary btn-lg btn-floating" 
+        style="background-color: #0082ca; margin: 5%;" 
+        href="#!" 
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a 
+        class="btn btn-primary btn-lg btn-floating" 
+        style="background-color: #333333; margin: 5%;" 
+        href="#!" 
+        role="button"
+        ><i class="fab fa-github"></i
+        ></a>
+
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     
 </body>
 </html>
