@@ -31,9 +31,24 @@
   color: white;
 }
 
+.aaaaaaaa{
+color: aliceblue;
+margin-left: 1vw;
+margin-right: 1vw;
+}
+
+.col{
+  padding-top: 2vh;
+}
+
+@media (max-width: 1000px) {
+  .custom-row {
+    flex-direction: column;
+  }
+}
 main{
   margin-top: 6vh;
-  
+  margin-bottom: 7.05vh;
 }
 
 body{
