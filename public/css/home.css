@@ -27,6 +27,7 @@ header {
     margin-right: 25px;
     color: white;
   }
+  
 
 
 
@@ -40,7 +41,9 @@ header {
 
   }
 
-
+.nav-item > i {
+    padding-left: 2vw;
+} 
 
 .imagenFondo {
     width: 100vw;
