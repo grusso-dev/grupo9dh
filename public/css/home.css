@@ -124,6 +124,13 @@ header {
     margin-top: 1.5vw;
 }
 
+.nav-item > a {
+    padding: 0.5vw;
+
+}
+
+
+
 .buttonGradient:hover {
     background-position: right center;
 }
