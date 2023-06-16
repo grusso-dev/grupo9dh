@@ -1,66 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/home.css">
   <script src="https://kit.fontawesome.com/6d376e5dff.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/register.css">
   <title>SoundStage</title>
-
 </head>
 
 <body>
   <header>
-    <nav>
-      <div class="navBar">
-        <img src="https://linsock.com.ar/soundstage/public/images/SoundStage_Logo_degrade_2.svg" alt="logo"
-          class="logo"> <a href="/"></a> </img>
-        <p>Shows cerca tuyo</p>
-        <p>Artistas del momento</p>
-        <p>Último momento</p>
-        <div class="buscador"><input type="search" name="searchbox" id="search"
-            value="Buscá por artista, lugar o fecha">
-          <div class="cajaI"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="https://linsock.com.ar/soundstage/public/images/SoundStage_Logo_degrade_2.svg" alt="logo"
+            class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shows cerca tuyo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artistas del momento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Último momento</a>
+            </li>
+            <li class="nav-item">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Buscá por artista, lugar o fecha"
+                  aria-label="Search">
+                <button class="btn btn-outline-light" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="/login"><i class="fa-solid fa-compact-disc fa-2x" style="color:  #93278F;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a href="/checkout"><i class="fa-solid fa-cart-shopping fa-2x" style="color: #93278F;"></i></a>
+            </li>
+          </ul>
         </div>
-        <i class="fa-solid fa-compact-disc fa-2xl" style="color:  #93278F;"><a href="/login"></a></i>
       </div>
     </nav>
+
     <section>
       <div class="contenidoHero">
         <div class="textHero">
           <h1>Descubre, agenda y disfruta: Tu música en un solo lugar</h1>
-          <!-- <button type="submit" class="buttonGradient"><a href="/register"></a>Conectá tu spotify</button> -->
         </div>
-        <div class="register">
-          <button type="submit" class="buttonGradient"><a href="/register"></a>
-            <i class="fa-brands fa-spotify fa-xl"></i> Ingresar con Spotify
-          </button>
+        <div class="recuadroHero">
+          <a href="/register">
+            <button type="submit" class="buttonGradient">
+              <i class="fa-brands fa-spotify fa-xl"></i> Ingresar con Spotify
+
+            </button>
+          </a>
           <br>
-          <button type="submit" class="buttonGradient"><a href="/register"></a>
-            <i class="fa-brands fa-microsoft fa-xl"></i> Ingresar con Outlook
-          </button>
           <br>
-          <button type="submit" class="buttonGradient"><a href="/register"></a>
-            <i class="fa-brands fa-google fa-xl"></i> Ingresar con Google
-          </button>
+          <a href="/register">
+            <button type="submit" class="buttonGradient">
+              <i class="fa-brands fa-microsoft fa-xl"></i> Ingresar con Outlook
+
+            </button>
+          </a>
           <br>
-          <button type="submit" class="buttonGradient"><a href="/register"></a>
-            <i class="fa-solid fa-envelope-open-text fa-xl"></i> Registrar con Mail
-          </button>
+          <a href="/register">
+            <button type="submit" class="buttonGradient">
+              <i class="fa-brands fa-google fa-xl"></i> Ingresar con Google
+            </button>
+          </a>
+          <br>
+          <a href="/register">
+            <button type="submit" class="buttonGradient">
+              <i class="fa-solid fa-envelope-open-text fa-xl"></i> Registrar con Mail
+            </button>
+          </a>
+          <br>
         </div>
       </div>
       <div class="imagenFondo">
@@ -69,15 +100,38 @@
     </section>
 
   </header>
-  <main>
 
-  </main>
 
-  <footer>
+  <footer class="footer">
+    <div class="footer1">
+      <h4>Mapa del sitio</h4>
+      <a href="/"> Home </a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      <a href="/registerdata">Register Data</a>
+      <a href="/detail">Product</a>
+      <a href="/checkout"> Checkout </a>
+    </div>
+    <div class="footer 2">
+      <a class="btn btn-primary btn-lg btn-floating" style="background-color: #ac2bac; margin: 5%;" href="#!"
+        role="button"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-primary btn-lg btn-floating" style="background-color: #3b5998; margin: 5%;" href="#!"
+        role="button"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-primary btn-lg btn-floating" style="background-color: #0082ca; margin: 5%;" href="#!"
+        role="button"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-primary btn-lg btn-floating" style="background-color: #333333; margin: 5%;" href="#!"
+        role="button"><i class="fab fa-github"></i></a>
 
+    </div>
   </footer>
-  <script src="https://kit.fontawesome.com/f8ff58bf54.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
