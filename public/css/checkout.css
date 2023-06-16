@@ -3,25 +3,21 @@
   margin-top: 0.5vh;
 }
 
-@media only screen and (max-width:1449px){
-  .fa-solid.fa-compact-disc.fa-2x{
-    margin-top: 2.5vh;
-  }
-  
-.input-group{
-    margin-top: 2vh;
-  }
-
-}
-
 .card.text-bg-dark{
   background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
   background-size: cover;
 }
 
-@media only screen and (max-width: 991px) {
-  .fa-solid.fa-compact-disc.fa-2x {
+.nav-item.abc{
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .fa-solid.fa-compact-disc.fa-2x, .fa-solid.fa-cart-shopping.fa-2x {
     display: none;
+  }
+  .nav-item.abc{
+    display: block;
   }
 }
 
@@ -41,10 +37,38 @@ margin-right: 1vw;
   padding-top: 2vh;
 }
 
+.image-info{
+  width: 6vw;
+  height: 6vh;
+  margin-right: 2vw;
+  margin-top: 2vh;
+}
+
+.image-text{
+  margin-top: 3vh;
+  }
+
 @media (max-width: 1000px) {
   .custom-row {
     flex-direction: column;
   }
+  .image-info{
+    width: 10vw;
+    height: 10vh;
+  }
+  .image-text{
+    margin-top: 5vh;
+    }
+}
+
+@media (max-width: 600px) {
+  .image-info{
+    width: 20vw;
+    height: 10vh;
+  }
+  .image-text{
+    margin-top: 5vh;
+    }
 }
 main{
   margin-top: 6vh;
@@ -59,7 +83,11 @@ header{
   padding-top: 4vh;
 }
 
-.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+.card-items{
+  display: flex;
+}
+
+.navbar.navbar-expand-xl.navbar-dark.bg-dark{
   width: 90%;
   margin: auto;
   margin-top: 1.2vh;
