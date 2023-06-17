@@ -212,7 +212,7 @@ header {
 
 .footer1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .footer1 > a {
