@@ -1,28 +1,347 @@
-.register {
+* {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+header {
+  height: 94vh;
+  width: 100%;
+  padding-top: 30px;
+  background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
+  background-size: cover;
+}
+
+.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  width: 90%;
+  /* margin: 4vh auto; */
+  margin-top: 0;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+  left: 5%;
+
+}
+
+
+.navbar-brand>img {
+  width: 14vw;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1vw;
+}
+
+.input-group {
+  width: 25vw;
+  margin: auto 1vw;
+
+}
+
+.btn {
+  background-color: #0075FF;
+  border-width: 0;
+
+}
+
+.btn:hover {
+  background-color: #93278F;
+}
+
+.fa-solid {
+  margin: auto 1vw;
+}
+
+.nav-item {
+  margin: auto 0.2vw;
+
+}
+
+.nav-item>i {
+  padding: 0.5vw;
+
+}
+
+.fa-solid.fa-compact-disc.fa-2x {
+  margin-left: 3vw;
+  margin-top: 0.4vh;
+}
+
+.textHero {
+  /* width: 45vw; */
+  text-shadow: black 0px 0px 10px;
+  /* margin-top: 4vw; */
+}
+
+.textHero>h1 {
+  font-size: 2vw;
+  color: white;
+
+
+}
+
+.recuadroHero {
   width: 30vw;
   position: relative;
   top: 5vw;
-
-
-
 }
 
-.register>img {
+.recuadroHero>img {
   width: 100%;
 }
 
-.register-data {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.textoImagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
-.register-data>input {
-  border-radius: 53px 0px 0px 53px;
+.textoImagen>p {
+  color: #0075FF;
+  text-align: center;
+  font-size: 2.5vw;
+  margin: 1%;
+}
+
+.textoImagen>h4 {
+  color: white;
+  text-align: center;
+  font-size: 4.5vw;
+  margin: 1%;
+}
+
+/* Botones  */
+.buttonGradient {
+  background-image: linear-gradient(to right, #93278F 0%, #0075FF 100%);
+  color: white;
   height: 2.5vw;
-  margin: 0;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 1.5vw;
   border-width: 0px;
-  border-style: none;
-  padding-left: 5%;
-  width: 15vw;
+  margin-top: 1.5vw;
+}
+
+
+.buttonGradient:hover {
+  background-position: right center;
+}
+
+.register {
+  text-align: center;
+}
+
+.botonera {
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #D9D9D9;
+  display: flex;
+  flex-direction: row;
+  align-items: space-arround;
+  padding-left: 10%;
+  padding-top: 5vh;
+  margin-top: 6vh;
+  padding-right: 10%;
+  /* width: 100vw; */
+  padding-bottom: 6vh;
+  gap: 2vw;
+}
+
+.fab {
+  width: 2vh;
+  height: 2vh;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+.footer1>a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.boxes img {
+  border-radius: 20px;
+}
+
+.contenedor {
+  width: 14vw;
+  height: 14vw;
+}
+
+.contenedor>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* celu */
+@media (max-width: 500px) {
+  header {
+    height: 60vh;
+    width: 100%;
+    padding-top: 100px;
+  }
+
+
+  .navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0%;
+    left: 0%;
+    top: 0%;
+    margin: auto;
+    z-index: 3;
+
+  }
+
+  .nav-item {
+    margin-top: 1vw;
+  }
+
+  .nav-link {
+    font-size: 3vw;
+  }
+
+  .navbar-brand>img {
+    width: 40vw;
+  }
+
+  .input-group {
+    width: 80vw;
+  }
+
+  .textHero>h1 {
+    font-size: 3vw;
+    color: white;
+  }
+
+  .botonera {
+    padding-top: 5vw;
+    width: 50%;
+  }
+
+  /* Botones  */
+  .buttonGradient {
+    height: 3vw;
+    padding: 10px 30px;
+    font-size: 2.5vw;
+    border-width: 0px;
+    margin-top: 2vw;
+  }
+
+  /* Footer */
+
+  .footer {
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .footer1 {
+    width: 90vw;
+  }
+
+  .footer2 {
+    width: 90vw;
+    gap: 1vw;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .fab {
+    margin: auto;
+  }
+
+  .btn {
+    margin: auto;
+  }
+
+  .botonera .input-group {
+    width: 56vw;
+  }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 768px) {
+
+  header {
+    height: 50vh;
+    width: 100%;
+    padding-top: 100px;
+  }
+
+
+  .navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    width: 100%;
+    position: absolute;
+    border-radius: 0%;
+    left: 0%;
+    top: 0%;
+    margin: auto;
+    z-index: 3;
+  }
+
+  .nav-item {
+    margin-top: 1vw;
+  }
+
+  .nav-link {
+    font-size: 3vw;
+  }
+
+  .navbar-brand>img {
+    width: 30vw;
+  }
+
+  .input-group {
+    width: 80vw;
+  }
+
+  .botonera .input-group {
+    width: 56vw;
+  }
+
+  /* Botones  */
+  .buttonGradient {
+    height: 3.5vw;
+    padding: 10px 30px;
+    font-size: 3vw;
+    border-width: 0px;
+    margin-top: 2vw;
+    width: 40vw;
+  }
+
+
+
+  .footer {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
 }
