@@ -429,13 +429,20 @@ header {
 
       .footer2 {
         width: 90vw;
-        margin: auto;
-        gap: 2vw;
+        gap: 1vw;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         
+      .fab {
+        margin: auto;
       }
- 
+
+      .btn {
+        margin: auto;
+      }
+
+    
+
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
