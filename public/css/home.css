@@ -55,13 +55,15 @@ header {
     margin: 4vh auto;
     border-radius: 16px;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     left: 5%;
 
   }
 
+
+
 .nav-item {
-    margin: auto 0.2vw;
+    margin: auto;
     
 } 
 
@@ -445,8 +447,8 @@ header {
 
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
-    /* Styles specific to tablets with a width between 500px and 768px */
+@media (min-width: 500px) and (max-width: 991px) {
+    /* Styles specific to tablets with a width between 500px and 991px */
 
     body {
         width: 100vw;
@@ -468,7 +470,7 @@ header {
       }
 
       .nav-item {
-        margin-top: 1vw;
+        margin-top: auto 1vw;
       }
 
       header {
@@ -486,8 +488,9 @@ header {
 
 
 
-    .nav-link {
-        font-size: 3vw;
+   .nav-link {
+        font-size: 5vw;
+        margin-top: 1vh;
       }
 
       .navbar-brand > img {
