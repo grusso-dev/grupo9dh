@@ -1,6 +1,25 @@
+.card{
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 8px;
+  height: 670px;
+  width: 400px;
+}
+.card-body{
+  height: 200px;
+}
+.box{
+  height: 600px;
+  margin-top: 20px;
+}
+img{
+  border-radius: 8px;
+}
 .container-sm{
-    background-color: aquamarine;
     margin-top: 50px;
+  }
+  .list-group-item{
+    text-align: center;
   }
   .logo{
     height: 70px;
@@ -8,7 +27,7 @@
   }
   .foto{
     height: 200px;
-    width: 290px;
+    width: 320px;
   }
   .miedo{
     display: flex;
