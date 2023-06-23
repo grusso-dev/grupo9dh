@@ -1,12 +1,13 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+app.set("views", path.join(__dirname, "/src/views"))
+app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, "/public")))
 //const rutasProductos = require('./src/routes/productRoutes');//
 const rutasIndex = require('./src/routes/indexRoutes');
 
 //app.use('/productos', rutasProductos);//
-
 app.use('/', rutasIndex);
 
 const port = 3000

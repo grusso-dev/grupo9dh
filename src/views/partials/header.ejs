@@ -1,0 +1,94 @@
+<header>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+      <div class="container aaa">
+        <a class="navbar-brand" href="/views/index.html">
+          <img
+            src="https://linsock.com.ar/soundstage/public/images/SoundStage_Logo_degrade_2.svg"
+            alt="logo"
+            class="logo-h"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shows cerca tuyo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artistas del momento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Último momento</a>
+            </li>
+            <li class="nav-item abc">
+              <a class="nav-link" href="/checkout"> Checkout </a>
+            </li>
+            <li class="nav-item abc">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item" style="align-self: center">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscá por artista, lugar o fecha"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-light" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </li>
+            <li class="nav-item" style="align-self: center">
+              <a href="/login" class="nav-link">
+                <i
+                  class="fa-solid fa-compact-disc fa-2x"
+                  style="color: #93278f; vertical-align: middle"
+                ></i>
+              </a>
+            </li>
+            <li class="nav-item nnn" style="align-self: center">
+              <div class="btn-group">
+                <a href="/checkout" class="btn btn-dark">
+                  <i class="fa-solid fa-cart-shopping fa-2x" style="color: #93278f; vertical-align: middle"></i>
+                </a>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <% for( let index = 0; index < 8; index++ ) { %>
+                        <li class="list-item">
+                            <img class="daru" src="https://picsum.photos/400/300" alt="asd" />
+                            <p class="maka">asdasdasddasdsadsad</p>
+                            <a class="sidon" href=""> x </a>
+                          </li>
+                    <% } %>
+
+
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="list-item qvc">
+                    <p class="subtotal">Subtotal</p>
+                    <p class="precio">$10000</p>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="list-item kkk">
+                    <button type="button" class="btn btn-info">Iniciar Compra</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
