@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <%- include("partials/head",{
-    styles: ["checkout", "partials"]
-  }) %>
-<link
-href="/Codigos\BOSSES\Proyecto Integrador\grupo9dh\public\css\checkout-dev.css"
-rel="stylesheet"
-/>
-</head>
+  <head>
+    <%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
+    <link
+      href="/Codigos\BOSSES\Proyecto Integrador\grupo9dh\public\css\checkout-dev.css"
+      rel="stylesheet"
+    />
+  </head>
 
   <body>
-
-<%- include("partials/header") %>
+    <%- include("partials/header") %>
 
     <main>
       <div class="container">
@@ -24,136 +20,40 @@ rel="stylesheet"
               <div class="card text-bg-dark">
                 <div class="card-img-overlay">
                   <h5 class="card-title">Resumen de compra</h5>
+                  <hr style="width: 6vw;">
+                  <h6 class="card-subtitle-mb-2 text-body-light"> Subtotal: </h3>
+                  <hr style="color: white">
+                  <% for( let index = 0; index < 9; index++ ) { %>
                   <div class="card-items">
                     <img
                       class="image-info"
                       src="https://picsum.photos/400/300"
                       alt="asd"
                     />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
+                    <p class="image-text a">Producto:</p>
+                    <p class="image-text b">1x</p>
+                    <p class="image-text c">Precio</p>
+                    <div class="zora">
+                      <input
+                        class="btn btn-outline-success mipha"
+                        type="button"
+                        value="+"
+                      />
+                      <input
+                        class="btn btn-outline-success daruk"
+                        type="button"
+                        value="x"
+                      />
+                      <input
+                        class="btn btn-outline-success tulin"
+                        type="button"
+                        value="-"
+                      />
                     </div>
                   </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text">asdasdasd</p>
-                    <div class="btn-group aaa" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">+</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">x</button>
-                      <button type="button" class="btn btn-secondary mipha" onclick="location.href=''">-</button>
-                    </div>
-                  </div>
+                  <hr style="color: white">
+                  <% } %>
+
                 </div>
               </div>
             </div>

@@ -3,17 +3,34 @@
   background-size: cover;
 }
 
-.btn-group.aaa{
-  margin: 1vw;
-  margin-left: 4vw;
-  margin-bottom: 2vh;
+
+.zora{
+  display: flex;
+  align-items: center;
+  margin-left: 5.7vw;
 }
 
-.btn.btn-secondary.mipha{
-  margin-left: 1vw;
-  margin-right: 1vw;
+.btn.btn-outline-success {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
   border: solid black 1px;
+  border-radius: 10px;
+  width: 3vw;
+  background-color: #a98aff;
+  height: 6vh;
+  margin-top: 0.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center; 
+  color: whitesmoke;
+}
+
+
+
+.btn.btn-outline-success.daruk {
+  margin-right: 10px; 
+  margin-left: 10px; 
 }
 
 .sidon{
@@ -46,11 +63,28 @@ margin-right: 1vw;
   margin-top: 2vh;
 }
 
-.image-text{
+.image-text.a{
   margin-top: 3vh;
+  font-weight: bold;
   }
 
-@media (max-width: 1000px) {
+.image-text.b{
+  margin-left: 1vh;
+  margin-top: 3vh;
+    }
+
+.image-text.c{
+  margin-left: 1vh;
+  margin-top: 3vh;
+    }
+
+@media screen and (max-width: 1200px) {
+  .btn.btn-outline-success{
+    width: 4vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .custom-row {
     flex-direction: column;
   }
@@ -61,12 +95,24 @@ margin-right: 1vw;
   .image-text{
     margin-top: 5vh;
     }
-  .btn.btn-secondary.mipha{
+  .btn.btn-outline-success{
     margin-top: 2.5vh;
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  .btn.btn-outline-success{
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .btn.btn-outline-success{
+    width: 7vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .image-info{
     width: 20vw;
     height: 10vh;
