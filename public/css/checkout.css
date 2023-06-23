@@ -1,70 +1,36 @@
-.fa-solid.fa-compact-disc.fa-2x{
-  margin-left: 3vw;
-}
-
-.dropdown-menu {
-  border: 1px solid gray;
-  padding: 10px;
-  box-shadow: 0px 2px 8px 0px;
-}
-
-.list-item.kkk{
-  display: flex;
-  justify-content: center;
-  margin-top: 1vw;
-}
-
-.list-item.qvc{
-  display: flex;
-  justify-content: space-between;
-}
-
-.subtotal, .precio{
-  margin-top: 1.2vh;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  font-weight: bold;
-}
-.precio {
-  order: 1;
-}
-
 .card.text-bg-dark{
   background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
   background-size: cover;
 }
 
-.nav-item.abc{
-  display: none;
-}
 
-.list-item {
+.zora{
   display: flex;
-  align-items: center; 
-  margin-bottom: 0.8vh; 
+  align-items: center;
+  margin-left: 5.7vw;
 }
 
-.list-item img {
-  margin: 10px; 
-  width: 5vw;
-  height: 7vh;
-}
-
-.xia{
-  color: white;
-}
-
-.btn-group.aaa{
-  margin: 1vw;
-  margin-left: 4vw;
-  margin-bottom: 2vh;
-}
-
-.btn.btn-secondary.mipha{
-  margin-left: 1vw;
-  margin-right: 1vw;
+.btn.btn-outline-success {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
   border: solid black 1px;
+  border-radius: 10px;
+  width: 3vw;
+  background-color: #a98aff;
+  height: 6vh;
+  margin-top: 0.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center; 
+  color: whitesmoke;
+}
+
+
+
+.btn.btn-outline-success.daruk {
+  margin-right: 10px; 
+  margin-left: 10px; 
 }
 
 .sidon{
@@ -78,41 +44,6 @@
   margin-top: 0.9vh;
   margin-right: 1vw;
   text-align: center; 
-}
-
-@media only screen and (max-width: 1200px) {
-  .fa-solid.fa-compact-disc.fa-2x, .fa-solid.fa-cart-shopping.fa-2x, .nav-item.nnn {
-    display: none;
-  }
-  .nav-item.abc{
-    display: block;
-  }
-
-  .nav-link{
-    text-align: center;
-  }
-
-  .container.aaa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    max-height: 100px; /* Adjust the height as needed */
-    margin-right: 10px; /* Add some spacing between the logo and the text */
-  }
-}
-
-
-.nav-link{
-  margin-right: 25px;
-  color: white;
 }
 
 .aaaaaaaa{
@@ -132,11 +63,28 @@ margin-right: 1vw;
   margin-top: 2vh;
 }
 
-.image-text{
+.image-text.a{
   margin-top: 3vh;
+  font-weight: bold;
   }
 
-@media (max-width: 1000px) {
+.image-text.b{
+  margin-left: 1vh;
+  margin-top: 3vh;
+    }
+
+.image-text.c{
+  margin-left: 1vh;
+  margin-top: 3vh;
+    }
+
+@media screen and (max-width: 1200px) {
+  .btn.btn-outline-success{
+    width: 4vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .custom-row {
     flex-direction: column;
   }
@@ -147,12 +95,24 @@ margin-right: 1vw;
   .image-text{
     margin-top: 5vh;
     }
-  .btn.btn-secondary.mipha{
+  .btn.btn-outline-success{
     margin-top: 2.5vh;
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  .btn.btn-outline-success{
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .btn.btn-outline-success{
+    width: 7vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .image-info{
     width: 20vw;
     height: 10vh;
@@ -170,20 +130,13 @@ body{
   background-color: aliceblue;
 }
 
-header{
-  padding-top: 4vh;
-}
+
 
 .card-items{
   display: flex;
 }
 
-.navbar.navbar-expand-xl.navbar-dark.bg-dark{
-  width: 90%;
-  margin: auto;
-  margin-top: 1.2vh;
-  border-radius: 16px;
-}
+
 
 .accordion-button{
     border: solid black 1px;
