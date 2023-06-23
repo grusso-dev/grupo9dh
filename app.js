@@ -20,25 +20,25 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "/views/index.html"))
 })
 
-app.get('/checkout', (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/checkout.html"))
-})
+var app = express();
 
-app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/login.html"))
-})
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/register.html"))
-})
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/registerdata', (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/registerdata.html"))
-})
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
-app.get('/detail', (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/detail.html"))
-})
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
 
 */

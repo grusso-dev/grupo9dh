@@ -1,15 +1,11 @@
 {
   "name": "grupo9dh",
-  "version": "1.0.0",
-  "description": "<img width = \"50%\" alt=\"logo\" src=\"https://soundstage.linsock.com.ar/public/images/logo_new.png\">",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.0",
     "ejs": "^3.1.9",
