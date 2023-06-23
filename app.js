@@ -2,10 +2,10 @@ const express = require('express')
 const path = require('path')
 const app = express()
 app.use(express.static(path.join(__dirname, "/public")))
-const rutasProductos = require('./src/routes/productRoutes.js');
-const rutasIndex = require('./src/routes/indexRoutes.js');
+//const rutasProductos = require('./src/routes/productRoutes');//
+const rutasIndex = require('./src/routes/indexRoutes');
 
-app.use('/productos', rutasProductos);
+//app.use('/productos', rutasProductos);//
 
 app.use('/', rutasIndex);
 
