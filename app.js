@@ -2,7 +2,19 @@ const express = require('express')
 const path = require('path')
 const app = express()
 app.use(express.static(path.join(__dirname, "/public")))
+const rutasProductos = require('./src/routes/productRoutes.js');
+const rutasIndex = require('./src/routes/indexRoutes.js');
 
+app.use('/productos', rutasProductos);
+
+app.use('/', rutasIndex);
+
+const port = 3000
+app.listen(port, () => {
+  console.log(`Aplicacion escuchando en el puerto: ${port}`)
+})
+
+/*
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "/views/index.html"))
 })
@@ -27,7 +39,6 @@ app.get('/detail', (req, res) => {
   res.sendFile(path.join(__dirname, "/views/detail.html"))
 })
 
-const port = 3000
-app.listen(port, () => {
-  console.log(`Aplicacion escuchando en el puerto: ${port}`)
-})
+
+*/
+
