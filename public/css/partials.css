@@ -60,6 +60,31 @@ header{
     border-radius: 16px;
   }
 
+  .sidon{
+    text-align: center; 
+    font-size: large;
+  }
+
+  .fa-regular.fa-circle-xmark{
+    margin-bottom: 1.5vh;
+  }
+
+  .daru{
+    border: solid black 1px;
+  }
+  
+  .maka {
+    margin-top: 0.9vh;
+    margin-right: 1vw;
+    text-align: center; 
+  }
+  
+  .aaaaaaaa{
+  color: aliceblue;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  }
+
   .nav-link{
     margin-right: 25px;
     color: white;
