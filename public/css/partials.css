@@ -85,6 +85,10 @@ header{
   margin-right: 1vw;
   }
 
+  .aaaaaaaa:hover{
+  color: grey;
+  transition: 200ms;
+  }
   .nav-link{
     margin-right: 25px;
     color: white;
@@ -135,8 +139,12 @@ header{
     }
   }
 
-
-
+@media only screen and (max-width: 400px){
+  .logo-h {
+    margin-right: 0px;
+    margin-left: 25px;
+  }
+}
 
 /* footer */
   .xia{
