@@ -9,9 +9,4 @@ router.get('/register', indexController.register);
 router.get('/detail', indexController.detail);
 router.get('/registerdata', indexController.registerdata);
 
-
-
-
-
-
 module.exports = router 
