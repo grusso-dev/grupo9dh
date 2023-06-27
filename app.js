@@ -6,11 +6,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, "/public")))
 //const rutasProductos = require('./src/routes/productRoutes');//
 const rutasIndex = require('./src/routes/indexRoutes');
-const rutasUsers = require('./src/routes/usersRoutes');
+// const rutasUsers = require('./src/routes/usersRoutes');
 
 //app.use('/productos', rutasProductos);//
 app.use('/', rutasIndex);
-app.use('/users', rutasUsers);
+// app.use('/users', rutasUsers);
 
 const port = 3000
 app.listen(port, () => {

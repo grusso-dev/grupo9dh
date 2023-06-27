@@ -9,13 +9,15 @@ body {
   width: 100vw;
 }
 
+/* 
 header {
   height: 94vh;
   width: 100%;
   padding-top: 30px;
   background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
   background-size: cover;
-}
+} 
+*/
 
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
   width: 90%;
