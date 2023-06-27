@@ -9,15 +9,14 @@ body {
   width: 100vw;
 }
 
-/* 
-header {
+
+.header {
   height: 94vh;
   width: 100%;
   padding-top: 30px;
   background-image: url("https://linsock.com.ar/soundstage/public/images/imagen_fondo.jpg");
   background-size: cover;
-} 
-*/
+}
 
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
   width: 90%;
@@ -46,7 +45,8 @@ header {
 
 }
 
-.btn {
+/*
+ .btn {
   background-color: #0075FF;
   border-width: 0;
 
@@ -54,26 +54,8 @@ header {
 
 .btn:hover {
   background-color: #93278F;
-}
-
-.fa-solid {
-  margin: auto 1vw;
-}
-
-.nav-item {
-  margin: auto 0.2vw;
-
-}
-
-.nav-item>i {
-  padding: 0.5vw;
-
-}
-
-.fa-solid.fa-compact-disc.fa-2x {
-  margin-left: 3vw;
-  margin-top: 0.4vh;
-}
+} 
+*/
 
 .textHero {
   /* width: 45vw; */
@@ -149,53 +131,7 @@ header {
 
 
 
-/* Footer */
-.footer {
-  background-color: #D9D9D9;
-  display: flex;
-  flex-direction: row;
-  align-items: space-arround;
-  padding-left: 10%;
-  padding-top: 5vh;
-  margin-top: 6vh;
-  padding-right: 10%;
-  /* width: 100vw; */
-  padding-bottom: 6vh;
-  gap: 2vw;
-}
 
-.fab {
-  width: 2vh;
-  height: 2vh;
-}
-
-.footer1 {
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-}
-
-.footer1>a {
-  text-decoration: none;
-  color: black;
-}
-
-
-
-.boxes img {
-  border-radius: 20px;
-}
-
-.contenedor {
-  width: 14vw;
-  height: 14vw;
-}
-
-.contenedor>img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
 
 
 /* celu */
