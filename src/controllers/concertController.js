@@ -5,10 +5,10 @@ const rutasconcertController = {
     res.render("detail");
   },
   create: (req, res) => {
-    res.render("create");
+    res.render("editconcert");
   },
   edit: (req, res) => {
-    res.render("edit");
+    res.render("editconcert");
   }
 };
 
