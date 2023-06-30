@@ -53,57 +53,32 @@ background-color: #86A8E7;
   margin-left: 10px; 
 }
 
-.col{
-  padding-top: 2vh;
-}
+
 
 .image-info{
   width: 90px;
-  height: 10vh;
+  height: 90px;
   margin-right: 1vw;
   border-radius: 100%;
 }
 
 .image-text.a{
-  margin-top: 3vh;
+  margin-left: 1vh;
+  margin-top: 30px;
   font-weight: bold;
   }
 
 .image-text.b{
   margin-left: 1vh;
-  margin-top: 3vh;
+  margin-top: 30px;
     }
 
 .image-text.c{
   margin-left: 1vh;
-  margin-top: 3vh;
+  margin-top: 30px;
     }
 
-@media screen and (max-width: 1200px) {
-  .btn.btn-outline-success{
-    width: 4vw;
-  }
-}
 
-@media screen and (max-width: 1000px) {
-  .custom-row {
-    flex-direction: column;
-  }
-  .image-info{
-    height: 10vh;
-  }
-
-}
-
-
-@media screen and (max-width: 600px) {
-  .image-info{
-    height: 10vh;
-  }
-  .image-text{
-    margin-top: 5vh;
-    }
-}
 main{
   margin-top: 6vh;
   margin-bottom: 7.05vh;

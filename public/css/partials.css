@@ -165,4 +165,13 @@ header{
     color: white;
   }
 
+@media screen and (max-width: 1000px) {
+    .custom-row {
+      flex-direction: column-reverse;
+    }  
+  }
+
+.custom-row > .col {
+    padding-top: 2vh;
+  }
   
