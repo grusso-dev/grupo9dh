@@ -10,13 +10,13 @@ const indexController = {
     res.render(path.join(__dirname, "../views/checkout.ejs"));
   },
   register: (req, res) => {
-    res.render(path.join(__dirname, "../views/register.ejs"));
+    res.render("register");
   },
   detail: (req, res) => {
     res.render(path.join(__dirname, "../views/detail.ejs"));
   },
   registerdata: (req, res) => {
-    res.render(path.join(__dirname, "../views/registerdata.ejs"));
+    res.render("registerdata");
   }
 };
 
