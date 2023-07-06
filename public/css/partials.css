@@ -2,10 +2,14 @@ header{
     padding-top: 4vh;
   }
 
-.fa-solid.fa-compact-disc.fa-2x{
-    margin-left: 3vw;
-  }
-  
+.btn.btn-dark, .btn.btn-dark.dropdown-toggle.dropdown-toggle-split{
+  padding: 5px;
+}
+
+.btn.btn-dark{
+  margin-left: 1vw;
+}
+
   .dropdown-menu {
     border: 1px solid gray;
     padding: 10px;
