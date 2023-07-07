@@ -158,9 +158,9 @@ header{
 }
 
 /* footer */
+
 .aaaaaaaa {
   color: aliceblue;
-
 }
 
 .aaaaaaaa:hover{
@@ -168,17 +168,54 @@ header{
   transition: 200ms;
   }
 
-  
-.titulonavegacion{
-  color: lightblue;
+.buttonlogo{
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
 }
+
+.buttonlogo:hover{
+  background-color: rgba(150, 150, 150, 0.25);
+  transition: 75ms;
+}
+
 .tengosed{
     display: flex;
     flex-direction: column;
   }
 
+.titulonavegacion{
+    color: lightblue;
+  }
+
+.tengohambre{
+    display: flex;
+    flex-direction: row;
+    display: none;
+  }
+
+.titulonavegacion2{
+    color: lightblue;
+    display: none;
+  }
+
 @media screen and (max-width: 1000px) {
   .custom-row {
-      flex-direction: column-reverse;
-        }  
+      flex-direction: column;
+        }   
+  .titulonavegacion2{
+    display: block;
+  }
+  .tengosed, .titulonavegacion{
+    display: none;
+  }
+
+  .tengohambre{
+    display: block;
+    margin-top: 3vh;
+  }
+  .soyobeso{
+    margin-top: 3vh;
+  }
       }
