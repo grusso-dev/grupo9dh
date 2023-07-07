@@ -12,6 +12,36 @@ header{
   margin-left: 1vw;
 }
 
+.hover-menu.pico {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px); /* Adds 10px spacing below the icon */
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 200px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.btn-group:hover .hover-menu.pico {
+  display: block;
+  opacity: 1;
+  
+}
+
+.hover-menu.pico a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hover-menu.pico a:hover {
+  background-color: #ddd;
+}
 
   .dropdown-menu {
     border: 1px solid gray;
