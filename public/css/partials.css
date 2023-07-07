@@ -1,3 +1,5 @@
+/* header */
+
 header{
     padding-top: 4vh;
   }
@@ -9,6 +11,7 @@ header{
 .btn.btn-dark{
   margin-left: 1vw;
 }
+
 
   .dropdown-menu {
     border: 1px solid gray;
@@ -97,16 +100,6 @@ header{
     word-wrap: break-word;
   }
 
-  .aaaaaaaa{
-  color: aliceblue;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  }
-
-  .aaaaaaaa:hover{
-  color: grey;
-  transition: 200ms;
-  }
   .nav-link{
     margin-right: 25px;
     color: white;
@@ -165,17 +158,27 @@ header{
 }
 
 /* footer */
-  .xia{
-    color: white;
+.aaaaaaaa{
+  color: aliceblue;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  }
+
+.aaaaaaaa:hover{
+  color: grey;
+  transition: 200ms;
   }
 
 @media screen and (max-width: 1000px) {
-    .custom-row {
+.custom-row {
       flex-direction: column-reverse;
     }  
   }
-
 .custom-row > .col {
     padding-top: 2vh;
   }
   
+.tengosed{
+    display: flex;
+    flex-direction: column;
+  }
