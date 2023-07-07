@@ -12,34 +12,77 @@ header{
   margin-left: 1vw;
 }
 
-.hover-menu.pico {
+.hover-menu {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
   position: absolute;
-  left: 50%;
-  top: calc(100% + 10px); /* Adds 10px spacing below the icon */
-  transform: translateX(-50%);
+  left: calc(60% - 100px); 
+  top: calc(100% + 3px);
+  transform: translateX(-50%) translateX(-1px); 
   z-index: 1;
   width: 200px;
   background-color: #f1f1f1;
+  border: solid 0.5px black;
+  border-radius: 10px;
   text-align: center;
 }
 
-.btn-group:hover .hover-menu.pico {
+.btn-group:hover .hover-menu {
   display: block;
   opacity: 1;
-  
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
-.hover-menu.pico a {
+.btn-group:not(:hover) .hover-menu {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+.hover-menu a {
   display: block;
   padding: 10px;
+  border-radius: 10px;
   color: #000;
   text-decoration: none;
 }
 
-.hover-menu.pico a:hover {
+.hover-menu a:hover {
   background-color: #ddd;
 }
 
