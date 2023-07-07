@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const ftp = require('basic-ftp');
 
-const conserstFilePath = path.join(__dirname, '../data/consertsDataBase.json');
+const consertsFilePath = path.join(__dirname, '../data/consertsDataBase.json');
 const consets = JSON.parse(fs.readFileSync(consertsFilePath, 'utf-8'));
 
 async function ftp_upload(image_origin_rute, image_destiny_route){
