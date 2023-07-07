@@ -158,27 +158,27 @@ header{
 }
 
 /* footer */
-.aaaaaaaa{
+.aaaaaaaa {
   color: aliceblue;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  }
+
+}
 
 .aaaaaaaa:hover{
   color: grey;
   transition: 200ms;
   }
 
-@media screen and (max-width: 1000px) {
-.custom-row {
-      flex-direction: column-reverse;
-    }  
-  }
-.custom-row > .col {
-    padding-top: 2vh;
-  }
   
+.titulonavegacion{
+  color: lightblue;
+}
 .tengosed{
     display: flex;
     flex-direction: column;
   }
+
+@media screen and (max-width: 1000px) {
+  .custom-row {
+      flex-direction: column-reverse;
+        }  
+      }
