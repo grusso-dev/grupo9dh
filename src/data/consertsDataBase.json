@@ -1,4 +1,4 @@
-[
+/*[
   {
     "id": 1,
     "name": "Los píojos",
@@ -9,7 +9,7 @@
     "image": "Los Piojos.jpg"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "La renga",
     "price": "15000",
     "date": "27/12/2023",
@@ -18,3 +18,39 @@
     "image": "Los Piojos.jpg"
   }
 ]
+
+*/
+
+const bandData = [];
+ for (let i = 1; i <= 100; i++) {
+  bandData.push({
+    id: i,
+    name: `Banda ${i}`,
+    price: getRandomPrice(),
+    date: getRandomDate(),
+    location: getRandomLocation(),
+    description: "Descripción de la banda",
+    image: "imagen.jpg",
+  });
+}
+ function getRandomPrice() {
+  // Generates a random price between 1000 and 20000
+  return Math.floor(Math.random() * (20000 - 1000 + 1)) + 1000;
+}
+ function getRandomDate() {
+  // Generates a random date between 10/07/2024 and 31/12/2024
+  const start = new Date(2023, 07, 10);
+  const end = new Date(2024, 11, 31);
+  const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  const day = randomDate.getDate();
+  const month = randomDate.getMonth() + 1;
+  const year = randomDate.getFullYear();
+   return `${day}/${month}/${year}`;
+}
+ function getRandomLocation() {
+  const locations = ["Luna Park", "Estadio River Plate", "Estadio Único de la Plata", "Estadio Velez", "Movistar Arena", "Pepsi Music", "Teatro Ópera"];
+  // Chooses a random location from the list
+  const randomIndex = Math.floor(Math.random() * locations.length);
+  return locations[randomIndex];
+}
+ console.log(bandData);

@@ -1,9 +1,9 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const ConsertController = require("../controllers/concertController")
-router.get('/', ConsertController.detail);
-router.get('/login', ConsertController.create);
-router.get('/register', ConsertController.edit);
+const concertController = require("../controllers/concertController");
 
-module.exports = router 
+router.get('/', concertController.concerts);
+router.get('/:id', concertController.detail);
+
+module.exports = router; 

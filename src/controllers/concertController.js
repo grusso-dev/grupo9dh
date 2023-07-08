@@ -2,43 +2,43 @@ const fs = require('fs');
 const path = require('path');
 const ftp = require('basic-ftp');
 
-const consertsFilePath = path.join(__dirname, '../data/consertsDataBase.json');
-const consets = JSON.parse(fs.readFileSync(consertsFilePath, 'utf-8'));
+ const concertsFilePath = path.join(__dirname, '../data/concertsDataBase.json');
 
-async function ftp_upload(image_origin_rute, image_destiny_route){
+const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
 
-		// Connect to the FTP server
-		const client = new ftp.Client();
-		await client.access({
-		  host: 'ftp.linsock.com.ar', 
-		  user: 'u629722589.soundstage',
-		  password: '12_Soundstage_34'
-		});
-	
-		// Upload the file to the FTP server
-		await client.uploadFrom(image_origin_rute, image_destiny_route);
-	
-		// Close the FTP connection
-		client.close();
-
+ async function ftp_upload(image_origin_route, image_destiny_route) {
+  // Connect to the FTP server
+  const client = new ftp.Client();
+  await client.access({
+    host: 'ftp.linsock.com.ar',
+    user: 'u629722589.soundstage',
+    password: '12_Soundstage_34'
+  });
+   // Upload the file to the FTP server
+  await client.uploadFrom(image_origin_route, image_destiny_route);
+   // Close the FTP connection
+  client.close();
 }
 
-const rutasconcertController = {
 
+ const concertController = {
   detail: (req, res) => {
-    res.render("detail");
+    res.render('detail');
   },
   create: (req, res) => {
-    res.render("editconcert");
+    res.render('editconcert');
   },
   edit: (req, res) => {
-    res.render("editconcert");
+    res.render('editconcert');
   },
   store: async (req, res) => {
-    await ftp_upload(	path.join(__dirname,'../../public/images/products', req.file.filename) , '/www/images/' + req.file.filename);
-    
-
+    await ftp_upload(path.join(__dirname, '../../public/images/products', req.file.filename), '/www/images/' + req.file.filename);
   },
+  concerts: (req, res) => {
+    res.render('todosLosConciertos');
+  },
+  list: (req, res) => {
+    // Implement the logic for listing concerts
+  }
 };
-
-module.exports = rutasconcertController;
+ module.exports = concertController;
