@@ -35,11 +35,6 @@ header{
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
-.btn-group:not(:hover) .hover-menu {
-  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-}
-
 @-webkit-keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
@@ -234,6 +229,7 @@ header{
 
 .aaaaaaaa {
   color: aliceblue;
+  text-decoration: none;
 }
 
 .aaaaaaaa:hover{

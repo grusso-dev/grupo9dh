@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Los píojos",
+    "price": "10000",
+    "date": "27/09/2023",
+    "location": "Rosario",
+    "description": "",
+    "image": "Los Piojos.jpg"
+  },
+  {
+    "id": 2,
+    "name": "La renga",
+    "price": "15000",
+    "date": "27/12/2023",
+    "location": "Rosario",
+    "description": "",
+    "image": "Los Piojos.jpg"
+  }
+]
+
+
+
