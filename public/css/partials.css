@@ -24,7 +24,7 @@ border-radius: 6px;
 }
 .cynthia:hover{
   background-color: #4140407e;
-
+  transition: 200ms;
 }
 
 .hover-menu {
