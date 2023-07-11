@@ -16,41 +16,38 @@
           <h1>Descubre, agenda y disfruta: Tu música en un solo lugar</h1>
         </div>
         <div class="botonera">
+          <form action="/users/save" method="POST">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Usuario" aria-label="user" id="user" name="user">
+              <button class="btn btn-outline-light" type="button">
+                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+              </button>
+            </div>
+            <br>
+            <div class="input-group">
+              <input type="mail" class="form-control" placeholder="E-Mail" aria-label="mail" id="mail" name="" mail>
+              <button class="btn btn-outline-light" type="button">
+                <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+              </button>
+            </div>
+            <br>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="name" id="name" name="name">
+              <button class="btn btn-outline-light" type="button">
+                <i class="fa-solid fa-signature" style="color: #ffffff;"></i>
+              </button>
+            </div>
+            <br>
+            <div class="input-group">
+              <input type="password" class="form-control" placeholder="Contraseña" aria-label="password" id="password" name="password">
+              <button class="btn btn-outline-light" type="button">
+                <i class="fa-solid fa-key" style="color: #ffffff;"></i>
+              </button>
+            </div>
+            <br>
+              <button type="submit" class="buttonGradient">Enviar</button>
 
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Usuario" aria-label="user" id="user" name="user">
-            <button class="btn btn-outline-light" type="button">
-              <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-            </button>
-          </div>
-          <br>
-          <div class="input-group">
-            <input type="mail" class="form-control" placeholder="E-Mail" aria-label="mail" id="mail" name="" mail>
-            <button class="btn btn-outline-light" type="button">
-              <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
-            </button>
-          </div>
-          <br>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="name" id="name" name="name">
-            <button class="btn btn-outline-light" type="button">
-              <i class="fa-solid fa-signature" style="color: #ffffff;"></i>
-            </button>
-          </div>
-          <br>
-          <div class="input-group">
-            <input type="password" class="form-control" placeholder="Contraseña" aria-label="password" id="password"
-              name="password">
-            <button class="btn btn-outline-light" type="button">
-              <i class="fa-solid fa-key" style="color: #ffffff;"></i>
-            </button>
-          </div>
-          <br>
-          <a href="">
-            <button type=" submit" class="buttonGradient">
-              Enviar
-            </button>
-          </a>
+          </form>
         </div>
       </div>
   </div>
