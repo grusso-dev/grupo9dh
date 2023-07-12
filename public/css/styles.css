@@ -25,3 +25,132 @@
   margin-top: 10px;
 
 }
+
+  /* Laptops */
+  @media (max-width: 1279px){
+    header {
+      height: 60vh;
+      width: 100%;
+      padding-top: 100px;
+    }
+    .custom-row {
+        flex-direction: column;
+          }   
+    .titulonavegacion2{
+      display: block;
+    }
+    .tengosed, .titulonavegacion{
+      display: none;
+    }
+  
+    .tengohambre{
+      display: block;
+      margin-top: 3vh;
+    }
+    .soyobeso{
+      margin-top: 3vh;
+    }
+   .seccionImputsLogin{
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-bottom: 100px;
+      margin-left: 80px;
+    }
+    .form-floating mb-3{
+      width: 60%;
+      height: 60%;
+    }
+    .form-floating{
+      width: 60%;
+      height: 60%;
+  }
+}
+  /* Tablets */
+
+  @media (max-width: 769px){
+    header {
+      height: 60vh;
+      width: 100%;
+      padding-top: 100px;
+    }
+    .custom-row {
+        flex-direction: column;
+          }   
+    .titulonavegacion2{
+      display: block;
+    }
+    .tengosed, .titulonavegacion{
+      display: none;
+    }
+  
+    .tengohambre{
+      display: block;
+      margin-top: 3vh;
+    }
+    .soyobeso{
+      margin-top: 3vh;
+    }
+   .seccionImputsLogin{
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-bottom: 100px;
+      margin-left: 80px;
+    }
+    .form-floating mb-3{
+      width: 60%;
+      height: 60%;
+    }
+    .form-floating{
+      width: 60%;
+      height: 60%;
+  }
+}
+/*celular*/
+
+@media (max-width: 500px) {
+  header {
+    height: 60vh;
+    width: 100%;
+    padding-top: 100px;
+  }
+  .custom-row {
+      flex-direction: column;
+        }   
+  .titulonavegacion2{
+    display: block;
+  }
+  .tengosed, .titulonavegacion{
+    display: none;
+  }
+
+  .tengohambre{
+    display: block;
+    margin-top: 3vh;
+  }
+  .soyobeso{
+    margin-top: 3vh;
+  }
+ .seccionImputsLogin{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-left: 80px;
+  }
+  .form-floating mb-3{
+    width: 60%;
+    height: 60%;
+  }
+  .form-floating{
+    width: 60%;
+    height: 60%;
+  }
+      }
+
+  
+
