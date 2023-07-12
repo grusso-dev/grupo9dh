@@ -16,10 +16,8 @@ const usersController = {
     res.render("registerdata");
   },
   save: (req, res) => {
-    console.log(req.body);
-    /*
-    newId=0;
-
+		newId=0;
+		
 		for (let s of users){
 			if (newId<s.userid){
 				newId=s.userid;
@@ -38,8 +36,9 @@ const usersController = {
 
 		users.push(newUser);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users,null,' '));
+		/*
     */
-		res.render("login");
+	 res.render("login");
   }
 };
 
