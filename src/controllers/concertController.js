@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const ftp = require('basic-ftp');
-
- const concertsFilePath = path.join(__dirname, '../data/concertsDataBase.json');
+const concertsFilePath = path.join(__dirname, '../data/concertsDataBase.json');
 
 const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
 
@@ -25,6 +24,9 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
   detail: (req, res) => {
     res.render('detail');
   },
+  todosLosConciertos: (req, res) => {
+    res.render('todosLosConciertos', {concerts});
+  },
   create: (req, res) => {
     res.render('editconcert');
   },
@@ -41,4 +43,4 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     // Implement the logic for listing concerts
   }
 };
- module.exports = concertController;
+module.exports = concertController;

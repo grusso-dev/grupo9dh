@@ -15,9 +15,12 @@ const indexController = {
   detail: (req, res) => {
     res.render(path.join(__dirname, "../views/detail.ejs"));
   },
+  todosLosConciertos: (req, res) => {
+    res.render(path.join(__dirname, "../views/todosLosConciertos.ejs"));
+  },
   registerdata: (req, res) => {
     res.render("registerdata");
-  }
+  },
 };
 
 module.exports = indexController;
