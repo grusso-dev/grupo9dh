@@ -29,11 +29,13 @@ header {
     
   }
 
+  
   .btn {
     background-color: #0075FF;
     border-width: 0;
     
-  }
+  } 
+  
 
   .btn:hover {
     background-color: #93278F;
@@ -526,4 +528,4 @@ footer {
         
     }
     
-}
+}}

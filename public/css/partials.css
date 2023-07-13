@@ -21,7 +21,20 @@ padding-bottom: 7px;
 padding-left: 10px;
 padding-right: 10px;
 border-radius: 6px;
+margin-left: 230px;
 }
+
+@media only screen and (max-width: 1470px){
+.cynthia{
+  margin-left: 250px;
+}
+}
+@media only screen and (max-width: 1399px){
+  .cynthia{
+    margin-left: 140px;
+  }
+  }
+
 .cynthia:hover{
   background-color: #4140407e;
   transition: 200ms;
@@ -241,7 +254,6 @@ border-radius: 6px;
 }
 
 /* footer */
-
 .aaaaaaaa {
   color: aliceblue;
   text-decoration: none;
