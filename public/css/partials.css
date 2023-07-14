@@ -46,11 +46,13 @@ margin-left: 230px;
   transition: opacity 0.3s ease;
   position: absolute;
   left: calc(60% - 100px); 
-  top: calc(100% + 3px);
+  top: calc(100% + 1px);
   transform: translateX(-50%) translateX(-1px); 
   z-index: 1;
   width: 200px;
-  background-color: #f1f1f1;
+  background: #C9D6FF; 
+  background: -webkit-linear-gradient(to left, #E2E2E2, #C9D6FF);  
+  background: linear-gradient(to left, #E2E2E2, #C9D6FF);    
   border: solid 0.5px black;
   border-radius: 10px;
   text-align: center;
@@ -106,7 +108,7 @@ margin-left: 230px;
 }
 
 .hover-menu a:hover {
-  background-color: #ddd;
+  background-color: #b1b1b15e;
 }
 
   .dropdown-menu {
