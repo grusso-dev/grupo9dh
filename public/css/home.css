@@ -9,50 +9,12 @@ body {
     width: 100vw;
 }
 
-header {
-    width: 100vw;
+
+header{
+    padding-top: 0px !important;
 }
 
-.fa-solid.fa-compact-disc.fa-2x{
-    margin-left: 3vw;
-    margin-top: 0.4vh;
-  }
-  
-  .nav-link{
-    color: white;
-    font-size: 1vw;
-  }
-
-  .input-group {
-    width: 25vw;
-    margin: auto 1vw;
-    
-  }
-
-  
-  .btn {
-    background-color: #0075FF;
-    border-width: 0;
-    
-  } 
-  
-
-  .btn:hover {
-    background-color: #93278F;
-  }
-
-
-
-  .navbar-brand > img {
-    width: 14vw;
-  }
-  
-  .fa-solid {
-    margin: auto 1vw;
-  }
-
-
-.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+.navbar.navbar-expand-xl.navbar-dark.bg-dark {
     width: 90%;
     margin: 4vh auto;
     border-radius: 16px;
@@ -440,7 +402,7 @@ footer {
 
     }
    
-    .navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    .navbar.navbar-expand-xl.navbar-dark.bg-dark {
         width: 100%;
         position: absolute;
         border-radius: 0%;
