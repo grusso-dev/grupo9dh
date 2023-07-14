@@ -41,6 +41,13 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
   },
   list: (req, res) => {
     // Implement the logic for listing concerts
-  }
+  }, 
+  editConcert: (req, res) => {
+    res.render('editconcert');
+  }, 
+  deleteConcert: (req, res) => {
+    res.render('deleteconcert');
+ }
 };
+
 module.exports = concertController;
