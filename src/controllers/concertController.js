@@ -47,6 +47,9 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
   }, 
   deleteConcert: (req, res) => {
     res.render('deleteconcert');
+ }, 
+ saveConcert: (req, res) => {
+    res.render('saveConcert');
  }
 };
 
