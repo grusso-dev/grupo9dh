@@ -10,60 +10,60 @@
   <%- include("partials/header") %>
 </header>
 <body>
-    <% concertsDataBase.forEach(concert => { %>
+    <% concerts.forEach(concert => { %>
         <div class="card" style="width: 18rem;">
           <img src="<%= concert.image %>" class="card-img-top" alt="...">
           <div class="card-body">
             <a href="/games/detail/<%=  %>">
-            <h5 class="card-title"><%= concertsDataBase.name %></h5></a>
+            <h5 class="card-title"><%= concert.name %></h5></a>
             <p class="card-text"><%= concert.date %></p>
             <p class="card-text"><%= concert.location %></p>
             <a href="/detail" class="btn btn-primary">Reservar</a>
           </div>
         </div>
         <% }) %>
-        <% concertsDataBase.forEach(concert => { %>
+        <% concerts.forEach(concert => { %>
           <div class="card" style="width: 18rem;">
             <img src="<%= concert.image %>" class="card-img-top" alt="...">
             <div class="card-body">
               <a href="/games/detail/<%=  %>">
-              <h5 class="card-title"><%= concertsDataBase.name %></h5></a>
+              <h5 class="card-title"><%= concert.name %></h5></a>
               <p class="card-text"><%= concert.date %></p>
               <p class="card-text"><%= concert.location %></p>
               <a href="/detail" class="btn btn-primary">Reservar</a>
             </div>
           </div>
           <% }) %>
-          <% concertsDataBase.forEach(concert => { %>
+          <% concerts.forEach(concert => { %>
             <div class="card" style="width: 18rem;">
               <img src="<%= concert.image %>" class="card-img-top" alt="...">
               <div class="card-body">
                 <a href="/games/detail/<%=  %>">
-                <h5 class="card-title"><%= concertsDataBase.name %></h5></a>
+                <h5 class="card-title"><%= concert.name %></h5></a>
                 <p class="card-text"><%= concert.date %></p>
                 <p class="card-text"><%= concert.location %></p>
                 <a href="/detail" class="btn btn-primary">Reservar</a>
               </div>
             </div>
             <% }) %>
-            <% concertsDataBase.forEach(concert => { %>
+            <% concerts.forEach(concert => { %>
               <div class="card" style="width: 18rem;">
                 <img src="<%= concert.image %>" class="card-img-top" alt="...">
                 <div class="card-body">
                   <a href="/games/detail/<%=  %>">
-                  <h5 class="card-title"><%= concertsDataBase.name %></h5></a>
+                  <h5 class="card-title"><%= concert.name %></h5></a>
                   <p class="card-text"><%= concert.date %></p>
                   <p class="card-text"><%= concert.location %></p>
                   <a href="/detail" class="btn btn-primary">Reservar</a>
                 </div>
               </div>
               <% }) %>
-              <% concertsDataBase.forEach(concert => { %>
+              <% concerts.forEach(concert => { %>
                 <div class="card" style="width: 18rem;">
                   <img src="<%= concert.image %>" class="card-img-top" alt="...">
                   <div class="card-body">
                     <a href="/games/detail/<%=  %>">
-                    <h5 class="card-title"><%= concertsDataBase.name %></h5></a>
+                    <h5 class="card-title"><%= concert.name %></h5></a>
                     <p class="card-text"><%= concert.date %></p>
                     <p class="card-text"><%= concert.location %></p>
                     <a href="/detail" class="btn btn-primary">Reservar</a>
