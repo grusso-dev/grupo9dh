@@ -4,6 +4,7 @@ const router = express.Router()
 const UsersController = require("../controllers/usersController")
 router.get('/', UsersController.login);
 router.get('/login', UsersController.login);
+router.post('/logindata', UsersController.logindata);
 router.get('/register', UsersController.register);
 router.get('/registerdata', UsersController.registerdata);
 router.post('/save', UsersController.save);
