@@ -37,7 +37,7 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     await ftp_upload(path.join(__dirname, '../../public/images/products', req.file.filename), '/www/images/' + req.file.filename);
   },
   concerts: (req, res) => {
-    res.render('todosLosConciertos');
+    res.render('todosLosConciertos',{concerts});
   },
   list: (req, res) => {
     // Implement the logic for listing concerts
