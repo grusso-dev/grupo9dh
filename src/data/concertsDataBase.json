@@ -1,23 +1,36 @@
 [
-  {
-    "id": 1,
-    "name": "Los píojos",
-    "price": "10000",
-    "date": "27/09/2023",
-    "location": "Rosario",
-    "description": "",
-    "image": "Los Piojos.jpg"
-  },
-  {
-    "id": 2,
-    "name": "La renga",
-    "price": "15000",
-    "date": "27/12/2023",
-    "location": "Rosario",
-    "description": "",
-    "image": "Los Piojos.jpg"
-  }
+ {
+  "id": 1,
+  "name": "Los píojos",
+  "price": "10000",
+  "date": "27/09/2023",
+  "location": "Rosario",
+  "description": "",
+  "image": "Los Piojos.jpg"
+ },
+ {
+  "id": 2,
+  "name": "La renga",
+  "price": "15000",
+  "date": "27/12/2023",
+  "location": "Rosario",
+  "description": "",
+  "image": "Los Piojos.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Maroon 5 ",
+  "price": "7",
+  "date": "",
+  "location": "La Plata",
+  "description": "fdsuifjkdsnf"
+ },
+ {
+  "id": 4,
+  "name": "Queen",
+  "price": "45666",
+  "date": "",
+  "location": "La Plata",
+  "description": "A night at the opera"
+ }
 ]
-
-
-

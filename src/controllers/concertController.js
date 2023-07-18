@@ -27,9 +27,6 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
   create: (req, res) => {
     res.render('createConcert');
   },
-  edit: (req, res) => {
-    res.render('editconcert');
-  },
   store: async (req, res) => {
     await ftp_upload(path.join(__dirname, '../../public/images/products', req.file.filename), '/www/images/' + req.file.filename);
   },
@@ -37,9 +34,6 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     res.render("todosLosConciertos", { concerts: concerts });
     
   },
-  editConcert: (req, res) => {
-      let id = req.params.id;
-  }, 
   deleteConcert: (req, res) => {
     res.render('deleteconcert');
  }, 
@@ -66,6 +60,13 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
   fs.writeFileSync(concertsFilePath, JSON.stringify(concerts, null, ' '));
 
   res.redirect('/conciertos');
+},
+editConcert: (req, res) => {
+  let idConcert = req.params.id;
+
+  let concertToEdit = concerts.find(concert => concert.id === idConcert);
+
+  res.render('editConcert', {concertToEdit:concertToEdit});
 }
 };
 
