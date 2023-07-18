@@ -25,7 +25,7 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     res.render('detail');
   },
   create: (req, res) => {
-    res.render('editconcert');
+    res.render('createConcert');
   },
   edit: (req, res) => {
     res.render('editconcert');
@@ -37,9 +37,6 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     res.render("todosLosConciertos", { concerts: concerts });
     
   },
-  list: (req, res) => {
-    // Implement the logic for listing concerts
-  }, 
   editConcert: (req, res) => {
     res.render('editconcert');
   }, 
