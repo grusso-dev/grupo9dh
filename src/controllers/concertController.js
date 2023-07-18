@@ -38,22 +38,37 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     
   },
   editConcert: (req, res) => {
-    res.render('editconcert');
+      let id = req.params.id;
   }, 
   deleteConcert: (req, res) => {
     res.render('deleteconcert');
  }, 
  saveConcert: (req, res) => {
-    let conciertos = {
-      name: req.body.name,
-      price: req.body.price,
-      date: req.body.date,
-      location: req.body.location,
-      description: req.body.description,
-    }
 
-    res.redirect('/conciertos');
- }
+  newId=0;
+		
+  for (let i of concerts){
+    if (conciertos<i.id){
+      conciertos=s.id;
+    }
+  }
+  conciertos++;
+
+
+  let conciertos =  {
+    id:   conciertos,
+    name: req.body.name,
+    price: req.body.price,
+    date: req.body.date,
+    location: req.body.location,
+    description: req.body.description,
+  };
+
+  users.push(conciertos);
+  fs.writeFileSync(usersFilePath, JSON.stringify(conciertos,null,' '));
+  /*
+  */
+  res.redirect('/conciertos');
 };
 
 module.exports = concertController;
