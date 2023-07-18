@@ -20,22 +20,24 @@
   <main>
     <h1 class="tituloCreateConcert">Todos los conciertos en un solo lugar</h1>
 
-    <form class="formulario">
+    <form class="formulario" action="/conciertos/create" method="post">
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Nombre de la banda</label>
-        <input type="text" class="form-control" id="validationCustom01">
+        <input type="text" name="name" class="form-control" id="validationCustom01">
       </div>
+     
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Precio</label>
-        <input type="number" class="form-control" id="validationCustom01">
+        <input type="number" name="price" class="form-control" id="validationCustom01">
       </div>
       <div class="col-md-4 botonInd">
-        <label for="validationCustom01" class="form-label">Fecha</label>
-        <input type="date" class="form-control" id="validationCustom01">
+        <label for="validationCustom01" class
+        ="form-label">Fecha</label>
+        <input type="date" name="date" class="form-control" id="validationCustom01">
       </div>
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Ciudad</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" name="location" aria-label="Default select example">
           <option selected>Elegi la Ciudad</option>
           <option value="Ciudad Autonoma de Buenos Aires">Ciudad Autonoma de Buenos Aires</option>
           <option value="La Plata">La Plata</option>
@@ -45,15 +47,15 @@
       </div>
       <div class="col-md-4 botonInd">
         <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <label for="validationCustom01" class="form-label">Subir poster del Show</label>
         <div class="cargarImagen">
-          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <input type="file" name="image" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
           <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir</button>
         </div>
-      </div>
+      </div> -->
       <button type="submit" class="buttonGradient btn btn-primary">Cargar</button>
     </form>
 

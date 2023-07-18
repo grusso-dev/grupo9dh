@@ -44,7 +44,15 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     res.render('deleteconcert');
  }, 
  saveConcert: (req, res) => {
-    res.render('saveConcert');
+    let conciertos = {
+      name: req.body.name,
+      price: req.body.price,
+      date: req.body.date,
+      location: req.body.location,
+      description: req.body.description,
+    }
+
+    res.redirect('/conciertos');
  }
 };
 
