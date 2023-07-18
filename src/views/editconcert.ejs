@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("partials/head", { styles: ["partials", "formConcierto"] }) %>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/formConcierto.css">
+    <title>Vendé tu concierto</title>
+</head>
+
+<body>
+  <header class="header">
+    <%- include("partials/header") %>
+  </header>
+
+  <main>
+    <h1 class="tituloCreateConcert">Todos los conciertos en un solo lugar</h1>
+
+    <form class="formulario" action="/conciertos/create?_method=PUT" method="post">
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Nombre de la banda</label>
+        <input type="text" name="name" class="form-control" id="validationCustom01">
+      </div>
+     
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Precio</label>
+        <input type="number" name="price" class="form-control" id="validationCustom01">
+      </div>
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class
+        ="form-label">Fecha</label>
+        <input type="date" name="date" class="form-control" id="validationCustom01">
+      </div>
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Ciudad</label>
+        <select class="form-select" name="location" aria-label="Default select example">
+          <option selected>Elegi la Ciudad</option>
+          <option value="Ciudad Autonoma de Buenos Aires">Ciudad Autonoma de Buenos Aires</option>
+          <option value="La Plata">La Plata</option>
+          <option value="Rosario">Rosario</option>
+          <option value="Cordoba">Cordoba</option>
+        </select>
+      </div>
+      <div class="col-md-4 botonInd">
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!-- <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Subir poster del Show</label>
+        <div class="cargarImagen">
+          <input type="file" name="image" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir</button>
+        </div>
+      </div> -->
+      <button type="submit" class="buttonGradient btn btn-primary">Cargar</button>
+    </form>
+
+
+  </main>
+
+  <footer>
+    <%- include("partials/footer") %>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"></script>
+  </footer>
+</body>
+
+</html>

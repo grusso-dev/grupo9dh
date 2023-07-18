@@ -44,19 +44,17 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     res.render('deleteconcert');
  }, 
  saveConcert: (req, res) => {
+  let conciertos = 0;
 
-  newId=0;
-		
-  for (let i of concerts){
-    if (conciertos<i.id){
-      conciertos=s.id;
+  for (let i of concerts) {
+    if (conciertos < i.id) {
+      conciertos = i.id;
     }
   }
   conciertos++;
 
-
-  let conciertos =  {
-    id:   conciertos,
+  let newConcert = {
+    id: conciertos,
     name: req.body.name,
     price: req.body.price,
     date: req.body.date,
@@ -64,11 +62,11 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
     description: req.body.description,
   };
 
-  users.push(conciertos);
-  fs.writeFileSync(usersFilePath, JSON.stringify(conciertos,null,' '));
-  /*
-  */
+  concerts.push(newConcert);
+  fs.writeFileSync(concertsFilePath, JSON.stringify(concerts, null, ' '));
+
   res.redirect('/conciertos');
+}
 };
 
 module.exports = concertController;
