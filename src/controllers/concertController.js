@@ -68,8 +68,6 @@ editConcert: (req, res) => {
 
   res.render('editConcert', {concertToEdit:concertToEdit});
 }
-  res.render('editConcert.ejs', {concertToEdit: concertToEdit});
-
 };
 
 module.exports = concertController;
