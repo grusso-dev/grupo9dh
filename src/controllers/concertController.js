@@ -63,11 +63,13 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
 },
 editConcert: (req, res) => {
   let idConcert = req.params.id;
+  let concerts = fs.readFileSync('../data/concertsDataBase.json' , 'utf8');
+  let concertJson = JSON.parse(concerts);
 
-  let concertToEdit = concerts.find(concert => concert.id === idConcert);
-
-  res.render('editConcert', {concertToEdit:concertToEdit});
+  let concertToEdit = concerts[idConcert];
 }
+  res.render('editConcert.ejs', {concertToEdit: concertToEdit});
+
 };
 
 module.exports = concertController;
