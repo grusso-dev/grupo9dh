@@ -13,10 +13,10 @@
     <%- include("partials/header") %>
       <div class="register">
         <div class="textHero">
-          <h1>Descubre, agenda y disfruta: Tu música en un solo lugar</h1>
+          <h1>Alta de usuario</h1>
         </div>
         <div class="botonera">
-          <form action="/users/save" method="POST">
+          <form action="/users/save" method="POST" enctype="multipart/form-data">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Usuario" aria-label="user" id="user" name="user">
               <button class="btn btn-outline-light" type="button">
@@ -43,6 +43,11 @@
               <button class="btn btn-outline-light" type="button">
                 <i class="fa-solid fa-key" style="color: #ffffff;"></i>
               </button>
+            </div>
+            <br>
+            <div class="input-group"> 
+              <input type="file" class="custom-file-input" id="image" name="image">
+              <label class="custom-file-label" for="image">Seleccione una foto</label>
             </div>
             <br>
               <button type="submit" class="buttonGradient">Enviar</button>
