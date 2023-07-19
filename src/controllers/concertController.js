@@ -63,9 +63,7 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
 },
 editConcert: (req, res) => {
   let idConcert = req.params.id;
-
-  let concertToEdit = concerts.find(concert => concert.id === idConcert);
-
+  let concertToEdit = concerts.find(concert => concert.id == idConcert);
   res.render('editConcert', {concertToEdit:concertToEdit});
 }
 };

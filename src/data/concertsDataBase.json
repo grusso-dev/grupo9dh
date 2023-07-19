@@ -32,5 +32,13 @@
   "date": "",
   "location": "La Plata",
   "description": "A night at the opera"
+ },
+ {
+  "id": 5,
+  "name": "La beriso",
+  "price": "8000",
+  "date": "2023-07-19",
+  "location": "La Plata",
+  "description": "descripcion"
  }
 ]
