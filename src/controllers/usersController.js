@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require("path");
 const ftp = require('basic-ftp');
-const {Readable}=require('stream');
+const {Readable}=require('stream'); 
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -27,7 +27,6 @@ const usersController = {
     res.render("login");
   },
   logindata: (req,res) =>{
-	console.log(req.body)
 	res.redirect('/');
   },
   register: (req, res) => {
@@ -51,7 +50,6 @@ const usersController = {
 		newId++;
 
 		let nombreImagen = req.file.originalname;
-		console.log(req.file);
 		let newUser =  {
 			id:   newId,
 			user: req.body.user ,

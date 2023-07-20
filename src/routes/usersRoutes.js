@@ -3,7 +3,6 @@ const router = express.Router()
 
 const multer=require("multer");
 const path = require("path");
-console.log(path.join(__dirname,"../../public/img"));
 // Configuracion del Multer  Local
 /* 
 const storage = multer.diskStorage({
