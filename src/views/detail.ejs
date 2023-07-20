@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/detalle.css">
+    <link rel="stylesheet" href="/css/detalle.css">
     <title>DetalleDeUnProducto</title>
 </head>
 <head>
@@ -15,75 +15,50 @@
 </head>
 
 <body>
-  <div class = "card-wrapper">
-    <div class = "card">
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title"></h2>
+			</div>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<div class="col-12 col-lg-8">
+					<img src="<%=productoEncontrado.image %>" alt="product image" class="product-detail-img">
+					<p class="product-detail-description">
+						<%=productoEncontrado.description %>
+					</p>
+				</div>
+				<div class="col-12 col-lg-4">
+					<article class="product-detail-info">
+						<h2 class="product-detail-title"><%=productoEncontrado.name %></h2>
+						
+							<p class="product-detail-price small">
+								<span>$<%=productoEncontrado.price %></span>
+							</p>
+						<ul class="actions-list">
+							<li>
+								<i class="fas fa-credit-card"></i>
+								<p>artistas</p>
+							</li>
+							<li>
+								<i class="fas fa-store"></i>
+								<p>horarios</p>
+							</li>
+						</ul>
 
-      <div class = "product-imgs">
-        <div class = "img-display">
-          <div class = "img-showcase">
-            <img src = "https://linsock.com.ar/soundstage/public/images/c74450cca629f0c19a2d7547e1aadf41.jpg" class="zxz" alt = "shoe image">
-          </div>
-        </div>
-        <div class = "img-select">
-          <div class = "img-item">
-            <a href = "#" data-id = "1">
-              <img src = "https://linsock.com.ar/soundstage/public/images/c74450cca629f0c19a2d7547e1aadf41.jpg" class="fato" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "2">
-              <img src ="https://linsock.com.ar/soundstage/public/images/2fee57b8a54e493a68702f11bfa3fe05.jpg" class="fato" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "3">
-              <img src = "https://linsock.com.ar/soundstage/public/images/a31dd9d87e4bf7c9af22f30524147a81.jpg" class="fato" alt = "shoe image">
-            </a>
-          </div>
-          <div class = "img-item">
-            <a href = "#" data-id = "4">
-              <img src = "https://linsock.com.ar/soundstage/public/images/3dbd4582e83f6293725ebeeb9b7ad551.jpg" class="fato" alt = "shoe image">
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class = "product-content">
-        <h2 class = "product-title">Nombre de la banda</h2>
+						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+						<hr>
 
-
-        <div class = "product-price">
-          <p class = "last-price">Integrantes del show</p>
-          <p class = "last-price">Integrantes del show</p>
-          <p class = "last-price">Integrantes del show</p>
-          <p class = "new-price">Integrantes del show</p>
-        </div>
-
-        <div class = "product-detail">
-          <h2>Descripcion corta del show. </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
-          <ul>
-            <li>Platea Vip: <span>in Stock</span></li>
-            <li>Platea Alta: <span>in stock</span></li>
-            <li>Platea Madia: <span>in stock</span></li>
-            <li>Platea Baja: <span>in stock</span></li>
-          </ul>
-        </div>
-
-        <div class = "purchase-info">
-          <input class="aaabbb" type = "number" min = "0" value = "1">
-          <a href="/checkout"><button type = "button" class = "btn">
-            
-            Comprar <i class = "fas fa-shopping-cart"></i>
-          </button></a>
-          <a href="/checkout"><button type = "button" class = "btn">Reservar</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
+						<a href="/products/edit/<%=productoEncontrado.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%=productoEncontrado.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
   <script src="script.js"></script>
 </body>
 

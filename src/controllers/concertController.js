@@ -20,9 +20,15 @@ const concerts = JSON.parse(fs.readFileSync(concertsFilePath, 'utf-8'));
 }
 
 
- const concertController = {
+const concertController = {
   detail: (req, res) => {
-    res.render('detail');
+		let idconcerts = req.params.id;
+		for(let i=0;i<concerts.length;i++){
+			if (concerts[i].id==idconcerts){
+				var productoEncontrado = concerts[i];
+			}
+		}
+		res.render('detail',{productoEncontrado: productoEncontrado});
   },
   create: (req, res) => {
     res.render('createConcert');
