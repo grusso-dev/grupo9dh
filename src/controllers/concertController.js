@@ -24,12 +24,13 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 
 const concertController = {
   detail: (req, res) => {
-    let idConcert = req.params.id;
-
-    let concertToEdit = concerts.find(concert => concert.id == idConcert);
-
-    res.render('detail', { concert: concertToEdit });
-
+		let idconcerts = req.params.id;
+		for(let i=0;i<concerts.length;i++){
+			if (concerts[i].id==idconcerts){
+				var productoEncontrado = concerts[i];
+			}
+		}
+		res.render('detail',{productoEncontrado: productoEncontrado});
   },
   create: (req, res) => {
     res.render('createConcert');
