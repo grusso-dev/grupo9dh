@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+//const jwt = require("jsonwebtoken");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -21,6 +22,7 @@ const rutasUsers = require('./src/routes/usersRoutes');
 app.use('/users', rutasUsers);
 
 const rutasConcert = require('./src/routes/concertRoutes');
+const { createSecretKey } = require('crypto');
 app.use('/conciertos', rutasConcert);
 
 

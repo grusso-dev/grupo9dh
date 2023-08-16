@@ -10,7 +10,8 @@ const usersController = {
     res.render("login");
   },
   logindata: (req,res) =>{
-	console.log(req.body)
+	console.log(req.body);
+	console.log('sesión iniciada');
 	res.redirect('/');
   },
   register: (req, res) => {
