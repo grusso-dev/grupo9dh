@@ -4,19 +4,40 @@
   "username": "GRUsso",
   "mail": "grusso@mail.com",
   "name": "Gustavo Russo",
-  "password": "12345"
+  "password": "12345",
+  "img": "/img/user.jpg"
  },
  {
   "userid": 2,
   "username": "usuario2",
   "mail": "user@mail.com",
   "name": "Usiario ramdom 1",
-  "password": "12345"
+  "password": "12345",
+  "img": "/img/user.jpg"
  },
  {
   "id": 3,
-  "user": "a",
-  "name": "a",
-  "password": "a"
+  "user": "www",
+  "name": "rrr",
+  "password": "ttt"
+ },
+ {
+  "id": 4,
+  "user": "www",
+  "name": "rrr",
+  "password": "ddd"
+ },
+ {
+  "id": 5,
+  "user": "www",
+  "name": "rrr",
+  "password": "ssss"
+ },
+ {
+  "id": 6,
+  "user": "www",
+  "name": "rrr",
+  "password": "aaaa",
+  "img": "Perfil.jpg"
  }
 ]
