@@ -1,66 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/detalle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>DetalleDeUnProducto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/detalle.css">
+<title>DetalleDeUnProducto</title>
 </head>
-<head>
-    <%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
-    <%- include("partials/header") %>
-
-</head>
+<body>
 <div class="container products-wrapper">
-  <div class="row">
-    <div class="col-12">
-      <h2 class="products-title">Detalle del show: <%=productoEncontrado.name%></h2>
-    </div>
+<div class="row">
+  <div class="col-12">
+    <h2 class="products-title"></h2>
   </div>
-  <div class="product-detail">
-    <div class="row">
-      <div class="col-12 col-lg-8">
-        <img src="/images/products/<%=productoEncontrado.image%>" alt="product image" class="product-detail-img">
-        <p class="product-detail-description">
-          <%=productoEncontrado.description%>
-        </p>
-      </div>
-      <div class="col-12 col-lg-4">
-        <article class="product-detail-info">
-          <h2 class="product-detail-title"><%=productoEncontrado.name%></h2>
-          
-            <p class="product-detail-price small">
-              <span>$<%=productoEncontrado.price%></span>
-              /
-            </p>
-          <ul class="actions-list">
-            <li>
+</div>
+<div class="product-detail">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <img src="<%=productoEncontrado.image %>" alt="product image" class="product-detail-img">
+      <p class="product-detail-description">
+        <%=productoEncontrado.description %>
+      </p>
+    </div>
+    <div class="col-12 col-lg-4">
+      <article class="product-detail-info">
+        <h2 class="product-detail-title"><%=productoEncontrado.name %></h2>
 
-              <p>descripcion del show</p>
-            </li>
-          </ul>
+          <p class="product-detail-price small">
+            <span>$<%=productoEncontrado.price %></span>
+          </p>
+        <ul class="actions-list">
+          <li>
+            <i class="fas fa-credit-card"></i>
+            <p>artistas</p>
+          </li>
+          <li>
+            <i class="fas fa-store"></i>
+            <p>horarios</p>
+          </li>
+        </ul>
 
-          <a href="#" class="buy-now-button">COMPRAR AHORA</a>
-          <hr>
+        <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+        <hr>
 
-          <a href="/products/edit/<%=productoEncontrado.id%>" class="action-button edit" >EDITAR PRODUCTO</a>
-          <form action="/products/<%=productoEncontrado.id%>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');"> 
-            <button type="submit" class="action-button delete">ELIMINAR</button>
-          </form>
-        </article>
-      </div>
+        <a href="/products/edit/<%=productoEncontrado.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+        <form action="/products/<%=productoEncontrado.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
+          <button type="submit" class="action-button delete">ELIMINAR</button>
+        </form>
+      </article>
     </div>
   </div>
 </div>
-
-
-
-<%- include("partials/footer") %>
-<%- include("partials/globalScripts") %>
-
-</html>
-
-
+</div>
+<script src="script.js"></script>
+</body>
