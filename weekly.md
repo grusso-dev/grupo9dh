@@ -12,3 +12,7 @@ Russo, Gustavo: realizará la pagina de registro.
 ### 15/06/2023
 
 Se definen lineamientos respecto de los estilos, se especifica que usaremos Bootstrap en su version 5.3 y se tomaran como referencia los estilos del home.
+
+## 23/08/2023
+
+* se definen parametros de la base de datos en el proyecto
