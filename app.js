@@ -1,5 +1,5 @@
 const express = require('express')
-const Sequelize = require('sequelize')
+// const Sequelize = require('sequelize')
 const path = require('path')
 const app = express()
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -28,38 +28,37 @@ const { error } = require('console');
 app.use('/conciertos', rutasConcert);
 
 //definimos parametros de conexion a la base de datos
-const sequelize = new Sequelize ('soundstage','u629722589_dhgrp9','tGpSMq9+',{
-  host:'localhost',
-  dialect: 'mysql'
-})
 
-//definimos el modelo
-const concert_model = sequelize.define('concert', {
-  "id":{type:Sequelize.INTEGER, primaryKey:true},
-  "user_id":{type:Sequelize.INTEGER},
-  "genre_id":{type:Sequelize.INTEGER},
-})
+// const sequelize = new Sequelize ('soundstage','u629722589_dhgrp9','tGpSMq9+',{
+//   host:'localhost',
+//   dialect: 'mysql'
+// })
 
-sequelize.authenticate()
-  .then(()=>{
-    console.log("Base de datos: CONECTADA")
-  })
-  .catch( error =>{
-    console.log("El error de la conexion es:" +error)
-  })
+// //definimos el modelo
+// const concert_model = sequelize.define('concert', {
+//   "id":{type:Sequelize.INTEGER, primaryKey:true},
+//   "user_id":{type:Sequelize.INTEGER},
+//   "genre_id":{type:Sequelize.INTEGER},
+// })
 
-concert_model.findAll({attributes: ['id','user_id']})
-  .then(concert =>{
-    console.log(concert)
-  })  
-  .catch( error =>{
-    console.log(error)
-  })
+// sequelize.authenticate()
+//   .then(()=>{
+//     console.log("Base de datos: CONECTADA")
+//   })
+//   .catch( error =>{
+//     console.log("El error de la conexion es:" +error)
+//   })
 
-
+// concert_model.findAll({attributes: ['id','user_id']})
+//   .then(concert =>{
+//     console.log(concert)
+//   })  
+//   .catch( error =>{
+//     console.log(error)
+//   })
 
 const port = 3001
 app.listen(port, () => {
-  console.log(`Aplicacion escuchando en el puerto: ${port}`)
+  console.log(`Aplicacion escuchando en el puerto: http://localhost:${port}`)
 })
 
