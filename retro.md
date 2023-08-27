@@ -1,4 +1,3 @@
-Retro.md
 Resumen
 Fecha: 15/6/2023
 
@@ -32,3 +31,12 @@ Conclusiones
 En el retro, el equipo identificó áreas de mejora y estableció acciones concretas para abordar los obstáculos encontrados. Se reforzó la importancia de la colaboración y la comunicación efectiva, y se acordó implementar prácticas específicas para optimizar el trabajo en equipo. Además, se definieron los objetivos y prioridades para el próximo sprint, brindando una dirección clara y compartida.
 
 El equipo se mostró comprometido y motivado para aplicar las mejoras propuestas y lograr un rendimiento aún mejor en el próximo sprint.
+
+
+
+Resultados del Sprint 5
+Objetivo
+El objetivo de este sprint fue implementar las operaciones CRUD (Crear, Leer, Actualizar, Borrar) en nuestro sitio, permitiendo la gestion de datos de manera eficiente y efectiva. 
+
+Reflexión
+Durante este sprint, aprendimos la importancia de una comunicación constante y efectiva. La colaboración y la resolución ágil de problemas resultaron clave para el éxito en la implementación de las operaciones CRUD. Nuestro equipo trabajó arduamente para lograr nuestros objetivos y superar los desafíos que surgieron. 

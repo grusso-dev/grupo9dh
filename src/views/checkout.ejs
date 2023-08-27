@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>SoundStage: Checkout</title>
     <%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
   </head>
 
@@ -81,17 +82,7 @@
                           placeholder="a"
                           required
                         />
-                        <label for="floatingInput">Nombre</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput">Apellido</label>
+                        <label for="floatingInput">Nombre y Apellido</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
@@ -113,6 +104,16 @@
                         />
                         <label for="floatingInput">E-mail</label>
                       </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="a"
+                          required
+                        />
+                        <label for="floatingInput">DNI</label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,7 +129,7 @@
                       aria-expanded="false"
                       aria-controls="flush-collapseTwo"
                     >
-                      Datos de entrega
+                      Datos de facturacion
                     </button>
                   </h2>
                   <div
@@ -145,17 +146,7 @@
                           placeholder="a"
                           required
                         />
-                        <label for="floatingInput">Direccion (Linea 1)</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput">Direccion (Linea 2)</label>
+                        <label for="floatingInput">Direccion</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
@@ -186,21 +177,6 @@
                         />
                         <label for="floatingInput">Codigo Postal</label>
                       </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput">Informacion adicional</label>
-                      </div>
-
-                      <p style="margin-top: 10px">
-                        Los datos de facturacion son los mismos que la entrega.
-                        <input type="checkbox" />
-                      </p>
                     </div>
                   </div>
                 </div>

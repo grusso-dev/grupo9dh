@@ -1,23 +1,56 @@
 [
-  {
-    "id": 1,
-    "name": "Los píojos",
-    "price": "10000",
-    "date": "27/09/2023",
-    "location": "Rosario",
-    "description": "",
-    "image": "Los Piojos.jpg"
-  },
-  {
-    "id": 2,
-    "name": "La renga",
-    "price": "15000",
-    "date": "27/12/2023",
-    "location": "Rosario",
-    "description": "",
-    "image": "Los Piojos.jpg"
-  }
+ {
+  "id": 1,
+  "name": "Los píojos",
+  "price": "10000",
+  "date": "2023-07-21",
+  "location": "Rosario",
+  "description": "esta es una descripcion nueva",
+  "image": "https://linsock.com.ar/soundstage/public/images/los-piojos.jpeg"
+ },
+ {
+  "id": 2,
+  "name": "La renga",
+  "price": "15000",
+  "date": "27/12/2023",
+  "location": "Rosario",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/la-renga.png"
+ },
+ {
+  "id": 3,
+  "name": "Maroon 5",
+  "price": "7",
+  "date": "",
+  "location": "La Plata",
+  "description": "fdsuifjkdsnf",
+  "image": "https://linsock.com.ar/soundstage/public/images/Maroon-5.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "Queen",
+  "price": "45666",
+  "date": "",
+  "location": "La Plata",
+  "description": "A night at the opera",
+  "image": "https://linsock.com.ar/soundstage/public/images/queen.jpeg"
+ },
+ {
+  "id": 5,
+  "name": "La beriso",
+  "price": "8000",
+  "date": "2023-07-19",
+  "location": "La Plata",
+  "description": "descripcion",
+  "image": "https://linsock.com.ar/soundstage/public/images/La-beriso.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "La 25",
+  "price": "11222222",
+  "date": "2023-07-21",
+  "location": "Cordoba",
+  "description": "La 25 toca en cordoba",
+  "image": "https://linsock.com.ar/soundstage/public/images/la25.jpg"
+ }
 ]
-
-
-
