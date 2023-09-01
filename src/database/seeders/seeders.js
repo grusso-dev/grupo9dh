@@ -1,4 +1,4 @@
-/*
+
 'use strict';
 
 module.exports = {
@@ -45,4 +45,3 @@ module.exports = {
      return queryInterface.bulkDelete('users', null, {});
   }
 };
-*/
