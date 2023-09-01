@@ -106,7 +106,7 @@
                       </div>
                       <div class="form-floating mb-3">
                         <input
-                          type="email"
+                          type="number"
                           class="form-control"
                           id="floatingInput"
                           placeholder="a"
@@ -192,7 +192,7 @@
                       aria-expanded="false"
                       aria-controls="flush-collapseThree"
                     >
-                      Datos de pago
+                      Metodo de pago
                     </button>
                   </h2>
                   <div
@@ -201,52 +201,23 @@
                     data-bs-parent="#accordionFlush"
                   >
                     <div class="accordion-body">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput"
-                          >Numero de tarjeta
-                          <i class="fa-brands fa-cc-visa"></i>
-                          <i class="fa-brands fa-cc-mastercard"></i>
-                          <i class="fa-brands fa-cc-amex"></i>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Tarjeta de credito
                         </label>
                       </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput"
-                          >Nombre y apellido del titular</label
-                        >
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Transferencia Bancaria
+                        </label>
                       </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput">CVV/CVC</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="a"
-                          required
-                        />
-                        <label for="floatingInput">Expira en: MM/YY</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          MercadoPago
+                        </label>
                       </div>
                     </div>
                   </div>
