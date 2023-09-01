@@ -1,11 +1,11 @@
 [
  {
   "id": 1,
-  "name": "Los píojos",
-  "price": "10000",
+  "name": "Intensivo",
+  "price": "345345345",
   "date": "2023-07-21",
-  "location": "Rosario",
-  "description": "esta es una descripcion nueva",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "asdasdasdas",
   "image": "https://linsock.com.ar/soundstage/public/images/los-piojos.jpeg"
  },
  {
@@ -52,5 +52,59 @@
   "location": "Cordoba",
   "description": "La 25 toca en cordoba",
   "image": "https://linsock.com.ar/soundstage/public/images/la25.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "3453443534",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Intensivo",
+  "price": "",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 12,
+  "name": "",
+  "price": "",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
  }
 ]
