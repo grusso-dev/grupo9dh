@@ -1,3 +1,4 @@
+/*
 'use strict';
 
 module.exports = {
@@ -47,3 +48,4 @@ module.exports = {
     return queryInterface.dropTable('user')
   }
 };
+*/

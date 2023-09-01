@@ -28,13 +28,14 @@ function userData(sequelize,Datatypes){
   // };
 
   //Relacion de esta tabla con consert
-  user.associate=function(modelos){
-    user.hasMany(modelos.concert,{
-      as:"concert",
-      foreingKey:'id'
-    });
-  };
-  return user;
+  // user.associate=function(modelos){
+  //   user.hasMany(modelos.concert,{
+  //     as:"concert",
+  //     foreingKey:'id'
+  //   });
+  // };
+  
+   return user;
 
 }
 module.exports = userData;
