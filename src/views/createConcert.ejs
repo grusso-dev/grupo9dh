@@ -22,22 +22,28 @@
 
     <form class="formulario" action="/conciertos/create" method="post" enctype="multipart/form-data">
       <div class="col-md-4 botonInd">
-        <label for="validationCustom01" class="form-label">Nombre de la banda</label>
-        <input type="text" name="name" class="form-control" id="validationCustom01">
+        <label for="validationCustom01" class="form-label">Artista</label>
+        <input type="text" name="artista" class="form-control" id="validationCustom01">
+      </div>
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Nombre del concierto</label>
+        <input type="text" name="title" class="form-control" id="validationCustom01">
       </div>
      
       <div class="col-md-4 botonInd">
-        <label for="validationCustom01" class="form-label">Precio</label>
-        <input type="number" name="price" class="form-control" id="validationCustom01">
-      </div>
-      <div class="col-md-4 botonInd">
-        <label for="validationCustom01" class
-        ="form-label">Fecha</label>
+        <label for="validationCustom01" class="form-label">Fecha</label>
         <input type="date" name="date" class="form-control" id="validationCustom01">
       </div>
+
       <div class="col-md-4 botonInd">
-        <label for="validationCustom01" class="form-label">Ciudad</label>
-        <select class="form-select" name="location" aria-label="Default select example">
+        <label for="validationCustom01" class="form-label">Dirección</label>
+        <input type="text" name="direccion" class="form-control" id="validationCustom01">
+      </div>
+
+      
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Provincia</label>
+        <select class="form-select" name="provincia" aria-label="Default select example">
           <option selected>Elegi la Ciudad</option>
           <option value="Ciudad Autonoma de Buenos Aires">Ciudad Autonoma de Buenos Aires</option>
           <option value="La Plata">La Plata</option>
@@ -45,6 +51,12 @@
           <option value="Cordoba">Cordoba</option>
         </select>
       </div>
+
+      <div class="col-md-4 botonInd">
+        <label for="validationCustom01" class="form-label">Ciudad</label>
+        <input type="text" name="ciudad" class="form-control" id="validationCustom01">
+      </div>
+
       <div class="col-md-4 botonInd">
         <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
         <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
