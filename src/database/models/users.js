@@ -27,13 +27,12 @@ function userData(sequelize,Datatypes){
   //   });
   // };
 
-  //Relacion de esta tabla con consert
-  // user.associate=function(modelos){
-  //   user.hasMany(modelos.concert,{
-  //     as:"concert",
-  //     foreingKey:'id'
-  //   });
-  // };
+  User.associate=function(modelos){
+  User.hasMany(modelos.Concierto,{
+        as:"Conciertos",
+        foreingKey:'user_id'
+    });
+  };
   
    return user;
 

@@ -17,29 +17,29 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         artista: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.VARCHAR(30)
         }, 
         title: {
-            type: DataTypes.STRING(20)
+            type: DataTypes.VARCHAR(20)
         } ,
         date: {
             type: DataTypes.DATE
         },
         direccion: {
-            type: DataTypes.STRING(100)
+            type: DataTypes.VARCHAR(100)
         },
         provincia: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.VARCHAR(30)
         },
         ciudad: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.VARCHAR(30)
         },
         image: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.VARCHAR(100),
             allowNull: true,
         } , 
         descripcion: {
-            type: DataTypes.STRING(255),
+            type: DataTypes.VARCHAR(255),
             allowNull: true,
         }
 
@@ -53,11 +53,27 @@ module.exports = (sequelize) => {
     const Concierto = sequelize.define(alias, cols, config);
 
     Concierto.associate = function (models) {
-        Concierto.belongsTo(models.Generos, {
-            as: "generos",
+        Concierto.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "user_id"
+        } );
+
+        Concierto.belongsTo(models.Genero, { 
+            as: "genero",
             foreignKey: "genre_id"
-        } )
-    }
+        } );    
+
+        Concierto.hasMany(models.Sector, {
+            as: "sectores",
+            foreignKey: "concierto_id"
+        })
+
+
+    };
+
+    
+    
+     
 
     return Concierto;
 }
