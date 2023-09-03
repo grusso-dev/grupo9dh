@@ -66,7 +66,14 @@ module.exports = (sequelize) => {
         Concierto.hasMany(models.Sector, {
             as: "sectores",
             foreignKey: "concierto_id"
+        });
+
+        Concierto.hasMany(models.checkoutItem, {
+            as: "checkoutItem",
+            foreignKey: "checkoutItem_id"
         })
+
+
 
 
     };
