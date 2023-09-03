@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         nombre_sector: {
-            type: DataTypes.VARCHAR(30)
+            type: DataTypes.STRING(30)
         }, 
         price: {
             type: DataTypes.DECIMAL

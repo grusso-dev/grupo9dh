@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         description: {
-            type: DataTypes.VARCHAR(200)
+            type: DataTypes.STRING(200)
         },
     };
 

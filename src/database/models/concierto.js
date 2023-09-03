@@ -17,29 +17,29 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         artista: {
-            type: DataTypes.VARCHAR(30)
+            type: DataTypes.STRING(30)
         }, 
         title: {
-            type: DataTypes.VARCHAR(20)
+            type: DataTypes.STRING(20)
         } ,
         date: {
             type: DataTypes.DATE
         },
         direccion: {
-            type: DataTypes.VARCHAR(100)
+            type: DataTypes.STRING(100)
         },
         provincia: {
-            type: DataTypes.VARCHAR(30)
+            type: DataTypes.STRING(30)
         },
         ciudad: {
-            type: DataTypes.VARCHAR(30)
+            type: DataTypes.STRING(30)
         },
         image: {
-            type: DataTypes.VARCHAR(100),
+            type: DataTypes.STRING(100),
             allowNull: true,
         } , 
         descripcion: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: true,
         }
 

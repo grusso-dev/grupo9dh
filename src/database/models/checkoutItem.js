@@ -20,8 +20,8 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         access_code:{
-            type: DataTypes.VARCHAR(200)
-        }
+             type: DataTypes.STRING(220)
+         }
 
     };
 
@@ -30,7 +30,7 @@ module.exports = (sequelize) => {
         timestamps: false
     };
     
-    const Sector = sequelize.define(alias, cols, config);
+    const CheckoutItem = sequelize.define(alias, cols, config);
 
     CheckoutItem.associate = function (models) {
         CheckoutItem.belongsTo(models.Concierto, {

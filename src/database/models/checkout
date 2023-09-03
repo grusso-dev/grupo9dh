@@ -11,16 +11,16 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         nombre: {
-            type: DataTypes.VARCHAR(50)
+            type: DataTypes.STRING(50)
         }, 
         buy_date: {
             type: DataTypes.DATETIME
         },
         status: {
-            type: DataTypes.VARCHAR(1)
+            type: DataTypes.STRING(1)
         },
        email:{
-            type: DataTypes.VARCHAR(60)
+            type: DataTypes.STRING(60)
         },
         payment_method: {
             type: DataTypes.ENUM
@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
             type: DataTypes.ENUM
         },
         cbu_alias_destination: {
-            type: DataTypes.VARCHAR(30)
+            type: DataTypes.STRING(30)
         }
 
     };

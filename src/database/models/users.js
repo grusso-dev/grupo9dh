@@ -17,7 +17,7 @@ function userData(sequelize,Datatypes){
                                     })}
   }
   let cfg={camelCase:false,timestamps:false}
-  const user = sequelize.define(tbl,cmp,cfg);
+  const User = sequelize.define(tbl,cmp,cfg);
   
   //Relacion con esta tabla desde consert
   // user.associate=function(modelos){
@@ -34,7 +34,7 @@ function userData(sequelize,Datatypes){
     });
   };
   
-   return user;
+   return User;
 
 }
 module.exports = userData;
