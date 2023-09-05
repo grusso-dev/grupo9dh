@@ -6,7 +6,7 @@ router.get('/', indexController.index);
 router.get('/login', indexController.login);
 router.get('/checkout', indexController.checkout);
 router.get('/register', indexController.register);
-router.get('/detail', indexController.detail);
+router.get('/detail/:id', indexController.detail);
 router.get('/registerdata', indexController.registerdata);
 router.get('/todosLosConciertos', indexController.todosLosConciertos);
 

@@ -1,3 +1,5 @@
+let db = require('../database/models');
+
 const fs = require('fs');
 const path = require("path");
 const ftp = require('basic-ftp');
@@ -24,62 +26,47 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 
 const concertController = {
   detail: (req, res) => {
-		let idconcerts = req.params.id;
-		for(let i=0;i<concerts.length;i++){
-			if (concerts[i].id==idconcerts){
-				var productoEncontrado = concerts[i];
-			}
-		}
-		res.render('detail',{productoEncontrado: productoEncontrado});
+      db.Conciertos.findByPk(req.params.id)
+      .then(function(concierto) {
+          res.render("detail", {concierto: concierto})
+      }
+      )
   },
   create: (req, res) => {
     res.render('createConcert');
   },
   concerts: (req, res) => {
-    res.render("todosLosConciertos", { concerts: concerts });
-
-  },
+    
+    db.Conciertos.findAll()
+    .then(function(conciertos) {
+      res.render('todosLosConciertos', {conciertos: conciertos})
+    })},
   deleteConcert: (req, res) => {
     res.render('deleteconcert');
   },
-  saveConcert: async (req, res) => {
-
-    const file = req.file;
-		const stream = new Readable();
-		stream.push(file.buffer);
-		stream.push(null); 
-		await ftp_upload(stream , '/public/images/' + file.originalname);
-
-    let conciertos = 0;
-
-    for (let i of concerts) {
-      if (conciertos < i.id) {
-        conciertos = i.id;
-      }
-    }
-    conciertos++;
-    let nombreImagen = 'https://linsock.com.ar/soundstage/public/images/' + req.file.originalname;
-    let newConcert = {
-      id: conciertos,
-      name: req.body.name,
-      price: req.body.price,
-      date: req.body.date,
-      location: req.body.location,
-      description: req.body.description,
-      image:nombreImagen
-    };
-
-    concerts.push(newConcert);
-    fs.writeFileSync(concertsFilePath, JSON.stringify(concerts, null, ' '));
-
-    res.redirect('/conciertos');
-  },
-  editConcert: (req, res) => {
-    let idConcert = req.params.id;
-
-    let concertToEdit = concerts.find(concert => concert.id == idConcert);
-
-    res.render('editConcert', { concertToEdit: concertToEdit });
+  saveConcert: function(req, res) {
+    db.Conciertos.create({
+        artista: req.body.artista,
+        title: req.body.name,
+        date: req.body.date,
+        direccion: req.body.direccion,
+        provincia: req.body.provincia,
+        ciudad: req.body.ciudad,
+        image: req.body.imagen,
+        descripcion: req.body.descripcion
+        
+    }).then(() => {
+        res.redirect('/');
+    }).catch((error) => {
+        console.error("Error creating concert:", error);
+    });
+},
+editConcert: (req, res) => {
+      db.Conciertos.findByPk(req.params.id)
+          .then(function(concierto) {
+          res.render("detail", {concierto: concierto})
+  }
+  )
   },
   saveEditConcert: (req, res) => {
     let idConcert = req.params.id;

@@ -36,7 +36,20 @@
   font-size: 1.8em;
   color: var(--green);
 }
+.aaa{
+  color: #000000;
 
+}
+.buttonGradient2 {
+  background-image: linear-gradient(to right, #1B1464 0%, #0075FF 100%);
+  color: white;
+  height: 3vw;
+  border-radius: 50px;
+  padding: 3px 30px;
+  font-size: 1.5vw;
+  border-width: 0px;
+  margin-top: 1.5vw;
+}
 .small span {
   text-decoration: line-through;
 }
@@ -67,7 +80,7 @@
 .buy-now-button {
   background-color: var(--light-blue);
   font-size: 1.6em;
-  color: #ffffff;
+  color: #8400ff;
   display: flex;
   align-items: center;
   justify-content: center;

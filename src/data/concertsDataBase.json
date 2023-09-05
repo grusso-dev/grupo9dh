@@ -1,11 +1,11 @@
 [
  {
   "id": 1,
-  "name": "Los píojos",
-  "price": "10000",
+  "name": "Intensivo",
+  "price": "345345345",
   "date": "2023-07-21",
-  "location": "Rosario",
-  "description": "esta es una descripcion nueva",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "asdasdasdas",
   "image": "https://linsock.com.ar/soundstage/public/images/los-piojos.jpeg"
  },
  {
@@ -14,7 +14,7 @@
   "price": "15000",
   "date": "27/12/2023",
   "location": "Rosario",
-  "description": "",
+  "description": "La Renga es una influyente banda de rock argentino conocida por su estilo característico y sus letras profundas. Formada en 1988 en Buenos Aires, Argentina, la banda está compuesta por Gustavo Chizzo Nápoli en guitarra y voz, Jorge Tanque Iglesias en batería, y Gabriel Chiflo Sánchez en bajo y saxofón. La Renga ha ganado popularidad a lo largo de los años gracias a su energética música en vivo y sus letras que a menudo abordan temas sociales y emocionales. Han lanzado varios álbumes exitosos, convirtiéndose en una de las bandas de rock más queridas de América Latina.",
   "image": "https://linsock.com.ar/soundstage/public/images/la-renga.png"
  },
  {
@@ -52,5 +52,59 @@
   "location": "Cordoba",
   "description": "La 25 toca en cordoba",
   "image": "https://linsock.com.ar/soundstage/public/images/la25.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "3453443534",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Ciudad Autonoma de Buenos Aires",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "4543-05-31",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Intensivo",
+  "price": "345345",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Intensivo",
+  "price": "",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
+ },
+ {
+  "id": 12,
+  "name": "",
+  "price": "",
+  "date": "",
+  "location": "Elegi la Ciudad",
+  "description": "",
+  "image": "https://linsock.com.ar/soundstage/public/images/Steam-Tank-Obsidian-boss-fight-in-Octopath-Traveler-2-1116x628.jpg"
  }
 ]
