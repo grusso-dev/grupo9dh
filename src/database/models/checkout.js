@@ -1,3 +1,4 @@
+
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -13,8 +14,8 @@ module.exports = (sequelize) => {
         nombre: {
             type: DataTypes.STRING(50)
         }, 
-        buy_date: {
-            type: DataTypes.DATETIME
+        buyDate: {
+            type: DataTypes.DATE
         },
         status: {
             type: DataTypes.STRING(1)
@@ -22,13 +23,13 @@ module.exports = (sequelize) => {
        email:{
             type: DataTypes.STRING(60)
         },
-        payment_method: {
-            type: DataTypes.ENUM
+        paymentMethod: {
+            type: DataTypes.STRING(60)
         },
-        count_type_destination: {
-            type: DataTypes.ENUM
+        countTypeDestination: {
+            type: DataTypes.STRING(60)
         },
-        cbu_alias_destination: {
+        cbuAliasDestination: {
             type: DataTypes.STRING(30)
         }
 
@@ -43,11 +44,15 @@ module.exports = (sequelize) => {
 
     Checkout.associate = function (models) {
         Checkout.hasMany(models.CheckoutItem, {
-          as: 'CheckoutItem',
-          foreignKey: 'checkout_id',
-        });
+            as: 'CheckoutItem',
+            foreignKey: 'checkout_id',
+          });
+          
     }
 
+    
     return Checkout;
 
 }
+
+

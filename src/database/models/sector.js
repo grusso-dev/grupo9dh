@@ -1,3 +1,4 @@
+
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -10,7 +11,7 @@ module.exports = (sequelize) => {
             autoIncrement: true,
             type: DataTypes.INTEGER
         },
-        nombre_sector: {
+        nombreSector: {
             type: DataTypes.STRING(30)
         }, 
         price: {
@@ -29,12 +30,16 @@ module.exports = (sequelize) => {
     
     const Sector = sequelize.define(alias, cols, config);
 
+ 
+
     Sector.associate = function (models) {
        Sector.belongsTo(models.Concierto, {
         as: "concierto",
         foreignKey: "concierto_id"
        })
     }
+
+   
 
     return Sector;
 }

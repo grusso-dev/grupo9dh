@@ -1,3 +1,5 @@
+
+
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -22,12 +24,15 @@ module.exports = (sequelize) => {
     
     const Genero = sequelize.define(alias, cols, config);
 
+  
+
     Genero.associate = function (models) {
-        Genero.belongsTo(models.Concierto, {
+        Genero.hasMany(models.Concierto, {
             as: "genero",
             foreignKey: "genre_id"
         } )
     };
+
 
     return Genero;
 }

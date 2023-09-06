@@ -1,3 +1,4 @@
+
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -10,32 +11,34 @@ module.exports = (sequelize) => {
             autoIncrement: true,
             type: DataTypes.INTEGER
         },
-        unit_price: {
+        unitPrice: {
             type: DataTypes.DECIMAL
         }, 
         quantity: {
             type: DataTypes.INTEGER
         },
-        checkout_id: {
+        checkoutId: {
             type: DataTypes.INTEGER
         },
-        access_code:{
+        accessCode:{
              type: DataTypes.STRING(220)
          }
 
     };
 
     let config = {
-        tableName: 'checkout_items',
+        tableName: 'CheckoutItems',
         timestamps: false
     };
     
     const CheckoutItem = sequelize.define(alias, cols, config);
 
+  
+
     CheckoutItem.associate = function (models) {
         CheckoutItem.belongsTo(models.Concierto, {
           as: 'concierto',
-          foreignKey: 'concierto_id',
+          foreignKey: "concert_id",
         });
     
         CheckoutItem.belongsTo(models.Checkout, {
@@ -43,6 +46,8 @@ module.exports = (sequelize) => {
           foreignKey: 'checkout_id',
         });
       };
+
+    
 
     return CheckoutItem;
 }
