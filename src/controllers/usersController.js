@@ -27,7 +27,7 @@ const usersController = {
   login: (req, res) => {
     db.user.findAll().then((users)=>{
       console.log("Consulta OK");
-      console.log(users);
+      console.log(users[0]);
       res.render('login');
 
     }).catch((error) => {
@@ -41,7 +41,17 @@ const usersController = {
     res.redirect('/')
   },
   register: (req, res) => {
-    res.render('register')
+    db.conciertos.findAll({include:[{association:"User"}]}).then((conciertos)=>{
+      console.log("Consulta conciertos OK");
+      console.log(conciertos[1]);
+      res.render('register')
+
+    }).catch((error) => {
+      console.log("Consulta conciertos NOK");
+      res.render('register')
+      //console.log(error);
+    });
+    
   },
   registerdata: (req, res) => {
     res.render('registerdata')

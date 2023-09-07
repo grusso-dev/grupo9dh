@@ -5,36 +5,23 @@ function userData(sequelize,Datatypes){
     mail:{type:Datatypes.STRING(50)},
     password:{type:Datatypes.STRING(20)},
     fullname:{type:Datatypes.STRING(50)},
-    fiscal_type:{type:Datatypes.ENUM({
-                                        values: ['value', 'another value']
-                                      })},
+    fiscal_type:{type:Datatypes.ENUM({values: ['value', 'another value']})},
     fiscal_value:{type:Datatypes.STRING(20)},
     create_date:{type:Datatypes.DATE},
     delete_date:{type:Datatypes.INTEGER},
     cbu_alias:{type:Datatypes.STRING(30)},
-    count_type:{type:Datatypes.ENUM({
-                                      values: ['value', 'another value']
-                                    })}
+    count_type:{type:Datatypes.ENUM({values: ['value', 'another value']})}
   }
-  let cfg={camelCase:false,timestamps:false}
+  let cfg={camelCase:false,timestamps:false,tableName:'users'}
   const User = sequelize.define(tbl,cmp,cfg);
-  
-  //Relacion con esta tabla desde consert
-  // user.associate=function(modelos){
-  //   user.belongsTo(modelos.users,{
-  //     as:"users",
-  //     foreingKey:'id'
-  //   });
-  // };
 
   User.associate=function(modelos){
-  User.hasMany(modelos.Concierto,{
-        as:"Conciertos",
-        foreingKey:'user_id'
+    User.hasMany(modelos.conciertos, {
+      as:"concierto",
+      foreignKey: 'user_id'
     });
   };
-  
-   return User;
+  return User;
 
 }
 module.exports = userData;
