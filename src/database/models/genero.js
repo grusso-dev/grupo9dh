@@ -20,14 +20,14 @@ module.exports = (sequelize) => {
         timestamps: false
     };
     
-    const Genero = sequelize.define(alias, cols, config);
+     const Genero = sequelize.define(alias, cols, config);
 
-    Genero.associate = function (models) {
-        Genero.belongsTo(models.Concierto, {
-            as: "genero",
-            foreignKey: "genre_id"
-        } )
-    };
+    // Genero.associate = function (models) {
+    //     Genero.belongsTo(models.Concierto, {
+    //         as: "genero",
+    //         foreignKey: "genre_id"
+    //     } )
+    // };
 
     return Genero;
 }
