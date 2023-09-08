@@ -5,12 +5,12 @@ function userData(sequelize,Datatypes){
     mail:{type:Datatypes.STRING(50)},
     password:{type:Datatypes.STRING(20)},
     fullname:{type:Datatypes.STRING(50)},
-    fiscal_type:{type:Datatypes.ENUM({values: ['value', 'another value']})},
+    fiscal_type:{type:Datatypes.ENUM({values: ['type1', 'type2']})},
     fiscal_value:{type:Datatypes.STRING(20)},
     create_date:{type:Datatypes.DATE},
     delete_date:{type:Datatypes.INTEGER},
-    cbu_alias:{type:Datatypes.STRING(30)},
-    count_type:{type:Datatypes.ENUM({values: ['value', 'another value']})}
+    count_type:{type:Datatypes.ENUM({values: ['type1', 'type2']})},
+    cbu_alias:{type:Datatypes.STRING(30)}
   }
   let cfg={camelCase:false,timestamps:false,tableName:'users'}
   const User = sequelize.define(tbl,cmp,cfg);
