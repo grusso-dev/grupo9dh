@@ -1,4 +1,3 @@
-
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -11,23 +10,23 @@ module.exports = (sequelize) => {
             autoIncrement: true,
             type: DataTypes.INTEGER
         },
-        unitPrice: {
+        unit_price: {
             type: DataTypes.DECIMAL
         }, 
         quantity: {
             type: DataTypes.INTEGER
         },
-        checkoutId: {
+        checkout_id: {
             type: DataTypes.INTEGER
         },
-        accessCode:{
+        access_code:{
              type: DataTypes.STRING(220)
          }
 
     };
 
     let config = {
-        tableName: 'CheckoutItems',
+        tableName: 'checkout_items',
         timestamps: false
     };
     

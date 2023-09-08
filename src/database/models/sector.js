@@ -1,4 +1,3 @@
-
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -11,7 +10,7 @@ module.exports = (sequelize) => {
             autoIncrement: true,
             type: DataTypes.INTEGER
         },
-        nombreSector: {
+        nombre_sector: {
             type: DataTypes.STRING(30)
         }, 
         price: {
@@ -36,8 +35,6 @@ module.exports = (sequelize) => {
     //     foreignKey: "concierto_id"
     //    })
     // }
-
-   
 
     return Sector;
 }
