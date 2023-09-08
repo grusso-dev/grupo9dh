@@ -3,10 +3,9 @@ const path = require('path')
 const ftp = require('basic-ftp')
 const { Readable } = require('stream')
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
 
 const db = require('../database/models');
+const { Console } = require('console')
 
 async function ftp_upload(image_origin_route, image_destiny_route) {
   // Connect to the FTP server
@@ -65,32 +64,21 @@ const usersController = {
     res.render('registerdata')
   },
   save: async (req, res) => {
-    const file = req.file
-    const stream = new Readable()
-    stream.push(file.buffer)
-    stream.push(null)
-
-    await ftp_upload(stream, '/public/images/' + file.originalname)
-
-    newId = 0
-
-    newId = users[users.length - 1].id// Obtengo el id del ultimo elemento del array
-    newId++
-
-    const nombreImagen = req.file.originalname
     const newUser = {
-      id: newId,
+      id: null,
       user: req.body.user,
       mail: req.body.mail,
-      name: req.body.name,
+      fullname: req.body.fullname,
       password: req.body.password,
-      img: nombreImagen
+      fiscal_value:req.body.fiscal_value,
+      cbu_alias:req.body.cbu_alias,
+      fiscal_type:"type1",//req.body.fiscal_type, ??
+      count_type:'type1',//req.body.count_type,??
+      //create_date:req.body.create_date ??
     }
+    //console.log(req.body);
+    let ret =  await db.user.create(newUser);
 
-    users.push(newUser)
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '))
-    /*
-    */
     res.render('login')
   }
 }
