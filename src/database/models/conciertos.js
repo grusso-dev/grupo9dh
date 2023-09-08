@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
             type: DataTypes.DATE
         },
         direccion: {
-            type: DataTypes.STRING(100)
+            type: DataTypes.STRING(100) 
         },
         provincia: {
             type: DataTypes.STRING(30)
@@ -52,11 +52,5 @@ module.exports = (sequelize) => {
         foreignKey: 'user_id'
       });
     };
-    // Concierto.associate=function(modelos){
-    //   Concierto.belongsTo(modelos.user,{
-    //         as:"User",
-    //         foreingKey:"user_id"
-    //     });
-    // };
     return Concierto;
 }

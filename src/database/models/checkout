@@ -41,12 +41,12 @@ module.exports = (sequelize) => {
     
     const Checkout = sequelize.define(alias, cols, config);
 
-    Checkout.associate = function (models) {
-        Checkout.hasMany(models.CheckoutItem, {
-          as: 'CheckoutItem',
-          foreignKey: 'checkout_id',
-        });
-    }
+    // Checkout.associate = function (models) {
+    //     Checkout.hasMany(models.CheckoutItem, {
+    //       as: 'CheckoutItem',
+    //       foreignKey: 'checkout_id',
+    //     });
+    // }
 
     return Checkout;
 
