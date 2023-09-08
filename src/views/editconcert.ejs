@@ -21,7 +21,7 @@
   <main>
     <h1 class="tituloCreateConcert">Todos los conciertos en un solo lugar</h1>
 
-    <form class="formulario" action="/conciertos/edit/<%= concertToEdit.id %>?_method=PUT" method="post">
+    <form class="formulario" action="/conciertos/edit/<%= concertToEdit.id %>?_method=PUT" method="POST">
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Nombre de la banda</label>
         <input type="text" name="name" value="<%= concertToEdit.name %>" class="form-control" id="validationCustom01">
