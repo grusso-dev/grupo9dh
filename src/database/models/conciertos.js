@@ -52,11 +52,6 @@ module.exports = (sequelize) => {
         foreignKey: 'user_id'
       });
     };
-    // Concierto.associate=function(modelos){
-    //   Concierto.belongsTo(modelos.user,{
-    //         as:"User",
-    //         foreingKey:"user_id"
-    //     });
-    // };
+    
     return Concierto;
 }
