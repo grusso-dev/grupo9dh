@@ -3,8 +3,6 @@ const path = require('path')
 const ftp = require('basic-ftp')
 const { Readable } = require('stream')
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
 
 const db = require('../database/models');
 const { Console } = require('console')
