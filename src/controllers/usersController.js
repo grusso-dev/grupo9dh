@@ -78,7 +78,7 @@ const usersController = {
       count_type:'type1',//req.body.count_type,??
       //create_date:req.body.create_date ??
     }
-    console.log(req.body);
+    //console.log(req.body);
     let ret =  await db.user.create(newUser);
 
     res.render('login')
