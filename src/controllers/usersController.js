@@ -27,7 +27,7 @@ const usersController = {
   login: (req, res) => {
     db.user.findAll().then((users)=>{
       console.log("Consulta OK");
-      console.log(users);
+      console.log(users[0]);
       res.render('login');
 
     }).catch((error) => {
@@ -40,8 +40,25 @@ const usersController = {
     console.log('sesión iniciada')
     res.redirect('/')
   },
-  register: (req, res) => {
-    res.render('register')
+  register: async (req, res) => {
+    // db.conciertos.findAll({include:[{association:"User"}]}).then((conciertos)=>{
+    //   console.log("Consulta conciertos OK");
+    //   console.log(conciertos);
+    //   res.render('register')
+
+    // }).catch((error) => {
+    //   console.log("Consulta conciertos NOK");
+    //   res.render('register')
+    //   //console.log(error);
+    // });
+    try{
+      let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
+      res.render('register',{conciertos});
+    }
+    catch(error){
+      console.log(error.message);
+
+    }
   },
   registerdata: (req, res) => {
     res.render('registerdata')

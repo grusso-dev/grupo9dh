@@ -33,21 +33,17 @@ module.exports = (sequelize) => {
     
     const CheckoutItem = sequelize.define(alias, cols, config);
 
-  
-
-    CheckoutItem.associate = function (models) {
-        CheckoutItem.belongsTo(models.Concierto, {
-          as: 'concierto',
-          foreignKey: "concert_id",
-        });
+    // CheckoutItem.associate = function (models) {
+    //     CheckoutItem.belongsTo(models.Concierto, {
+    //       as: 'concierto',
+    //       foreignKey: 'concierto_id',
+    //     });
     
-        CheckoutItem.belongsTo(models.Checkout, {
-          as: 'checkout',
-          foreignKey: 'checkout_id',
-        });
-      };
-
-    
+    //     CheckoutItem.belongsTo(models.Checkout, {
+    //       as: 'checkout',
+    //       foreignKey: 'checkout_id',
+    //     });
+    //   };
 
     return CheckoutItem;
 }

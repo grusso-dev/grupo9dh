@@ -30,14 +30,12 @@ module.exports = (sequelize) => {
     
     const Sector = sequelize.define(alias, cols, config);
 
- 
-
-    Sector.associate = function (models) {
-       Sector.belongsTo(models.Concierto, {
-        as: "concierto",
-        foreignKey: "concierto_id"
-       })
-    }
+    // Sector.associate = function (models) {
+    //    Sector.belongsTo(models.Concierto, {
+    //     as: "concierto",
+    //     foreignKey: "concierto_id"
+    //    })
+    // }
 
    
 

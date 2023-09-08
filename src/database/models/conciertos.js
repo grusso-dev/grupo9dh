@@ -1,4 +1,3 @@
-
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -9,6 +8,12 @@ module.exports = (sequelize) => {
         id: {
             primaryKey: true,
             autoIncrement: true,
+            type: DataTypes.INTEGER
+        },
+        user_id: {
+            type: DataTypes.INTEGER
+        },
+        sector_id: {
             type: DataTypes.INTEGER
         },
         artista: {
@@ -66,18 +71,15 @@ module.exports = (sequelize) => {
         Concierto.hasMany(models.checkoutItem, {
             as: "checkoutItem",
             foreignKey: "checkoutItem_id"
-        });
+        })
 
-        Concierto.hasMany(models.CheckoutItem, {
-            as: "checkoutItem",
-            foreignKey: "checkout_id"
-        });
-        
+
 
 
     };
 
-
+    
+    
      
 
     return Concierto;
