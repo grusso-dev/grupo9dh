@@ -24,7 +24,7 @@
     <form class="formulario" action="/conciertos/edit/<%= concertToEdit.id %>?_method=PUT" method="POST">
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Nombre de la banda</label>
-        <input type="text" name="name" value="<%= concertToEdit.name %>" class="form-control" id="validationCustom01">
+        <input type="text" name="name" value="<%= concertToEdit.artista %>" class="form-control" id="validationCustom01">
       </div>
 
       <div class="col-md-4 botonInd">
@@ -37,7 +37,7 @@
       </div>
       <div class="col-md-4 botonInd">
         <label for="validationCustom01" class="form-label">Ciudad</label>
-        <select class="form-select" name="location" value="<%= concertToEdit.location %>" aria-label="Default select example">
+        <select class="form-select" name="location" value="<%= concertToEdit.ciudad %>" aria-label="Default select example">
           <option selected>Elegi la Ciudad</option>
           <option value="Ciudad Autonoma de Buenos Aires">Ciudad Autonoma de Buenos Aires</option>
           <option value="La Plata">La Plata</option>

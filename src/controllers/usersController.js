@@ -52,8 +52,8 @@ const usersController = {
     // });
     try{
       let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
-      //res.send(conciertos);
-      res.render('register',{conciertos});
+      res.send(conciertos);
+      //res.render('register',{conciertos});
     }
     catch(error){
       console.log(error.message);

@@ -10,25 +10,30 @@
   <%- include("partials/header") %>
 </header>
 <body>
+  <!-- var date = moment('2016-08-15');
+      date.format('LL'); // 15 de Septiembre de 2016
+      date.format('LLL') // Jueves, 15 de Septiembre de 2016 0:00
+ -->
     <% concerts.forEach(concert => { %>
         <div class="card" style="width: 18rem;">
           <img src="<%= concert.image %>" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="/games/detail/<%=  %>">
-            <h5 class="card-title"><%= concert.name %></h5></a>
+            <a href="/concert/detail/<%=  %>">
+            <h5 class="card-title"><%= concert.description %></h5></a>
             <p class="card-text"><%= concert.date %></p>
-            <p class="card-text"><%= concert.location %></p>
+            <p class="card-text"><%= concert.direccion %></p>
             <a href="/detail" class="btn btn-primary">Reservar</a>
           </div>
         </div>
         <% }) %>
+<!--         
         <% concerts.forEach(concert => { %>
           <div class="card" style="width: 18rem;">
             <img src="<%= concert.image %>" class="card-img-top" alt="...">
             <div class="card-body">
-              <a href="/games/detail/<%=  %>">
+              <a href="/concert/detail/<%=  %>">
               <h5 class="card-title"><%= concert.name %></h5></a>
-              <p class="card-text"><%= concert.date %></p>
+              <p class="card-text"><%= concert.date.toLocaleDateString('en-GB') %></p>
               <p class="card-text"><%= concert.location %></p>
               <a href="/detail" class="btn btn-primary">Reservar</a>
             </div>
@@ -70,5 +75,6 @@
                   </div>
                 </div>
                 <% }) %>
+               -->
 </body>
 </html>

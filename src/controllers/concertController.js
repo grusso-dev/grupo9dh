@@ -41,15 +41,19 @@ const concertController = {
   create: (req, res) => {
     res.render('createConcert');
   },
-  concerts: (req, res) => {
-    db.Conciertos.findAll()
-      .then(function (conciertos) {
-        res.render('todosLosConciertos', { conciertos: conciertos });
-      })
-      .catch(function (error) {
-        console.error("Error al buscar conciertos:", error);
-        res.render("errorPage"); // Manejar el error adecuadamente
-      });
+  concerts:async (req, res) => {
+    let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
+    console.log(conciertos);
+    res.render('todosLosConciertos', { concerts: conciertos });
+
+    // db.Conciertos.findAll()
+    //   .then(function (conciertos) {
+    //     res.render('todosLosConciertos', { conciertos: conciertos });
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Error al buscar conciertos:", error);
+    //     res.render("errorPage"); // Manejar el error adecuadamente
+    //   });
   },
   deleteConcert: (req, res) => {
     db.Conciertos.destroy({
@@ -84,15 +88,20 @@ const concertController = {
         res.render("errorPage"); // Manejar el error adecuadamente
       });
   },
-  editConcert: (req, res) => {
-    db.Conciertos.findByPk(req.params.id)
-      .then(function (concierto) {
-        res.render("editconcert", { concierto: concierto });
-      })
-      .catch(function (error) {
-        console.error("Error al buscar concierto para editar:", error);
-        res.render("errorPage"); // Manejar el error adecuadamente
-      });
+  editConcert: async (req, res) => {
+    //console.log(req.params.id);
+    // db.Conciertos.findByPk(req.params.id)
+    //   .then(function (concierto) {
+    //     res.render("editconcert", { concierto: concierto });
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Error al buscar concierto para editar:", error);
+    //     res.render("errorPage"); // Manejar el error adecuadamente
+    //   });
+    let concierto = await db.conciertos.findByPk(req.params.id);
+    //console.log(concierto.dataValues);
+    res.render("editconcert", { concertToEdit: concierto.dataValues });
+
   },
   saveEditConcert: (req, res) => {
     db.Conciertos.update({
