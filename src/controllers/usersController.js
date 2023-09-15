@@ -24,22 +24,21 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 const usersController = {
 
   login: (req, res) => {
-    db.user.findAll().then((users)=>{
-      console.log("Consulta OK");
-      console.log(users[0]);
-      res.render('login');
-
-    }).catch((error) => {
-      res.render('login');
-      console.log(error);
-    });
+    res.render('login');
+   
   },
-  logindata: (req, res) => {
-    console.log(req.body)
-    console.log('sesión iniciada')
-    res.redirect('/')
+  logindata: async(req, res) => {
+    try{
+      let usuario = await db.user.findByPk(1)
+      res.send(usuario);
+    }
+    catch(error){
+      console.log(error.message);
+    }
   },
   register: async (req, res) => {
+    res.render('register');
+    /*FindAll con then (Poco usado) */
     // db.conciertos.findAll({include:[{association:"User"}]}).then((conciertos)=>{
     //   console.log("Consulta conciertos OK");
     //   console.log(conciertos);
@@ -50,15 +49,16 @@ const usersController = {
     //   res.render('register')
     //   //console.log(error);
     // });
-    try{
-      let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
-      res.send(conciertos);
-      //res.render('register',{conciertos});
-    }
-    catch(error){
-      console.log(error.message);
 
-    }
+    /** FindAll con await (Mas usado) */
+
+    // try{
+    //   let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
+    //   res.send(conciertos);
+    // }
+    // catch(error){
+    //   console.log(error.message);
+    // }
   },
   registerdata: (req, res) => {
     res.render('registerdata')

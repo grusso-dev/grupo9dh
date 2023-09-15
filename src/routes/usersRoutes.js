@@ -26,6 +26,6 @@ router.get('/login', UsersController.login);
 router.post('/logindata', UsersController.logindata);
 router.get('/register', UsersController.register);
 router.get('/registerdata', UsersController.registerdata);
-router.post('/save',upload.single("image"), UsersController.save);//router.post('/save',upload.single("image"), UsersController.save);
+router.post('/save', UsersController.save);//router.post('/save',upload.single("image"), UsersController.save);
 
 module.exports = router 
