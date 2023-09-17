@@ -39,16 +39,16 @@ const concertController = {
       });
   },
   create: (req, res) => {
-    res.render('createConcert');
+    res.render('createConcert')
   },
-  concerts:async (req, res) => {
-    let conciertos = await db.conciertos.findAll({include:[{association:"User"}]});
+  concerts: async (req, res) => {
+    let conciertos = await db.conciertos.findAll();
     console.log(conciertos);
     res.render('todosLosConciertos', { concerts: conciertos });
 
     // db.Conciertos.findAll()
     //   .then(function (conciertos) {
-    //     res.render('todosLosConciertos', { conciertos: conciertos });
+    //     res.render('todosLosConciertos', { concerts: conciertos });
     //   })
     //   .catch(function (error) {
     //     console.error("Error al buscar conciertos:", error);
@@ -70,7 +70,7 @@ const concertController = {
       });
   },
   saveConcert: function (req, res) {
-    db.Conciertos.create({
+    db.conciertos.create({
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -81,7 +81,7 @@ const concertController = {
       descripcion: req.body.descripcion
     })
       .then(() => {
-        res.redirect('/');
+        res.redirect('/conciertos/');
       })
       .catch((error) => {
         console.error("Error al crear concierto:", error);
@@ -104,7 +104,7 @@ const concertController = {
 
   },
   saveEditConcert: (req, res) => {
-    db.Conciertos.update({
+    db.conciertos.update({
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -119,7 +119,7 @@ const concertController = {
       }
     })
       .then(() => {
-        res.redirect('/conciertos/edit/' + req.params.id);
+        res.redirect('/conciertos/todosLosConciertos/' + req.params.id);
       })
       .catch(function (error) {
         console.error("Error al guardar la edición del concierto:", error);
