@@ -42,6 +42,8 @@ const concertController = {
     res.render('createConcert')
   },
   concerts: async (req, res) => {
+    console.log('probando')
+
     let conciertos = await db.conciertos.findAll();
     console.log(conciertos);
     res.render('todosLosConciertos', { concerts: conciertos });
