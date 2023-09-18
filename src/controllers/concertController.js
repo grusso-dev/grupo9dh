@@ -85,7 +85,7 @@ const concertController = {
     //   descripcion: req.body.descripcion
     // }
     // let ret =  await db.conciertos.create(newConcierto);
-    db.conciertos.create({
+    db.Concierto.create({
       user_id:1,
       genre_id:1,
       artista: req.body.artista,
@@ -121,7 +121,9 @@ const concertController = {
 
   },
   saveEditConcert: (req, res) => {
-    db.conciertos.update({
+    db.Concierto.update({
+      user_id:1,
+      genre_id:1,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,

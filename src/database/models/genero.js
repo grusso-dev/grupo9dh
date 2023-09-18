@@ -23,11 +23,11 @@ module.exports = (sequelize) => {
     const Genero = sequelize.define(alias, cols, config);
 
     Genero.associate=function(modelos){
-        Genero.hasMany(modelos.conciertos, {
+        Genero.hasMany(modelos.Concierto, {
             as:"concierto",
             foreignKey: 'genre_id'
         });
     };
 
-    return Genero;
+    return Genero; 
 }

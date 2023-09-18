@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
     const Sector = sequelize.define(alias, cols, config);
 
     Sector.associate = function (modelos) {
-        Sector.belongsTo(modelos.Conciertos, {
+        Sector.belongsTo(modelos.Concierto, {
             as: "conciertos",
             foreignKey: "concert_id"
         });
