@@ -1,8 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-
-    let alias = "conciertos";
+    let alias = "Conciertos"; 
 
     let cols = {
         id: {
@@ -13,11 +12,17 @@ module.exports = (sequelize) => {
         user_id: {
             type: DataTypes.INTEGER
         },
-        // sector_id: {
-        //     type: DataTypes.INTEGER
-        // },
+        genre_id: {
+            type: DataTypes.INTEGER
+        },
+        sector_id: {
+            type: DataTypes.INTEGER
+        },
         artista: {
             type: DataTypes.STRING(30)
+        },
+        name: { 
+            type: DataTypes.STRING(20)
         },
         date: {
             type: DataTypes.DATE
@@ -35,23 +40,46 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING(100),
             allowNull: true,
         },
+        status: { 
+            type: DataTypes.ENUM('method1', 'method2')
+        },
         description: {
-            type: DataTypes.STRING(255),
+            type: DataTypes.TEXT, 
             allowNull: true,
         }
     };
 
     let config = {
-        tableName: 'conciertos',
+        tableName: 'concert',
         timestamps: false
     };
+
     const Concierto = sequelize.define(alias, cols, config);
-    Concierto.associate=function(modelos){
-      Concierto.belongsTo(modelos.user, {
-        as:"User",
-        foreignKey: 'user_id'
-      });
-    };
-    
+
+    Concierto.associate = function (modelos) {
+        Concierto.belongsTo(modelos.users, {
+            as: "users",
+            foreignKey: 'user_id'
+        });
+
+        Concierto.belongsTo(modelos.Generos, {
+            as: "generos",
+            foreignKey: 'genre_id'
+        });
+
+        Concierto.hasMany(modelos.sector, {
+            as: "sectores",
+            foreignKey: "concert_id"
+        });
+
+        /*
+        Concierto.hasMany(modelos.checkout_item, {
+            as: "checkout_items",
+            foreignKey: "concert_id"
+        });
+
+        */
+    }
+
     return Concierto;
-}
+};

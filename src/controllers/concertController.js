@@ -73,6 +73,8 @@ const concertController = {
   },
   saveConcert: function (req, res) {
     db.conciertos.create({
+      user_id: 1,
+      genre_id: 1,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -83,7 +85,7 @@ const concertController = {
       descripcion: req.body.descripcion
     })
       .then(() => {
-        res.redirect('/conciertos/');
+        res.redirect('/conciertos');
       })
       .catch((error) => {
         console.error("Error al crear concierto:", error);

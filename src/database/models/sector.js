@@ -1,8 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    
-    let alias = "Sectores"; 
+    let alias = "Sector"; 
 
     let cols = {
         id: {
@@ -12,29 +11,28 @@ module.exports = (sequelize) => {
         },
         nombre_sector: {
             type: DataTypes.STRING(30)
-        }, 
+        },
         price: {
             type: DataTypes.DECIMAL
         },
         capacity: {
             type: DataTypes.INTEGER
         }
-
     };
 
     let config = {
-        tableName: 'sectores',
+        tableName: 'sector', 
         timestamps: false
     };
-    
+
     const Sector = sequelize.define(alias, cols, config);
 
-    // Sector.associate = function (models) {
-    //    Sector.belongsTo(models.Concierto, {
-    //     as: "concierto",
-    //     foreignKey: "concierto_id"
-    //    })
-    // }
+    Sector.associate = function (modelos) {
+        Sector.belongsTo(modelos.Conciertos, {
+            as: "conciertos",
+            foreignKey: "concert_id"
+        });
+    }
 
     return Sector;
 }

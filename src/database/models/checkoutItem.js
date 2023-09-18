@@ -1,8 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    
-    let alias = "CheckoutItems"; 
+    let alias = "CheckoutItem";
 
     let cols = {
         id: {
@@ -12,37 +11,39 @@ module.exports = (sequelize) => {
         },
         unit_price: {
             type: DataTypes.DECIMAL
-        }, 
+        },
         quantity: {
             type: DataTypes.INTEGER
         },
         checkout_id: {
             type: DataTypes.INTEGER
         },
-        access_code:{
-             type: DataTypes.STRING(220)
-         }
-
+        access_code: {
+            type: DataTypes.STRING(220)
+        }
     };
 
     let config = {
-        tableName: 'checkout_items',
+        tableName: 'checkout_item', 
         timestamps: false
     };
-    
-    const CheckoutItem = sequelize.define(alias, cols, config);
 
-    // CheckoutItem.associate = function (models) {
-    //     CheckoutItem.belongsTo(models.Concierto, {
-    //       as: 'concierto',
-    //       foreignKey: 'concierto_id',
-    //     });
-    
-    //     CheckoutItem.belongsTo(models.Checkout, {
-    //       as: 'checkout',
-    //       foreignKey: 'checkout_id',
-    //     });
-    //   };
+    const CheckoutItem = sequelize.define(alias, cols, config);
+    /*
+
+    CheckoutItem.associate = function (modelos) {
+        CheckoutItem.belongsTo(modelos.Conciertos, { 
+            as: 'conciertos',
+            foreignKey: 'concert_id',
+        });
+        
+        CheckoutItem.belongsTo(modelos.Checkout, { 
+            as: 'checkouts',
+            foreignKey: 'checkout_id',
+        });
+    };
+
+    */
 
     return CheckoutItem;
-}
+};
