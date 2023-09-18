@@ -24,17 +24,35 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 const usersController = {
 
   login: (req, res) => {
+    
     res.render('login');
    
   },
-  logindata: async(req, res) => {
-    try{
-      let usuario = await db.user.findByPk(1)
-      res.send(usuario);
+  logindata: async (req, res) => {
+    let usuarios = await db.user.findAll(
+      { where:{
+          mail: {[db.Sequelize.Op.like]:'%'+req.body.mail+'%'}
+      }}
+    );
+    if(usuarios.length =1){
+
+      try{
+        let usuario = await db.user.findByPk(usuarios[0].id)
+        if(usuario.password==req.body.password){
+          res.render('login',usuario);
+
+        }else{
+          res.send(usuario);
+        }
+      }
+      catch(error){
+        console.log(error.message);
+      }
+    }else{
+      res.render('login');
     }
-    catch(error){
-      console.log(error.message);
-    }
+
+    
   },
   register: async (req, res) => {
     res.render('register');
