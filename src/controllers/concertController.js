@@ -71,10 +71,23 @@ const concertController = {
         res.render("errorPage"); // Manejar el error adecuadamente
       });
   },
-  saveConcert: function (req, res) {
+  saveConcert: async function (req, res) {
+    // newConcierto={
+    //   user_id:1,
+    //   genre_id:1,
+    //   artista: req.body.artista,
+    //   title: req.body.name,
+    //   date: req.body.date,
+    //   direccion: req.body.direccion,
+    //   provincia: req.body.provincia,
+    //   ciudad: req.body.ciudad,
+    //   image: req.body.imagen,
+    //   descripcion: req.body.descripcion
+    // }
+    // let ret =  await db.conciertos.create(newConcierto);
     db.conciertos.create({
-      user_id: 1,
-      genre_id: 1,
+      user_id:1,
+      genre_id:1,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -83,14 +96,14 @@ const concertController = {
       ciudad: req.body.ciudad,
       image: req.body.imagen,
       descripcion: req.body.descripcion
+    }).then(() => {
+      res.redirect('/');
     })
-      .then(() => {
-        res.redirect('/conciertos');
-      })
-      .catch((error) => {
-        console.error("Error al crear concierto:", error);
-        res.render("errorPage"); // Manejar el error adecuadamente
-      });
+    .catch((error) => {
+      console.error("Error al crear concierto:", error);
+      res.render("errorPage"); // Manejar el error adecuadamente
+    });
+
   },
   editConcert: async (req, res) => {
     //console.log(req.params.id);
