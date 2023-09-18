@@ -29,7 +29,7 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 
 const concertController = {
   detail: (req, res) => {
-    db.Conciertos.findByPk(req.params.id)
+    db.Concierto.findByPk(req.params.id)
       .then(function (concierto) {
         res.render("detail", { concierto: concierto });
       })
@@ -44,7 +44,7 @@ const concertController = {
   concerts: async (req, res) => {
     console.log('probando')
 
-    let conciertos = await db.conciertos.findAll();
+    let conciertos = await db.Concierto.findAll();
     console.log(conciertos);
     res.render('todosLosConciertos', { concerts: conciertos });
 
@@ -58,7 +58,7 @@ const concertController = {
     //   });
   },
   deleteConcert: (req, res) => {
-    db.Conciertos.destroy({
+    db.Concierto.destroy({
       where: {
         id: req.params.id
       }
@@ -115,7 +115,7 @@ const concertController = {
     //     console.error("Error al buscar concierto para editar:", error);
     //     res.render("errorPage"); // Manejar el error adecuadamente
     //   });
-    let concierto = await db.conciertos.findByPk(req.params.id);
+    let concierto = await db.Concierto.findByPk(req.params.id);
     //console.log(concierto.dataValues);
     res.render("editconcert", { concertToEdit: concierto.dataValues });
 
