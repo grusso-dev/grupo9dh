@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    let alias = "Conciertos"; 
+    let alias = "Concierto"; 
 
     let cols = {
         id: {
@@ -50,7 +50,7 @@ module.exports = (sequelize) => {
     };
 
     let config = {
-        tableName: 'concert',
+        tableName: 'conciertos',
         timestamps: false
     };
 
