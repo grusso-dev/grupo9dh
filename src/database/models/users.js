@@ -17,7 +17,7 @@ function userData(sequelize, DataTypes) {
   const User = sequelize.define(tbl, cmp, cfg);
 
   User.associate = function (modelos) {
-      User.hasMany(modelos.Conciertos, {
+      User.hasMany(modelos.Concierto, {
           as: "conciertos",
           foreignKey: 'user_id'
       });

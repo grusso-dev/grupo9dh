@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    let alias = "Conciertos"; 
+    let alias = "Concierto"; 
 
     let cols = {
         id: {
@@ -50,36 +50,21 @@ module.exports = (sequelize) => {
     };
 
     let config = {
-        tableName: 'concert',
+        tableName: 'conciertos',
         timestamps: false
     };
 
     const Concierto = sequelize.define(alias, cols, config);
-
-    Concierto.associate = function (modelos) {
-        Concierto.belongsTo(modelos.users, {
-            as: "users",
-            foreignKey: 'user_id'
-        });
-
-        Concierto.belongsTo(modelos.Generos, {
-            as: "generos",
-            foreignKey: 'genre_id'
-        });
-
-        Concierto.hasMany(modelos.sector, {
-            as: "sectores",
-            foreignKey: "concert_id"
-        });
-
-        /*
-        Concierto.hasMany(modelos.checkout_item, {
-            as: "checkout_items",
-            foreignKey: "concert_id"
-        });
-
-        */
-    }
-
+    Concierto.associate=function(modelos){
+      Concierto.belongsTo(modelos.user, {
+        as:"User",
+        foreignKey: 'user_id'
+      });
+      Concierto.belongsTo(modelos.Genero, {
+        as:"Generos",
+        foreignKey: 'genre_id'
+      });
+    };
+    
     return Concierto;
 };

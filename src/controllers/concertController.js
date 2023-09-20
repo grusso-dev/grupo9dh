@@ -29,7 +29,7 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 
 const concertController = {
   detail: (req, res) => {
-    db.Conciertos.findByPk(req.params.id)
+    db.Concierto.findByPk(req.params.id)
       .then(function (concierto) {
         res.render("detail", { concierto: concierto });
       })
@@ -44,7 +44,7 @@ const concertController = {
   concerts: async (req, res) => {
     console.log('probando')
 
-    let conciertos = await db.conciertos.findAll();
+    let conciertos = await db.Concierto.findAll();
     console.log(conciertos);
     res.render('todosLosConciertos', { concerts: conciertos });
 
@@ -58,7 +58,7 @@ const concertController = {
     //   });
   },
   deleteConcert: (req, res) => {
-    db.Conciertos.destroy({
+    db.Concierto.destroy({
       where: {
         id: req.params.id
       }
@@ -71,10 +71,23 @@ const concertController = {
         res.render("errorPage"); // Manejar el error adecuadamente
       });
   },
-  saveConcert: function (req, res) {
-    db.conciertos.create({
-      user_id: 1,
-      genre_id: 1,
+  saveConcert: async function (req, res) {
+    // newConcierto={
+    //   user_id:1,
+    //   genre_id:1,
+    //   artista: req.body.artista,
+    //   title: req.body.name,
+    //   date: req.body.date,
+    //   direccion: req.body.direccion,
+    //   provincia: req.body.provincia,
+    //   ciudad: req.body.ciudad,
+    //   image: req.body.imagen,
+    //   descripcion: req.body.descripcion
+    // }
+    // let ret =  await db.conciertos.create(newConcierto);
+    db.Concierto.create({
+      user_id:1,
+      genre_id:1,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -83,14 +96,14 @@ const concertController = {
       ciudad: req.body.ciudad,
       image: req.body.imagen,
       descripcion: req.body.descripcion
+    }).then(() => {
+      res.redirect('/');
     })
-      .then(() => {
-        res.redirect('/conciertos');
-      })
-      .catch((error) => {
-        console.error("Error al crear concierto:", error);
-        res.render("errorPage"); // Manejar el error adecuadamente
-      });
+    .catch((error) => {
+      console.error("Error al crear concierto:", error);
+      res.render("errorPage"); // Manejar el error adecuadamente
+    });
+
   },
   editConcert: async (req, res) => {
     //console.log(req.params.id);
@@ -102,13 +115,15 @@ const concertController = {
     //     console.error("Error al buscar concierto para editar:", error);
     //     res.render("errorPage"); // Manejar el error adecuadamente
     //   });
-    let concierto = await db.conciertos.findByPk(req.params.id);
+    let concierto = await db.Concierto.findByPk(req.params.id);
     //console.log(concierto.dataValues);
     res.render("editconcert", { concertToEdit: concierto.dataValues });
 
   },
   saveEditConcert: (req, res) => {
-    db.conciertos.update({
+    db.Concierto.update({
+      user_id:1,
+      genre_id:1,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
