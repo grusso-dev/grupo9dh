@@ -1,19 +1,30 @@
 window.addEventListener("load", function(){
-let formulario = document.querySelectorAll("form.input-group")
+let formulario = document.getElementById("login_form")
+
+let errores = [];
 
 formulario.addEventListener('submit', function(e){
-   let email = document.querySelector("input.form-control")
+   let email = document.getElementById("mail")
    if(email.value == ""){
-    alert("Debe completar el email")
+    errores.push("Debe completar el email")
    }
 })
 
 formulario.addEventListener('submit', function(e){
-   let password = document.querySelector("input.form-control")
+   let password = document.getElementById("password")
    if(password.value == ""){
-    alert("Debe completar la contraseña")
+      errores.push("Debe completar la contraseña")
    }else if(password.value.length < 5){
-      alert("La contraseña es demasiado corta")
+      errores.push("La contraseña es demasiado corta")
    }
 })
+
+if (errores.length > 0){
+   e.preventDefault();
+
+   let ulErrores = document.querySelector("div.errores ul");
+   for(let i = 0 ; i < errores.length ; i++ ){
+    ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+   }
+}
 })
