@@ -4,32 +4,32 @@ window.addEventListener('load', function() {
     formulario.addEventListener('submit', function(e) {
       let errores = [];
       
-      let campoArtista = document.querySelector('input#artista');
+      let campoArtista = document.getElementById('artista');
       if (campoArtista.value == '') {
         errores.push('El campo de Artista debe estar completo');
       }
 
-      let campoTitle = document.querySelector('#title');
+      let campoTitle = document.getElementById('title');
       if (campoTitle.value == '') {
         errores.push('El campo de título debe estar completo');
       }
 
-      let campoDate = document.querySelector('#date');
+      let campoDate = document.getElementById('date');
       if (campoDate.value == '') {
         errores.push('El campo de fecha debe estar completo');
       }
 
-      let campoDireccion = document.querySelector('input#direccion');
+      let campoDireccion = document.getElementById('direccion');
       if (campoDireccion.value == '') {
         errores.push('El campo de dirección debe estar completo');
       }
 
-      let campoProvincia = document.querySelector('select#provincia');
+      let campoProvincia = document.getElementById('provincia');
       if (campoProvincia.value == 'Elegi la Ciudad') {
         errores.push('Debes seleccionar una provincia');
       }
 
-      let campoCiudad = document.querySelector('input#ciudad');
+      let campoCiudad = document.getElementById('ciudad');
       if (campoCiudad.value == '') {
         errores.push('El campo de Ciudad debe estar completo');
       }
@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
       }
 
       let ulErrores = document.querySelector('div.errores ul');
-      ulErrores.innerHTML = ''; 
+      ulErrores.innerHTML = ''; // Limpiar mensajes de error anteriores
       
       if (errores.length > 0) {
         e.preventDefault();
