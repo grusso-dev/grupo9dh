@@ -106,18 +106,19 @@ const concertController = {
 
   },
   editConcert: async (req, res) => {
-    //console.log(req.params.id);
-    // db.Conciertos.findByPk(req.params.id)
-    //   .then(function (concierto) {
-    //     res.render("editconcert", { concierto: concierto });
-    //   })
-    //   .catch(function (error) {
-    //     console.error("Error al buscar concierto para editar:", error);
-    //     res.render("errorPage"); // Manejar el error adecuadamente
-    //   });
-    let concierto = await db.Concierto.findByPk(req.params.id);
+    console.log(req.params.id);
+    db.Concierto.findByPk(req.params.id)
+      .then(function (concierto) {
+         res.render("editconcert", { concertToEdit: concierto.dataValues });
+      })
+       .catch(function (error) {
+        console.error("Error al buscar concierto para editar:", error);
+        res.render("errorPage"); // Manejar el error adecuadamente
+       });
+    
+    /*let concierto = await db.Concierto.findByPk(req.params.id);
     //console.log(concierto.dataValues);
-    res.render("editconcert", { concertToEdit: concierto.dataValues });
+    res.render("editconcert", { concertToEdit: concierto.dataValues }); */
 
   },
   saveEditConcert: (req, res) => {
