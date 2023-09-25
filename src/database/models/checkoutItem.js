@@ -9,8 +9,11 @@ module.exports = (sequelize) => {
             autoIncrement: true,
             type: DataTypes.INTEGER
         },
+        concert_id: {
+            type: DataTypes.INTEGER
+        },
         unit_price: {
-            type: DataTypes.DECIMAL
+            type: DataTypes.DECIMAL(10,2)
         },
         quantity: {
             type: DataTypes.INTEGER
@@ -19,12 +22,12 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         access_code: {
-            type: DataTypes.STRING(220)
+            type: DataTypes.STRING(200)
         }
     };
 
     let config = {
-        tableName: 'checkoutItem', 
+        tableName: 'checkout_item', 
         timestamps: false
     };
 
