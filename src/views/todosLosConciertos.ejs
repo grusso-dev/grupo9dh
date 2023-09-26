@@ -21,8 +21,10 @@
               <p class="card-text"> Genero: </p>
               <p class="card-text"> Fecha: <%= concerts[i].date %></p>
               <p class="card-text"> Direccion: <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
-              <a href="#" class="btn btn-primary">Agregar al carrito</a>
-              <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
+              <div class="card-buttons">
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
+              </div>
             </div>
           </div>
         </div>
