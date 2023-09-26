@@ -2,38 +2,76 @@
 <html>
 <head>
     <%- include("./partials/head", { styles: ["todosLosConciertos", "partials"] }) %>
+    <script>
+      function formatDateTime(dateTime) {
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+          const formattedDate = new Date(dateTime).toLocaleDateString('es-AR', options);
+          const dayName = formattedDate.split(' ')[0];
+          const capitalizedDayName = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+          return formattedDate.replace(dayName, capitalizedDayName);
+      }
+  </script>
 </head>
 <body>
     <%- include("./partials/header") %>
     <div class="container text-center">
-      <% for (let i = 0; i < concerts.length; i++) { %>
-        <% if (i % 3 === 0) { %>
-          <div class="row">
-        <% } %>
 
-        <!-- Tarjeta con los datos -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
-            <div class="card-body">
-              <h5 class="card-title a"> <%= concerts[i].name %> </h5>
-              <h6 class="card-title b"> <%= concerts[i].artista %> </h6>
-              <p class="card-text"> Genero: </p>
-              <p class="card-text"> Fecha: <%= concerts[i].date %></p>
-              <p class="card-text"> Direccion: <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
-              <div class="card-buttons">
-                <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
-              </div>
+<!-- Modal -->
+<div class="modal fade" id="concertModal" tabindex="-1" aria-labelledby="concertModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="concertModalLabel">Concert Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Concert details will go here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
+
+        <% for (let i = 0; i < concerts.length; i++) { %>
+            <% if (i % 3 === 0) { %>
+                <div class="row">
+            <% } %>
+
+            <!-- Tarjeta con los datos -->
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
+                    <div class="card-body">
+                        <h5 class="card-title a"> <%= concerts[i].name %> </h5>
+                        <h6 class="card-title b"> <%= concerts[i].artista %> </h6>
+                        <p class="card-text"> Genero: </p>
+                        <p class="card-text"> Fecha: <span id="formattedDate<%= i %>"></span></p>
+                        <p class="card-text"> Direccion: <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
+                        <div class="card-buttons">
+                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">
+                              Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- Tarjeta con los datos -->
+            <!-- Tarjeta con los datos -->
 
-        <% if ((i + 1) % 3 === 0 || i === concerts.length - 1) { %>
-          </div>
+            <% if ((i + 1) % 3 === 0 || i === concerts.length - 1) { %>
+                </div>
+            <% } %>
+
+            <script>
+                const formattedDate<%= i %> = formatDateTime("<%= concerts[i].date %>");
+                document.getElementById("formattedDate<%= i %>").textContent = formattedDate<%= i %>;
+            </script>
+
         <% } %>
-      <% } %>
     </div>
     <%- include("./partials/footer") %>
     <%- include("./partials/globalScripts") %>
