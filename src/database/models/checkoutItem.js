@@ -32,21 +32,20 @@ module.exports = (sequelize) => {
     };
 
     const CheckoutItem = sequelize.define(alias, cols, config);
-    /*
-
+    
     CheckoutItem.associate = function (modelos) {
-        CheckoutItem.belongsTo(modelos.Conciertos, { 
+        CheckoutItem.belongsTo(modelos.Concierto, { 
             as: 'conciertos',
             foreignKey: 'concert_id',
         });
         
-        CheckoutItem.belongsTo(modelos.Checkout, { 
+        CheckoutItem.belongsTo(modelos.CheckoutItem, { 
             as: 'checkouts',
             foreignKey: 'checkout_id',
         });
+
     };
 
-    */
 
     return CheckoutItem;
 };
