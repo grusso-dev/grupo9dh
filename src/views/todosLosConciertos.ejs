@@ -21,14 +21,17 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="concertModalLabel">Concert Details</h5>
+        <h5 class="modal-title" id="concertModalLabel">Eleccion de sector</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
-        <p>Concert details will go here.</p>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Sector 2"></button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Sector 1"></button>
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -52,10 +55,10 @@
                         <p class="card-text"> Fecha: <span id="formattedDate<%= i %>"></span></p>
                         <p class="card-text"> Direccion: <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
                         <div class="card-buttons">
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">
-                              Detalles
-                            </button>
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">
+                              Agregar al carrito
+                          </button>
+                          <a href="#" class="btn btn-primary">Detalles</a>
                         </div>
                     </div>
                 </div>
