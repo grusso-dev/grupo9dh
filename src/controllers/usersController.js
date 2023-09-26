@@ -28,6 +28,14 @@ const usersController = {
     res.render('login');
    
   },
+  test: async(req, res) => {
+    let usuarios = await db.CheckoutItem.findAll();
+    data={
+      return:usuarios
+    };
+    res.send({data:data});
+   
+  },
   logindata: async (req, res) => {
     let usuarios = await db.user.findAll(
       { where:{

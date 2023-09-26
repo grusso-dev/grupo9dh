@@ -1,12 +1,14 @@
 const db = require('../src/database/models');
 describe("Test DB",function(){
   it("Test findAll Usuarios",async function () {
+    let usuarios;
     try {
-      let usuarios = await db.user.findAll();
+      usuarios = await db.user.findAll();
       return true;
     } catch (error) {
       return false;
     }
+
   });
 
   it("Test findAll Concierto",async function() {
@@ -30,7 +32,26 @@ describe("Test DB",function(){
       let sectores = await db.Sector.findAll();
       return true;
     } catch (error) {
-      return false;
+      return false; 
     }
+  });
+  it("Test findAll Checkout",async function() {
+    try {
+      let checkout = await db.Checkout.findAll();
+      return true;
+    } catch (error) {
+      return false; 
+    }
+  });
+  it("Test findAll CheckoutItem",async function() {
+    let checkoutItem ;
+    try {
+      checkoutItem = await db.CheckoutItem.findAll();
+      return true;
+    } catch (error) {
+      return false; 
+    }
+    console.log(checkoutItem);
+
   });
 });
