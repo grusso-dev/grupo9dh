@@ -3,6 +3,9 @@
 
 }
 
+.card-text.a{
+    font-weight: bold;
+}
 .card {
     display: flex;
     flex-direction: column;
