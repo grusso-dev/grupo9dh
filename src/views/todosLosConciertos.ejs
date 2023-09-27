@@ -38,7 +38,7 @@
               <div class="carousel-item <% if (i === 0) { %>active<% } %>" data-bs-interval="10000">
                 <img src="https://picsum.photos/600/300" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <a type="button" href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-outline-primary"> Sector <%= i + 1 %> </a>
+                  <a type="button" href="checkout" class="btn btn-outline-primary"> Sector <%= i + 1 %> </a>
                 </div>
               </div>
             <% } %>
@@ -69,7 +69,6 @@
             <% if (i % 3 === 0) { %>
                 <div class="row">
             <% } %>
-            <% let currentI = i; %>
             <!-- Tarjeta con los datos -->
             <div class="col-lg-4">
                 <div class="card mb-4">
@@ -84,7 +83,7 @@
                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">
                               Agregar al carrito
                           </button>
-                          <a href="#" class="btn btn-primary">Detalles</a>
+                          <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
                         </div>
                     </div>
                 </div>
