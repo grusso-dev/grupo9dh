@@ -2,6 +2,7 @@ const db = require('../database/models');
 const fs = require('fs');
 const path = require("path");
 const ftp = require('basic-ftp');
+// const { Concert, Genero } = require('../database/models')
 
 const concertsFilePath = path.join(__dirname, '../data/concertsDataBase.json');
 
@@ -105,10 +106,18 @@ const concertController = {
     });
 
   },
-  editConcert: async (req, res) => {
-    console.log(req.params.id);
-    db.Concierto.findByPk(req.params.id)
+  //,{include:[{association:"Genero"}]}
+  editConcert:  (req, res) => {
+    //console.log(req.params.id);
+    /*
+    const concert = await Concert.findByPk(concertId, {
+      include: [{ model: Genre, required: true }], // Perform an inner join with Genre
+    });
+    */
+    
+    db.Concierto.findByPk(req.params.id,{include:[{association:"Generos"}]})
       .then(function (concierto) {
+        console.log(concierto.dataValues);
          res.render("editconcert", { concertToEdit: concierto.dataValues });
       })
        .catch(function (error) {
@@ -116,9 +125,9 @@ const concertController = {
         res.render("errorPage"); // Manejar el error adecuadamente
        });
     
-    /*let concierto = await db.Concierto.findByPk(req.params.id);
-    //console.log(concierto.dataValues);
-    res.render("editconcert", { concertToEdit: concierto.dataValues }); */
+    // let concierto = await db.Concierto.findByPk(req.params.id);
+    // //console.log(concierto.dataValues);
+    // res.render("editconcert", { concertToEdit: concierto }); 
 
   },
   saveEditConcert: (req, res) => {

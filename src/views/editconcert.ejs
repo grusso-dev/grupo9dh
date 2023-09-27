@@ -25,25 +25,36 @@
       <ul>
 
       </ul>
-
-      <form class="formulario" action="/conciertos/create" method="post" enctype="multipart/form-data">
+      
+      <form class="formulario" action="/conciertos/edit/<%=concertToEdit.id %>/?_method=PATCH" method="post" enctype="multipart/form-data">
         <div class="col-md-4 botonInd">
           <label for="validationCustom01" class="form-label">Artista</label>
-          <input type="text" name="artista" class="form-control" id="validationCustom01 artita">
+          <input type="text" name="artista" class="form-control" id="validationCustom01 artita" value="<%=concertToEdit.artista %>">
         </div>
         <div class="col-md-4 botonInd">
           <label for="validationCustom01" class="form-label">Nombre del concierto</label>
-          <input type="text" name="title" class="form-control" id="validationCustom01 title">
+          <input type="text" name="title" class="form-control" id="validationCustom01 title" value="<%=concertToEdit.name %>">
+        </div>
+        <div class="col-md-4 botonInd">
+          <label for="validationCustom01" class="form-label">Genero</label>
+          <select class="form-select" name="provincia" aria-label="Default select example" id="provincia" value="<%=concertToEdit.Generos.description %>">
+            <option selected>Elegi un genero</option>
+            <option value="1">Rock</option>
+            <option value="2">Pop</option>
+            <option value="3">Reggaeton</option>
+            <option value="4">Punk Rock</option> 
+          
+          </select>
         </div>
        
         <div class="col-md-4 botonInd">
           <label for="validationCustom01" class="form-label">Fecha</label>
-          <input type="date" name="date" class="form-control" id="validationCustom01 date">
+          <input type="date" name="date" class="form-control" id="validationCustom01 date" value="<%=concertToEdit.date %>">
         </div>
   
         <div class="col-md-4 botonInd">
           <label for="validationCustom01" class="form-label">Dirección</label>
-          <input type="text" name="direccion" class="form-control" id="validationCustom01 direccion">
+          <input type="text" name="direccion" class="form-control" id="validationCustom01 direccion" value="<%=concertToEdit.direccion %>">
         </div>
   
         
@@ -60,7 +71,7 @@
   
         <div class="col-md-4 botonInd">
           <label for="validationCustom01" class="form-label">Ciudad</label>
-          <input type="text" name="ciudad" class="form-control" id="validationCustom01 ciudad">
+          <input type="text" name="ciudad" class="form-control" id="validationCustom01 ciudad" value="<%=concertToEdit.ciudad %>">
         </div>
   
         <div class="col-md-4 botonInd">
@@ -74,8 +85,14 @@
             <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir</button>
           </div>
         </div>
+        
         <button type="submit" class="buttonGradient btn btn-primary">Editar</button>
+
         <a href="/conciertos/delete/1"><button type="button" class="buttonGradient btn btn-primary">Borrar</button></a>
+      </form>
+
+      <form class="formulario" action="/conciertos/delete/<%=concertToEdit.id %>/?_method=DELETE" method="post" enctype="multipart/form-data">
+        <button type="submit" class="buttonGradient btn btn-primary">Borrar</button>
       </form>
 
       </div>
