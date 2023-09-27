@@ -88,6 +88,7 @@ const concertController = {
     db.Concierto.create({
       user_id:1,
       genre_id:1,
+      genero:req.body.genero,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -105,11 +106,11 @@ const concertController = {
     });
 
   },
-  editConcert: async (req, res) => {
+  editConcert: (req, res) => {
     console.log(req.params.id);
     db.Concierto.findByPk(req.params.id)
       .then(function (concierto) {
-         res.render("editconcert", { concertToEdit: concierto.dataValues });
+         res.render("editconcert", { concertToEdit: concierto });
       })
        .catch(function (error) {
         console.error("Error al buscar concierto para editar:", error);
