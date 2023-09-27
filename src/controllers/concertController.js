@@ -32,7 +32,7 @@ const concertController = {
   detail: (req, res) => {
     db.Concierto.findByPk(req.params.id)
       .then(function (concierto) {
-        res.render("detail", { productoEncontrado: concierto });
+        res.render("detail", { productoEncontrado: concierto});
       })
       .catch(function (error) {
         console.error("Error al buscar concierto:", error);
@@ -89,6 +89,7 @@ const concertController = {
     db.Concierto.create({
       user_id:1,
       genre_id:1,
+      genero:req.body.genero,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
@@ -117,7 +118,6 @@ const concertController = {
     
     db.Concierto.findByPk(req.params.id,{include:[{association:"Generos"}]})
       .then(function (concierto) {
-        console.log(concierto.dataValues);
          res.render("editconcert", { concertToEdit: concierto.dataValues });
       })
        .catch(function (error) {
