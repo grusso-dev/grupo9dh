@@ -11,7 +11,13 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER
         },
         description: {
-            type: DataTypes.STRING(200)
+            type: DataTypes.ENUM(
+                'Elegi un genero',
+                '1',
+                '2',
+                '3',
+                '4'
+            )
         },
     };
 

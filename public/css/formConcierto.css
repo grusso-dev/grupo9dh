@@ -60,3 +60,8 @@ body {
     flex-direction: row;
     text-align: center;
 }
+
+.errores {
+    color: red;
+    font-weight: bold;
+}
