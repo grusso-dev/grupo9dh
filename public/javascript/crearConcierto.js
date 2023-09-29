@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
 
     formulario.addEventListener('submit', function(e) {
       let errores = [];
-      
+      e.preventDefault();
       let campoArtista = document.getElementById('artista');
       if (campoArtista.value == '') {
         errores.push('El campo de Artista debe estar completo');
@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
         errores.push('El campo de fecha debe estar completo');
       }
 
-      let campoDireccion = document.getElementById('direccion');
+      let campoDireccion = document.getElementById('direccion'); 
       if (campoDireccion.value == '') {
         errores.push('El campo de dirección debe estar completo');
       }
@@ -43,10 +43,11 @@ window.addEventListener('load', function() {
       ulErrores.innerHTML = ''; // Limpiar mensajes de error anteriores
       
       if (errores.length > 0) {
-        e.preventDefault();
         for (let i = 0; i < errores.length; i++) {
           ulErrores.innerHTML += '<li>' + errores[i] + '</li>';
         }
+      }else{
+        formulario.submit();
       }
     });
   });
