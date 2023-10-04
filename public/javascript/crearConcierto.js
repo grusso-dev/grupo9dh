@@ -4,19 +4,20 @@ window.addEventListener('load', function() {
     formulario.addEventListener('submit', function(e) {
       let errores = [];
 
-      e.preventDefault;
+      e.preventDefault();
       let campoArtista = document.getElementById('artista');
       if (campoArtista.value == '') {
         errores.push('El campo de Artista debe estar completo');
       }
-
+      
       let campoTitle = document.getElementById('title');
       if (campoTitle.value == '') {
         errores.push('El campo de título debe estar completo');
       }
-
+      
+      debugger;
       let campoGenero = document.getElementById('genero');
-      if (campoTitle.value == '') {
+      if (campoGenero.value == '') {
         errores.push('El campo de género debe estar completo');
       }
 
@@ -49,7 +50,6 @@ window.addEventListener('load', function() {
       ulErrores.innerHTML = ''; // Limpiar mensajes de error anteriores
 
   
-      
       if (errores.length > 0) {
       
         for (let i = 0; i < errores.length; i++) {
