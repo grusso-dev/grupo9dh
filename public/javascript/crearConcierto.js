@@ -14,8 +14,6 @@ window.addEventListener('load', function() {
       if (campoTitle.value == '') {
         errores.push('El campo de título debe estar completo');
       }
-      
-      debugger;
       let campoGenero = document.getElementById('genero');
       if (campoGenero.value == '') {
         errores.push('El campo de género debe estar completo');

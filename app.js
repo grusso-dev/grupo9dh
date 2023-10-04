@@ -21,9 +21,12 @@ const rutasUsers = require('./src/routes/usersRoutes')
 app.use('/users', rutasUsers)
 
 const rutasConcert = require('./src/routes/concertRoutes')
+app.use('/conciertos', rutasConcert)
 // const { createSecretKey } = require('crypto');
 // const { error } = require('console');
-app.use('/conciertos', rutasConcert)
+
+const rutasApi = require('./src/routes/apiRoutes')
+app.use('/api', rutasApi)
 
 // definimos parametros de conexion a la base de datos
 
