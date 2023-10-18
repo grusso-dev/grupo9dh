@@ -1,10 +1,12 @@
 const express = require('express')
+const cors = require('cors')
 // const Sequelize = require('sequelize')
 const path = require('path')
 const app = express()
 const methodOverride = require('method-override') // Pasar poder usar los métodos PUT y DELETE
 // const jwt = require("jsonwebtoken");
 
+app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
