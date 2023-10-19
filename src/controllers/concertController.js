@@ -33,7 +33,7 @@ const concertController = {
   detail: (req, res) => {
     db.Concierto.findByPk(req.params.id)
       .then(function (concierto) {
-        res.render("detail", { productoEncontrado: concierto});
+        res.render("detail", { concerts: concierto});
       })
       .catch(function (error) {
         console.error("Error al buscar concierto:", error);

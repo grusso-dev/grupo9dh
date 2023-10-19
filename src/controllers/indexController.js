@@ -16,7 +16,19 @@ const indexController = {
     res.render(path.join(__dirname, "../views/detail.ejs"));
   },
   todosLosConciertos: (req, res) => {
-    res.render(path.join(__dirname, "../views/todosLosConciertos.ejs"));
+    Promise.all([
+      conciertos.findAll(),
+      genero.findAll(),
+    ])
+      .then(([concerts, genre]) => {
+        res.render(path.join(__dirname, "../views/todosLosConciertos.ejs"), {
+          conciertos: concerts,
+          genero: genre,
+        });
+      })
+      .catch((error) => {
+        console.error("Error", error);
+      });
   },
   registerdata: (req, res) => {
     res.render("registerdata");

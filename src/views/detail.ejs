@@ -1,62 +1,98 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/detalle.css">
-<title>DetalleDeUnProducto</title>
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include("partials/head", { styles: ["detalle", "partials"] }) %>
+  <title>DetalleDeUnProducto</title>
 </head>
+
 <body>
   <header>
     <%- include("partials/header") %>
-
   </header>
 
-<div class="container products-wrapper">
-<div class="row">
-  <div class="col-12">
-    <h2 class="products-title"></h2>
+<!-- Modal -->
+<div class="modal fade" id="concertModal" tabindex="-1" aria-labelledby="concertModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="concertModalLabel">Eleccion de sector</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <% for (let i = 0; i < 5; i++) { %>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<%= i %>" <% if (i === 0) { %>class="active" aria-current="true"<% } %> aria-label="Slide <%= i + 1 %>"></button>
+            <% } %>
+          </div>
+      
+          <div class="carousel-inner">
+            <% for (let i = 0; i < 5; i++) { %>
+              <div class="carousel-item <% if (i === 0) { %>active<% } %>" data-bs-interval="10000">
+                <img src="https://indiehoy.com/wp-content/uploads/2020/01/movistar-arena-argentina-plano-espacios-interior-565x513.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <a type="button" href="checkout" class="btn btn-primary"> Sector <%= i + 1 %> </a>
+                </div>
+              </div>
+            <% } %>
+          </div>
+      
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
   </div>
 </div>
-<div class="product-detail">
-  <div class="row">
-    <div class="col-12 col-lg-8">
-      <img src="<%=productoEncontrado.image %>" alt="product image" class="product-detail-img">
-    </div>
-    <div class="col-12 col-lg-4">
-      <article class="product-detail-info">
-        <ul class="actions-list">
-          <li>
-            <i class="fas fa-credit-card"></i>
-            <p>PRECIO</p>
-          </li>
-        </ul>
-          <p class="product-detail-title">
-            <span>$<%=productoEncontrado.price %></span>
-          </p>
-        <ul class="actions-list">
-          <li>
-            <i class="fas fa-credit-card"></i>
-            <p>ubicacion</p>
-          </li>
-          <h2 class="textos"><%=productoEncontrado.location %></h2>
-          <li>
-            <i class="fas fa-store"></i>
-            <p>fecha</p>
-          </li>
-          <h2 class="textos"><%=productoEncontrado.date %></h2>
-        </ul>
-        <button href="checkout" class="buttonGradient2">COMPRAR AHORA</button>
-        <hr>
-        <a href="/products/edit/<%=productoEncontrado.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-        <form action="/products/<%=productoEncontrado.id %>?_method=DELETE" method="POST" style="display: inline-flex" onsubmit="return confirm('Esta seguro que desea eliminarlo?');">
-          <button type="submit" class="action-button delete">ELIMINAR</button>
-        </form>
-      </article>
+<!-- Modal -->
+
+  <div class="container d-flex justify-content-center"> <!-- Center the card horizontally -->
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
+        <div class="card-body text-center"> <!-- Center the text inside the card -->
+          <h4 class="card-title a"><%= concerts.name %></h4>
+          <h5 class="card-title b"><%= concerts.artista %></h5>
+          <p class="card-text"><strong>Genero:</strong></p>
+          <p class="card-text"><strong>Fecha:</strong> <span id="formattedDate"></span></p>
+          <p class="card-text"><strong>Direccion:</strong> <%= concerts.provincia %> <%= concerts.ciudad %></p>
+          <p class="card-text"><strong>Precio: </strong> </p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
-<%- include("partials/footer") %>
-<script src="script.js"></script>
+
+  <%- include("partials/footer") %>
+  <%- include("./partials/globalScripts") %>
+  <script>
+    function formatDateTime(dateTime) {
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+      const formattedDate = new Date(dateTime).toLocaleDateString('es-AR', options);
+      const dayName = formattedDate.split(' ')[0];
+      const capitalizedDayName = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+      return formattedDate.replace(dayName, capitalizedDayName);
+    }
+    const formattedDateElement = document.getElementById('formattedDate');
+    const dateTime = '2023-10-19T14:30:00'; // Replace with your date value
+    const formattedDate = formatDateTime(dateTime);
+    formattedDateElement.textContent = formattedDate;
+  </script>
 </body>
+</html>
