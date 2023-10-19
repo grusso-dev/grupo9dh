@@ -2,6 +2,7 @@ const db = require('../database/models');
 const fs = require('fs');
 const path = require("path");
 const ftp = require('basic-ftp');
+const {Readable}=require('stream');
 // const { Concert, Genero } = require('../database/models')
 
 const concertsFilePath = path.join(__dirname, '../data/concertsDataBase.json');
@@ -19,7 +20,7 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
     });
 
     // Subir el archivo al servidor FTP
-    await client.uploadFrom(image_origin_route, image_destiny_route);
+    await client.uploadFrom(image_origin_route, image_destiny_route); 
   } catch (error) {
     console.error('Error al subir archivo al FTP:', error);
   } finally {
@@ -73,6 +74,13 @@ const concertController = {
       });
   },
   saveConcert: async function (req, res) {
+    const stream = new Readable();
+    const file = req.file;
+		stream.push(file.buffer);
+		stream.push(null); 
+
+
+		await ftp_upload(stream , '/public/images/' + file.originalname);
     newConcierto={
       id: null,
       user_id:1,
@@ -84,7 +92,8 @@ const concertController = {
       provincia: req.body.provincia[1],
       ciudad: req.body.ciudad,
       image: req.body.imagen,
-      descripcion: req.body.descripcion
+      descripcion: req.body.descripcion,
+      image: file.originalname
     }
     let ret =  await db.Concierto.create(newConcierto);
     console.log(req.body.provincia[1]);
