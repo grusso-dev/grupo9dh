@@ -10,6 +10,9 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .card-body {
