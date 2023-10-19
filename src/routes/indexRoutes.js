@@ -10,15 +10,6 @@ router.get('/checkout', indexController.checkout);
 router.get('/register', indexController.register);
 router.get('/detail/:id', indexController.detail);
 router.get('/registerdata', indexController.registerdata);
-router.get('/todosLosConciertos', (req, res) => {
-    conciertos.findAll()
-      .then(concerts => {
-        res.render('todosLosConciertos', { conciertos });
-      })
-      .catch(error => {
-        console.error('Error', error);
-      });
-  });
-  
+router.get('/todosLosConciertos', indexController.todosLosConciertos); 
 
-module.exports = router 
+module.exports = router //dddd
