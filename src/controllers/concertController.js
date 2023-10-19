@@ -84,22 +84,22 @@ const concertController = {
     newConcierto={
       id: null,
       user_id:1,
-      genre_id:1,
+      genre_id:req.body.genero,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
       direccion: req.body.direccion,
-      provincia: req.body.provincia[1],
+      provincia: req.body.provincia,
       ciudad: req.body.ciudad,
       image: req.body.imagen,
       descripcion: req.body.descripcion,
       image: file.originalname
     }
     let ret =  await db.Concierto.create(newConcierto);
-    console.log(req.body.provincia[1]);
+    console.log(req.body.provincia);
     res.redirect('/');
 
-    // db.Concierto.create({
+    // db.Concierto.create({ 
     //   id:null,
     //   user_id:1,
     //   genre_id:1,
