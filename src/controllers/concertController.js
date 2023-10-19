@@ -73,9 +73,28 @@ const concertController = {
       });
   },
   saveConcert: async function (req, res) {
-    // newConcierto={
+    newConcierto={
+      id: null,
+      user_id:1,
+      genre_id:1,
+      artista: req.body.artista,
+      title: req.body.name,
+      date: req.body.date,
+      direccion: req.body.direccion,
+      provincia: req.body.provincia[1],
+      ciudad: req.body.ciudad,
+      image: req.body.imagen,
+      descripcion: req.body.descripcion
+    }
+    let ret =  await db.Concierto.create(newConcierto);
+    console.log(req.body.provincia[1]);
+    res.redirect('/');
+
+    // db.Concierto.create({
+    //   id:null,
     //   user_id:1,
     //   genre_id:1,
+    //   genero:req.body.genero,
     //   artista: req.body.artista,
     //   title: req.body.name,
     //   date: req.body.date,
@@ -84,27 +103,13 @@ const concertController = {
     //   ciudad: req.body.ciudad,
     //   image: req.body.imagen,
     //   descripcion: req.body.descripcion
-    // }
-    // let ret =  await db.conciertos.create(newConcierto);
-    db.Concierto.create({
-      user_id:1,
-      genre_id:1,
-      genero:req.body.genero,
-      artista: req.body.artista,
-      title: req.body.name,
-      date: req.body.date,
-      direccion: req.body.direccion,
-      provincia: req.body.provincia,
-      ciudad: req.body.ciudad,
-      image: req.body.imagen,
-      descripcion: req.body.descripcion
-    }).then(() => {
-      res.redirect('/');
-    })
-    .catch((error) => {
-      console.error("Error al crear concierto:", error);
-      res.render("errorPage"); // Manejar el error adecuadamente
-    });
+    // }).then(() => {
+    //   res.redirect('/');
+    // })
+    // .catch((error) => {
+    //   console.error("Error al crear concierto:", error);
+    //   res.render("errorPage"); // Manejar el error adecuadamente
+    // });
 
   },
   //,{include:[{association:"Genero"}]}

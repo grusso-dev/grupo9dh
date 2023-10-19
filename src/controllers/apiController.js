@@ -10,7 +10,7 @@ const apiController = {
   },
   getGeneros: async(req,res) => {
     db.Genero.findAll({include:[{association:"concierto"}]}).then(generos=>{
-      res.json(generos);
+      res.json({generos});
     });
   },
 }

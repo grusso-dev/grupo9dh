@@ -31,13 +31,7 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING(100)
         },
         provincia: {
-            type: DataTypes.ENUM(
-                'Elegi la Ciudad',
-                'Ciudad Autonoma de Buenos Aires',
-                'La Plata',
-                'Rosario',
-                'Cordoba'
-            )
+            type: DataTypes.STRING(30)
         },
         ciudad: {
             type: DataTypes.STRING(30)
