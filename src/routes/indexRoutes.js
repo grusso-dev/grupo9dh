@@ -12,4 +12,4 @@ router.get('/detail/:id', indexController.detail);
 router.get('/registerdata', indexController.registerdata);
 router.get('/todosLosConciertos', indexController.todosLosConciertos); 
 
-module.exports = router //dddd
+module.exports = router 

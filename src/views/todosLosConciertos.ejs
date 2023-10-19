@@ -1,32 +1,51 @@
-<% for (let i = 0; i < concerts.length; i++) { %>
-  <% if (i % 3 === 0) { %>
-      <div class="row">
-  <% } %>
-  <!-- Tarjeta con los datos -->
-  <div class="col-lg-4">
-      <div class="card mb-4">
-          <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
-          <div class="card-body">
-              <h4 class="card-title a"> <%= concerts[i].name %> </h5>
-              <h5 class="card-title b"> <%= concerts[i].artista %> </h6>
-              <p class="card-text"> <strong>Genero:</strong>  <%= genre[i].description %></p>
-              <p class="card-text"><strong>Fecha:</strong> <span id="formattedDate<%= i %>"></span></p>
-              <p class="card-text"><strong>Direccion:</strong> <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
-              <div class="card-buttons">
-                <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Tarjeta con los datos -->
-
-  <% if ((i + 1) % 3 === 0 || i === concerts.length - 1) { %>
-      </div>
-  <% } %>
-
-  <script>
-      const formattedDate<%= i %> = formatDateTime("<%= concerts[i].date %>");
-      document.getElementById("formattedDate<%= i %>").textContent = formattedDate<%= i %>;
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include("./partials/head", { styles: ["todosLosConciertos", "partials"] }) %>
+    <script>
+      function formatDateTime(dateTime) {
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+          const formattedDate = new Date(dateTime).toLocaleDateString('es-AR', options);
+          const dayName = formattedDate.split(' ')[0];
+          const capitalizedDayName = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+          return formattedDate.replace(dayName, capitalizedDayName);
+      }
   </script>
-
-<% } %>
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <div class="container text-center">
+        <% for (let i = 0; i < concerts.length; i++) { %>
+            <% if (i % 3 === 0) { %>
+                <div class="row">
+            <% } %>
+            <!-- Tarjeta con los datos -->
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
+                    <div class="card-body">
+                        <h4 class="card-title a"> <%= concerts[i].name %> </h5>
+                        <h5 class="card-title b"> <%= concerts[i].artista %> </h6>
+                        <p class="card-text"> <strong>Genero: </strong> </p>
+                        <p class="card-text"><strong>Fecha:</strong> <span id="formattedDate<%= i %>"></span></p>
+                        <p class="card-text"><strong>Direccion:</strong> <%= concerts[i].provincia %> <%= concerts[i].ciudad %></p>
+                        <div class="card-buttons">
+                          <a href="conciertos/detail/<%= concerts[i].id %>" class="btn btn-primary">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta con los datos -->
+            <% if ((i + 1) % 3 === 0 || i === concerts.length - 1) { %>
+                </div>
+            <% } %>
+            <script>
+                const formattedDate<%= i %> = formatDateTime("<%= concerts[i].date %>");
+                document.getElementById("formattedDate<%= i %>").textContent = formattedDate<%= i %>;
+            </script>
+        <% } %>
+    </div>
+    <%- include("./partials/footer") %>
+    <%- include("./partials/globalScripts") %>
+</body>
+</html>
