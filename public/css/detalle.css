@@ -1,6 +1,15 @@
 .card{
   margin-top: 2vh;
-  box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.25);
+}
+.card-img-top{
+  margin-bottom: 0.5vh;
+  height: 30vh;
+}
+
+.card-text.lorem{
+overflow: hidden; 
+display: -webkit-box;
+-webkit-box-orient: vertical; 
+-webkit-line-clamp: 3;
 }

@@ -22,8 +22,12 @@
             <!-- Tarjeta con los datos -->
             <div class="col-lg-4">
                 <div class="card mb-4">
-                    <img src="https://picsum.photos/600/300" class="card-img-top" alt="Concert Image">
-                    <div class="card-body">
+                    <% if (concerts[i].image) { %>
+                        <img src="https://linsock.com.ar/soundstage/public/images/<%= concerts[i].image %>" class="card-img-top" alt="Concert Image">
+                      <% } else { %>
+                        <img src="https://picsum.photos/600/300" class="card-img-top" alt="Default Image">
+                      <% } %>
+                      <div class="card-body">
                         <h4 class="card-title a"> <%= concerts[i].name %> </h5>
                         <h5 class="card-title b"> <%= concerts[i].artista %> </h6>
                         <p class="card-text"> <strong>Genero: </strong>  </p>
