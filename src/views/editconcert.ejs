@@ -88,7 +88,9 @@
         
         <button type="submit" class="buttonGradient btn btn-primary">Editar</button>
 
-        <a href="/conciertos/delete/1"><button type="button" class="buttonGradient btn btn-primary">Borrar</button></a>
+        <!-- 
+          <a href="/conciertos/delete/<%=concertToEdit.id %>"><button type="button" class="buttonGradient btn btn-primary">Borrar</button></a> 
+        -->
       </form>
 
       <form class="formulario" action="/conciertos/delete/<%=concertToEdit.id %>/?_method=DELETE" method="post" enctype="multipart/form-data">

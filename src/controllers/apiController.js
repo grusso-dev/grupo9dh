@@ -28,6 +28,12 @@ const apiController = {
       res.json({catidad:concerts.length});
     });
   },
+  ultimoconcert: async(req,res) => {
+    db.Concierto.findAll().then(concerts=>{
+      const ultimo=concerts.length - 1;
+      res.json({ultimo:concerts[ultimo]});
+    });
+  },
 }
 
 module.exports = apiController

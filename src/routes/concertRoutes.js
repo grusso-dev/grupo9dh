@@ -15,5 +15,6 @@ router.get('/edit/:id', concertController.editConcert); //ver edit. el form igua
 router.put('/edit/:id', concertController.saveEditConcert); // guardar info editada
 router.patch('/edit/:id', concertController.saveEditConcert); // guardar info editada
 router.delete('/delete/:id', concertController.deleteConcert); // elimina concierto editado. el form igual que create pero con los datos pre-cargados en valor value y boton delete.
+router.get('/delete/:id', concertController.deleteConcert); // elimina concierto editado. el form igual que create pero con los datos pre-cargados en valor value y boton delete.
 
 module.exports = router; 
