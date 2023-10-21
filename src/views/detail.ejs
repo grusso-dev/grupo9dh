@@ -72,7 +72,7 @@
           <p class="card-text"><strong>Genero:</strong></p>
           <p class="card-text"><strong>Fecha:</strong> <span id="formattedDate"></span></p>
           <p class="card-text"><strong>Direccion:</strong> <%= concerts.provincia %> <%= concerts.ciudad %></p>
-          <p class="card-text"><strong>Precio: $500000 </strong> </p>
+          <p class="card-text"><strong>Precio: $<%= concerts.Sector.price %></strong> </p>
           <p class="card-text lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
           <div class="card-buttons">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#concertModal">

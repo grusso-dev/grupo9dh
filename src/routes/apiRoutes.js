@@ -7,6 +7,8 @@ router.get('/totalgeneros', apiController.totalgeneros);
 router.get('/totalconcert', apiController.totalconcert);
 router.get('/generos', apiController.getGeneros);
 router.get('/ultimoconcert', apiController.ultimoconcert);
+router.get('/concert/:id', apiController.concert);
+router.get('/concerts', apiController.concerts);
 
 
 module.exports = router

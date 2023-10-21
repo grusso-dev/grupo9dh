@@ -64,6 +64,10 @@ module.exports = (sequelize) => {
         as:"Generos",
         foreignKey: 'genre_id'
       });
+      Concierto.belongsTo(modelos.Sector, {
+        as:"Sector",
+        foreignKey: 'sector_id'
+      });
     };
     
     return Concierto;

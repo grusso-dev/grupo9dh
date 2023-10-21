@@ -31,8 +31,13 @@ async function ftp_upload(image_origin_route, image_destiny_route) {
 
 const concertController = {
   detail: (req, res) => {
-    db.Concierto.findByPk(req.params.id)
+    db.Concierto.findByPk(req.params.id,{include:[{association:"Generos"},{association:"User"},{association:"Sector"}]})
       .then(function (concierto) {
+        db.Sector.findByPk(2)
+        .then((sector)=>{
+          concierto.sector=sector;
+        })
+
         res.render("detail", { concerts: concierto});
       })
       .catch(function (error) {
@@ -45,10 +50,13 @@ const concertController = {
   },
   concerts: async (req, res) => {
     console.log('probando')
+    db.Concierto.findAll({include:[{association:"Generos"},{association:"User"},{association:"Sector"}]})
+    .then(conciertos=>{
+      res.render('todosLosConciertos', { concerts: conciertos });
+    });
 
-    let conciertos = await db.Concierto.findAll();
-    console.log(conciertos);
-    res.render('todosLosConciertos', { concerts: conciertos });
+    // let conciertos = await db.Concierto.findAll();
+    // res.render('todosLosConciertos', { concerts: conciertos });
 
     // db.Conciertos.findAll()
     //   .then(function (conciertos) {
@@ -58,6 +66,7 @@ const concertController = {
     //     console.error("Error al buscar conciertos:", error);
     //     res.render("errorPage"); // Manejar el error adecuadamente
     //   });
+
   },
   deleteConcert: (req, res) => {
     db.Concierto.destroy({
@@ -85,6 +94,7 @@ const concertController = {
       id: null,
       user_id:1,
       genre_id:req.body.genero,
+      sector_id:2,
       artista: req.body.artista,
       title: req.body.name,
       date: req.body.date,
