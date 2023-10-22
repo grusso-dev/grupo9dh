@@ -22,17 +22,17 @@
       <div class="modal-body">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
           <div class="carousel-indicators">
-            <% for (let i = 0; i < 5; i++) { %>
+            <% for (let i = 0; i < 2; i++) { %>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<%= i %>" <% if (i === 0) { %>class="active" aria-current="true"<% } %> aria-label="Slide <%= i + 1 %>"></button>
             <% } %>
           </div>
       
           <div class="carousel-inner">
-            <% for (let i = 0; i < 5; i++) { %>
+            <% for (let i = 0; i < 2; i++) { %>
               <div class="carousel-item <% if (i === 0) { %>active<% } %>" data-bs-interval="10000">
                 <img src="https://indiehoy.com/wp-content/uploads/2020/01/movistar-arena-argentina-plano-espacios-interior-565x513.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <a type="button" href="checkout" class="btn btn-primary"> Sector <%= i + 1 %> </a>
+                  <a type="button" id="sectorButton<%= i + 1 %>" class="btn btn-primary"> Sector <%= i + 1 %> </a>
                 </div>
               </div>
             <% } %>
@@ -98,6 +98,12 @@
     const dateTime = '2023-10-19T14:30:00'; // Replace with your date value
     const formattedDate = formatDateTime(dateTime);
     formattedDateElement.textContent = formattedDate;
+
+    <% for (let i = 0; i < 2; i++) { %>
+        document.getElementById('sectorButton<%= i+1 %>').addEventListener('click', function() {
+          alert('You selected Sector '+<%= i+1 %>+'. Continue browsing or...'); 
+        });            
+    <% } %>
   </script>
 </body>
 </html>

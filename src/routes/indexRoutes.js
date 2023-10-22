@@ -11,5 +11,10 @@ router.get('/register', indexController.register);
 router.get('/detail/:id', indexController.detail);
 router.get('/registerdata', indexController.registerdata);
 router.get('/todosLosConciertos', indexController.todosLosConciertos); 
-
+router.get('/check-session', (req, res) => {
+    const cart = req.session.cart;
+    console.log(cart);
+    res.send('Session value checked.');
+  });
+  
 module.exports = router 

@@ -145,11 +145,6 @@ margin-left: 230px;
     margin-top: 1vw;
   }
   
-  .list-item.qvc{
-    display: flex;
-    justify-content: space-between;
-  }
-  
   .btn-info:hover{
     background-color: lightskyblue;
   }
