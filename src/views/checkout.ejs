@@ -3,6 +3,13 @@
   <head>
     <title>SoundStage: Checkout</title>
     <%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
+    <style>
+      <% for (let i = 0; i < 9; i++) { %>
+        .card-items-<%= i %>.hidden {
+          display: none;
+        }
+      <% } %>
+    </style>
   </head>
 
   <body>
@@ -18,33 +25,30 @@
                 <div class="card-img-overlay">
                   <h5 class="card-title">Resumen de compra</h5>
                   <hr style="width: 6vw;">
-                  <h6 class="card-subtitle-mb-2 text-body-light"> Subtotal: </h6>
+                  <h6 class="card-subtitle-mb-2 text-body-light">Subtotal: <span id="subtotal"></span></h6>
                   <hr style="color: white">
-                  <% for( let index = 0; index < 9; index++ ) { %>
-                  <div class="card-items">
-                    <img
-                      class="image-info"
-                      src="https://picsum.photos/400/300"
-                      alt="asd"
-                    />
-                    <p class="image-text a">Producto:</p>
-                    <p class="image-text b">1x</p>
-                    <p class="image-text c">Precio</p>
-                    <div class="zora">
-                      <button class="btn btn-outline-success mipha" type="button">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                      <button class="btn btn-outline-success daruk" type="button">
-                        <i class="fas fa-times"></i>
-                      </button>
-                      <button class="btn btn-outline-success tulin" type="button">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <hr style="color: white">
-                  <% } %>
 
+                  <% for (let i = 0; i < 9; i++) { %>
+                    <div class="card-items card-items-<%= i %>" id="product_<%= i %>">
+                      <img class="image-info" src="https://picsum.photos/400/300" alt="asd" />
+                      <p class="image-text a">Producto:</p>
+                      <p class="image-text b"><span id="quantity_<%= i %>">1</span>x</p>
+                      <p class="image-text c">Price</p>
+                      <div class="zora">
+                        <button class="btn btn-outline-success mipha" type="button">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="btn btn-outline-success daruk" type="button">
+                          <i class="fas fa-times"></i>
+                        </button>
+                        <button class="btn btn-outline-success tulin" type="button">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  <% } %>
+                  
+                  
                 </div>
               </div>
             </div>
@@ -92,7 +96,7 @@
                           placeholder="a"
                           required
                         />
-                        <label for="floatingInput">Numero de telefono</label>
+                        <label for "floatingInput">Numero de telefono</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
@@ -225,13 +229,7 @@
               </div>
             </div>
             <div class="d-grid gap-2">
-              <button
-                class="btn btn-outline-dark"
-                type="submit"
-                style="margin-top: 10px"
-              >
-                Enviar
-              </button>
+              <button class="btn btn-outline-dark" type="submit" style="margin-top: 10px">Enviar</button>
             </div>
           </form>
         </div>
@@ -240,5 +238,89 @@
 
     <%- include("partials/footer") %>
     <%- include("partials/globalScripts") %>
+
+    <script>
+      // Function to update quantity when + button is clicked
+      function incrementQuantity(cardIndex) {
+        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+        const currentQuantity = parseInt(quantityElement.innerText, 10);
+        quantityElement.innerText = (currentQuantity + 1).toString();
+        updateSubtotal();
+      }
+    
+      // Function to update quantity when - button is clicked
+      function decrementQuantity(cardIndex) {
+        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+        const currentQuantity = parseInt(quantityElement.innerText, 10);
+        if (currentQuantity > 1) {
+          quantityElement.innerText = (currentQuantity - 1).toString();
+        } else {
+          // Quantity can't be lower than 0
+          quantityElement.innerText = "0";
+          document.getElementById(`product_${cardIndex}`).classList.add('hidden');
+        }
+        updateSubtotal();
+      }
+    
+      // Function to set quantity to 0 when x button is clicked
+      function resetQuantity(cardIndex) {
+        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+        quantityElement.innerText = "0";
+        document.getElementById(`product_${cardIndex}`).classList.add('hidden');
+        updateSubtotal();
+      }
+    
+      // Function to calculate the subtotal for the current product card
+      function calculateProductSubtotal(cardIndex) {
+        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+        const currentQuantity = parseInt(quantityElement.innerText, 10);
+        const priceElement = document.querySelector(`#product_${cardIndex} .image-text.c`); // Replace this selector with the actual selector for the price element
+        const price = parseFloat(priceElement.textContent.replace("$", "").trim()); // Extract and parse the price
+    
+        const productCard = document.getElementById(`product_${cardIndex}`);
+        if (currentQuantity === 0) {
+          // If quantity is 0, add the class to hide the product card
+          productCard.classList.add(`card-items-${cardIndex}`);
+        } else {
+          // If quantity is not 0, remove the class to show the product card
+          productCard.classList.remove(`card-items-${cardIndex}`);
+        }
+    
+        return price * currentQuantity;
+      }
+    
+      // Function to calculate and update the subtotal for all product cards
+      function updateSubtotal() {
+        let subtotal = 0;
+        for (let index = 0; index < 9; index++) {
+          subtotal += calculateProductSubtotal(index);
+        }
+    
+        const subtotalElement = document.getElementById("subtotal");
+        subtotalElement.textContent = "$" + subtotal.toFixed(2);
+      }
+    
+      // Event delegation for button clicks
+      document.addEventListener("click", function (event) {
+        if (event.target.matches('.btn.btn-outline-success') || event.target.matches('.btn.btn-outline-success i')) {
+          const card = event.target.closest(".card-items");
+          if (!card) return; // Not inside a product card
+          const cardIndex = card.id.split("_")[1];
+    
+          if (event.target.classList.contains("mipha") || event.target.parentNode.classList.contains("mipha")) {
+            incrementQuantity(cardIndex);
+          } else if (event.target.classList.contains("daruk") || event.target.parentNode.classList.contains("daruk")) {
+            resetQuantity(cardIndex);
+          } else if (event.target.classList.contains("tulin") || event.target.parentNode.classList.contains("tulin")) {
+            decrementQuantity(cardIndex);
+          }
+        }
+      });
+    
+      // Initial calculation
+      updateSubtotal();
+    </script>
+    
+    
   </body>
 </html>

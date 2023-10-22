@@ -92,6 +92,7 @@ body{
 
 .card-items{
   display: flex;
+  margin-bottom: 1vh;
 }
 
 
