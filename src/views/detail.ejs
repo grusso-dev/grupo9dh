@@ -32,7 +32,13 @@
               <div class="carousel-item <% if (i === 0) { %>active<% } %>" data-bs-interval="10000">
                 <img src="https://indiehoy.com/wp-content/uploads/2020/01/movistar-arena-argentina-plano-espacios-interior-565x513.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <a type="button" id="sectorButton<%= i + 1 %>" class="btn btn-primary"> Sector <%= i + 1 %> </a>
+                  <a type="button" 
+                  id="sectorButton<%= i + 1 %>" 
+                  class="btn btn-primary" 
+                  onclick="addToCart(this)"
+                  data-product-name="<%= concerts.name %>"
+                  data-product-price="<%= concerts.Sector.price %>"> 
+                  Sector <%= i + 1 %> </a>
                 </div>
               </div>
             <% } %>
@@ -100,10 +106,46 @@
     formattedDateElement.textContent = formattedDate;
 
     <% for (let i = 0; i < 2; i++) { %>
-        document.getElementById('sectorButton<%= i+1 %>').addEventListener('click', function() {
-          alert('You selected Sector '+<%= i+1 %>+'. Continue browsing or...'); 
-        });            
+      document.getElementById('sectorButton<%= i+1 %>').addEventListener('click', function() {
+        Swal.fire({
+          title: 'Sector Seleccionado',
+          text: 'Seleccionaste el sector <%= i+1 %>. Podes continuar reservando o puedes ir al carrito',
+          icon: 'success',
+          iconColor: 'purple',
+          confirmButtonText: 'OK'
+        });
+      });
     <% } %>
+
+    function addToCart(button) {
+  const productName = button.getAttribute('data-product-name');
+  const productPrice = button.getAttribute('data-product-price');
+
+  fetch('/add-to-cart', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: productName,
+      price: productPrice,
+      quantity: 1, // You can set the quantity as needed
+    }),
+  })
+    .then((response) => {
+      if (response.ok) {
+        // Handle success (if needed)
+        console.log('Product added to cart');
+      } else {
+        // Handle errors (if needed)
+        console.error('Failed to add product to cart');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
   </script>
 </body>
 </html>
