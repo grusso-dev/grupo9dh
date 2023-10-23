@@ -4,7 +4,7 @@
     <title>SoundStage: Checkout</title>
     <%- include("partials/head",{ styles: ["checkout", "partials"] }) %>
     <style>
-      <% for (let i = 0; i < 9; i++) { %>
+      <% for (let i = 0; i < array.length; i++) { %>
         .card-items-<%= i %>.hidden {
           display: none;
         }
@@ -28,12 +28,12 @@
                   <h6 class="card-subtitle-mb-2 text-body-light">Subtotal: <span id="subtotal"></span></h6>
                   <hr style="color: white">
 
-                  <% for (let i = 0; i < 9; i++) { %>
+                  <% for (let i = 0; i < array.length; i++) { %>
                     <div class="card-items card-items-<%= i %>" id="product_<%= i %>">
                       <img class="image-info" src="https://picsum.photos/400/300" alt="asd" />
-                      <p class="image-text a">Producto:</p>
-                      <p class="image-text b"><span id="quantity_<%= i %>">1</span>x</p>
-                      <p class="image-text c">Price</p>
+                      <p class="image-text a"><%= array[i].Name %></p> 
+                      <p class="image-text b"><span id="quantity_<%= i %>"><%= array[i].Quantity %></span>x</p> 
+                      <p class="image-text c"><%= array[i].Price %></p> 
                       <div class="zora">
                         <button class="btn btn-outline-success mipha" type="button">
                           <i class="fas fa-plus"></i>
@@ -240,7 +240,7 @@
     <%- include("partials/globalScripts") %>
 
     <script>
-      // Function to update quantity when + button is clicked
+      const array = <%- JSON.stringify(array) %>
       function incrementQuantity(cardIndex) {
         const quantityElement = document.getElementById(`quantity_${cardIndex}`);
         const currentQuantity = parseInt(quantityElement.innerText, 10);
@@ -248,21 +248,18 @@
         updateSubtotal();
       }
     
-      // Function to update quantity when - button is clicked
       function decrementQuantity(cardIndex) {
         const quantityElement = document.getElementById(`quantity_${cardIndex}`);
         const currentQuantity = parseInt(quantityElement.innerText, 10);
         if (currentQuantity > 1) {
           quantityElement.innerText = (currentQuantity - 1).toString();
         } else {
-          // Quantity can't be lower than 0
           quantityElement.innerText = "0";
           document.getElementById(`product_${cardIndex}`).classList.add('hidden');
         }
         updateSubtotal();
       }
     
-      // Function to set quantity to 0 when x button is clicked
       function resetQuantity(cardIndex) {
         const quantityElement = document.getElementById(`quantity_${cardIndex}`);
         quantityElement.innerText = "0";
@@ -270,29 +267,25 @@
         updateSubtotal();
       }
     
-      // Function to calculate the subtotal for the current product card
       function calculateProductSubtotal(cardIndex) {
-        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
-        const currentQuantity = parseInt(quantityElement.innerText, 10);
-        const priceElement = document.querySelector(`#product_${cardIndex} .image-text.c`); // Replace this selector with the actual selector for the price element
-        const price = parseFloat(priceElement.textContent.replace("$", "").trim()); // Extract and parse the price
-    
-        const productCard = document.getElementById(`product_${cardIndex}`);
-        if (currentQuantity === 0) {
-          // If quantity is 0, add the class to hide the product card
-          productCard.classList.add(`card-items-${cardIndex}`);
-        } else {
-          // If quantity is not 0, remove the class to show the product card
-          productCard.classList.remove(`card-items-${cardIndex}`);
-        }
-    
-        return price * currentQuantity;
+      const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      const priceElement = document.querySelector(`#product_${cardIndex} .image-text.c`);
+      const price = parseFloat(priceElement.textContent.replace("$", "").trim());
+
+      const productCard = document.getElementById(`product_${cardIndex}`);
+      if (currentQuantity === 0) {
+        productCard.classList.add(`card-items-${cardIndex}`);
+      } else {
+        productCard.classList.remove(`card-items-${cardIndex}`);
       }
-    
-      // Function to calculate and update the subtotal for all product cards
+
+      return price * currentQuantity;
+    }
+
       function updateSubtotal() {
         let subtotal = 0;
-        for (let index = 0; index < 9; index++) {
+        for (let index = 0; index < array.length; index++) {
           subtotal += calculateProductSubtotal(index);
         }
     
@@ -300,7 +293,6 @@
         subtotalElement.textContent = "$" + subtotal.toFixed(2);
       }
     
-      // Event delegation for button clicks
       document.addEventListener("click", function (event) {
         if (event.target.matches('.btn.btn-outline-success') || event.target.matches('.btn.btn-outline-success i')) {
           const card = event.target.closest(".card-items");
@@ -317,7 +309,6 @@
         }
       });
     
-      // Initial calculation
       updateSubtotal();
     </script>
     

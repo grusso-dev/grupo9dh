@@ -7,8 +7,14 @@ const indexController = {
     res.render(path.join(__dirname, "../views/login.ejs"));
   },
   checkout: (req, res) => {
-    res.render(path.join(__dirname, "../views/checkout.ejs"));
-  },
+    const cart = req.session.cart;
+    console.log(cart)
+  if (cart) {
+    res.render(path.join(__dirname, "../views/checkout.ejs"), { array: cart });
+  } else {
+    res.render(path.join(__dirname, "../views/checkout.ejs"), { array: [] });
+  }
+  },  
   register: (req, res) => {
     res.render("register");
   },
@@ -28,6 +34,28 @@ const indexController = {
   },  
   registerdata: (req, res) => {
     res.render("registerdata");
+  },
+  addToCart: async (req, res) => {
+    const { name, price } = req.body;
+
+    try {
+      const productData = {
+        Name: name,
+        Price: price,
+        Quantity: 1,
+      };
+
+      if (!req.session.cart) {
+        req.session.cart = [];
+      }
+
+      req.session.cart.push(productData);
+
+      res.status(200).json({ message: 'Product added to cart' });
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
   },
 };
 
