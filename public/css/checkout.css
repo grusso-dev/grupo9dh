@@ -152,4 +152,18 @@ z-index: 1;
 color: aliceblue;
 } 
 
+  .card-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image-text.a {
+    white-space: nowrap;
+    flex-grow: 1; 
+  }
+
+  .zora {
+    display: flex;
+  }
 

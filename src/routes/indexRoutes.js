@@ -17,4 +17,22 @@ router.get('/check-session', (req, res) => {
   console.log(cart);
   res.send(cart);
 });
+router.post('/incrementQuantity', (req, res) => {
+  const cardIndex = req.body.cardIndex; 
+  req.session.cart[cardIndex].Quantity++;
+
+  res.json({ success: true });
+});
+router.post('/decrementQuantity', (req, res) => {
+  const cardIndex = req.body.cardIndex; 
+  req.session.cart[cardIndex].Quantity--;
+
+  res.json({ success: true });
+});
+router.post('/resetQuantity', (req, res) => {
+  const cardIndex = req.body.cardIndex; 
+  req.session.cart[cardIndex].Quantity = 0;
+
+  res.json({ success: true });
+});
 module.exports = router 

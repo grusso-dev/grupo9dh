@@ -29,11 +29,11 @@
                   <hr style="color: white">
 
                   <% for (let i = 0; i < array.length; i++) { %>
-                    <div class="card-items card-items-<%= i %>" id="product_<%= i %>">
+                    <div class="card-items card-items-<%= i %><%= array[i].Quantity === 0 ? ' hidden' : '' %>" id="product_<%= i %>">
                       <img class="image-info" src="https://picsum.photos/400/300" alt="asd" />
-                      <p class="image-text a"><%= array[i].Name %></p> 
-                      <p class="image-text b"><span id="quantity_<%= i %>"><%= array[i].Quantity %></span>x</p> 
-                      <p class="image-text c"><%= array[i].Price %></p> 
+                      <p class="image-text a"><%= array[i].Name %></p>
+                      <p class="image-text b"><span id="quantity_<%= i %>"><%= array[i].Quantity %></span>x</p>
+                      <p class="image-text c"><%= array[i].Price %></p>
                       <div class="zora">
                         <button class="btn btn-outline-success mipha" type="button">
                           <i class="fas fa-plus"></i>
@@ -47,7 +47,6 @@
                       </div>
                     </div>
                   <% } %>
-                  
                   
                 </div>
               </div>
@@ -240,33 +239,76 @@
     <%- include("partials/globalScripts") %>
 
     <script>
-      const array = <%- JSON.stringify(array) %>
-      function incrementQuantity(cardIndex) {
-        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
-        const currentQuantity = parseInt(quantityElement.innerText, 10);
-        quantityElement.innerText = (currentQuantity + 1).toString();
-        updateSubtotal();
+    const array = <%- JSON.stringify(array) %>;
+////////////////////////////////////////////////
+    function incrementQuantity(cardIndex) {
+      const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      quantityElement.innerText = (currentQuantity + 1).toString();
+      updateSubtotal();
+
+      fetch('/incrementQuantity', {
+        method: 'POST',
+        body: JSON.stringify({ cardIndex }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          }
+        })
+        .catch(error => console.error(error));
       }
-    
-      function decrementQuantity(cardIndex) {
-        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
-        const currentQuantity = parseInt(quantityElement.innerText, 10);
-        if (currentQuantity > 1) {
-          quantityElement.innerText = (currentQuantity - 1).toString();
-        } else {
-          quantityElement.innerText = "0";
-          document.getElementById(`product_${cardIndex}`).classList.add('hidden');
-        }
-        updateSubtotal();
-      }
-    
-      function resetQuantity(cardIndex) {
-        const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+////////////////////////////////////////////////
+    function decrementQuantity(cardIndex) {
+      const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+      const currentQuantity = parseInt(quantityElement.innerText, 10);
+      if (currentQuantity > 1) {
+        quantityElement.innerText = (currentQuantity - 1).toString();
+      } else {
         quantityElement.innerText = "0";
         document.getElementById(`product_${cardIndex}`).classList.add('hidden');
-        updateSubtotal();
       }
-    
+      updateSubtotal();
+      fetch('/decrementQuantity', {
+    method: 'POST',
+    body: JSON.stringify({ cardIndex }), 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+    }
+  })
+  .catch(error => console.error(error));
+}
+////////////////////////////////////////////////    
+function resetQuantity(cardIndex) {
+  const quantityElement = document.getElementById(`quantity_${cardIndex}`);
+  quantityElement.innerText = "0";
+  document.getElementById(`product_${cardIndex}`).classList.add('hidden');
+  updateSubtotal();
+
+  fetch('/resetQuantity', {
+    method: 'POST',
+    body: JSON.stringify({ cardIndex }), 
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      
+    }
+  })
+  .catch(error => console.error(error));
+}
+////////////////////////////////////////////////    
       function calculateProductSubtotal(cardIndex) {
       const quantityElement = document.getElementById(`quantity_${cardIndex}`);
       const currentQuantity = parseInt(quantityElement.innerText, 10);
@@ -296,7 +338,7 @@
       document.addEventListener("click", function (event) {
         if (event.target.matches('.btn.btn-outline-success') || event.target.matches('.btn.btn-outline-success i')) {
           const card = event.target.closest(".card-items");
-          if (!card) return; // Not inside a product card
+          if (!card) return; 
           const cardIndex = card.id.split("_")[1];
     
           if (event.target.classList.contains("mipha") || event.target.parentNode.classList.contains("mipha")) {
